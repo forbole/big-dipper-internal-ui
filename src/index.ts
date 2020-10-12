@@ -6,9 +6,10 @@ import {
   GithubIcon,
   TwitterIcon,
   YoutubeIcon,
-} from '@icons';
+} from './icons';
 import ButtonExample from './button_example';
 import DataBlock from './data_block';
+import Footer from './footer';
 
 export {
   ButtonExample,
@@ -20,4 +21,5 @@ export {
   GithubIcon,
   TwitterIcon,
   YoutubeIcon,
+  Footer,
 };

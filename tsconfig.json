@@ -27,12 +27,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "@icons": [
-        "src/icons"
-      ]
-    }
+    "baseUrl": "."
   },
   "include": [
     "src"

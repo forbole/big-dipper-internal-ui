@@ -1,6 +1,6 @@
 import React from 'react';
 import { DataBlock } from '../src';
-import { DataBlockCustom } from './utils';
+import { DataBlockCustom } from './utils/data_block';
 
 export default {
   title: 'DataBlock',
