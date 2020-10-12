@@ -28,6 +28,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "baseUrl": ".",
+    "paths": {
+      "@icons": [
+        "src/icons"
+      ]
+    }
   },
   "include": [
     "src"
