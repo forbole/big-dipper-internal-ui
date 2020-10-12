@@ -22,6 +22,8 @@ export const Footer = (props: FooterProps) => {
     BDLogoAlt,
     blockExplorerText,
     copyrightText,
+    donateText,
+    linkComponents,
   } = props;
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
@@ -54,47 +56,53 @@ export const Footer = (props: FooterProps) => {
             {copyrightText}
           </Typography>
         </div>
-        {/* <Button
-          className={classnames(classes.mobileOnly)}
+        <Button
+          className={classnames(classes.mobileOnly, 'donate-text-mobile')}
           variant="contained"
           color="primary"
           size="small"
         >
-          {t('donate')}
-        </Button> */}
+          {donateText}
+        </Button>
       </div>
-{/*
+
       <div
-        className={classes.listContainer}
+        className={classnames(classes.listContainer, 'list-container')}
       >
         <List
-          className={classes.list}
+          className={classnames(classes.list, 'list')}
         >
-          {footerLinks.map((x, i) => {
+          {linkComponents.map((x, i) => {
             return (
-              <ListItem
-                key={x.key}
-                className={classes.listItem}
-              >
-                <NextLink
-                  href={`${x.url}`}
-                >
-                  <Link
-                    href={`${x.url}`}
-                    color="inherit"
-                    underline="none"
-                  >
-                    {t(x.key)}
-                  </Link>
-                </NextLink>
-                {i !== footerLinks.length - 1 && (
-                  <span>|</span>
-                )}
-              </ListItem>
+              <span className={classnames(classes.listItem, 'list-item')}>
+                {x}
+              </span>
+              // <ListItem
+              //   key={x.key}
+              //   className={classes.listItem}
+              // >
+              //   <NextLink
+              //     href={`${x.url}`}
+              //   >
+              //     <Link
+              //       href={`${x.url}`}
+              //       color="inherit"
+              //       underline="none"
+              //     >
+              //       {t(x.key)}
+              //     </Link>
+              //   </NextLink>
+              //   {i !== footerLinks.length - 1 && (
+              //     <span>|</span>
+              //   )}
+              // </ListItem>
+              // {i !== footerLinks.length - 1 && (
+              //   <span>|</span>
+              // )}
             );
           })}
         </List>
-        <div
+        {/* <div
           className={classes.playStore}
         >
           {storeBadges.map((x) => (
@@ -112,9 +120,9 @@ export const Footer = (props: FooterProps) => {
               />
             </a>
           ))}
-        </div>
+        </div> */}
       </div>
-      <div
+      {/* <div
         className={classes.socialMediaContainer}
       >
         {socialMediaLinks.map((x, i) => (
@@ -145,6 +153,7 @@ Footer.defaultProps = {
   BDLogoSrc: './src/resources/images/big-dipper-logo.png',
   BDLogoAlt: 'big dipper logo',
   breakpoint: 769,
+  linkComponents: [],
 };
 
 export default Footer;

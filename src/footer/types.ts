@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 export interface FooterProps {
   BDLogoSrc?: string;
   /**
@@ -10,4 +12,6 @@ export interface FooterProps {
   breakpoint?: number | string;
   blockExplorerText: string;
   copyrightText: string;
+  donateText: string;
+  linkComponents: ReactElement[];
 }

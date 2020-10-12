@@ -10,8 +10,8 @@ export const useGetStyles = ({
   // root colors
   const root = {
     background: theme?.palette?.custom?.footer
-    ?? theme?.palette?.primary?.main,
-    color: theme?.palette?.custom?.onDarkSurface ?? 'blue',
+    ?? '#242322',
+    color: theme?.palette?.custom?.onDarkSurface ?? 'white',
   };
 
   // logo colors
@@ -22,6 +22,10 @@ export const useGetStyles = ({
   // copyright colors
   const copyright = {
     color: theme?.palette?.custom?.onDarkSurface ?? 'white',
+  };
+
+  const listItem = {
+    fontSize: theme?.typography?.body3?.fontSize ?? 14,
   }
 
   const useStyles = makeStyles({
@@ -55,26 +59,26 @@ export const useGetStyles = ({
         borderRadius: '20px',
       },
     },
-    // listContainer: {
-    //   [getMinMediaQuery(theme.breakpoints.tablet)]: {
-    //     flex: 1,
-    //     marginLeft: '2rem',
-    //     paddingTop: 0,
-    //   },
-    // },
-    // list: {
-    //   display: 'flex',
-    //   flexWrap: 'wrap',
-    // },
-    // listItem: {
-    //   whiteSpace: 'nowrap',
-    //   width: 'auto',
-    //   padding: '0',
-    //   fontSize: theme.typography.body3.fontSize,
-    //   '& span': {
-    //     margin: '0 1rem',
-    //   },
-    // },
+    listContainer: {
+      [getMinMediaQuery(tableBreakPoint)]: {
+        flex: 1,
+        marginLeft: '2rem',
+        paddingTop: 0,
+      },
+    },
+    list: {
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+    listItem: {
+      whiteSpace: 'nowrap',
+      width: 'auto',
+      padding: '0',
+      fontSize: listItem.fontSize,
+      '& span': {
+        margin: '0 1rem',
+      },
+    },
     // playStore: {
     //   display: 'none',
     //   [getMinMediaQuery(theme.breakpoints.tablet)]: {

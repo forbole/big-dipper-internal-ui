@@ -1,4 +1,26 @@
+import React from 'react';
+import {
+  Link,
+} from '@material-ui/core';
 import { FooterProps } from '../../src/footer/types';
+
+export const LinkComponent = (props:any) => {
+  const {
+    url,
+    title,
+  } = props;
+
+  return (
+    <Link
+      href={url}
+      color="inherit"
+      underline="none"
+    >
+      {title}
+    </Link>
+  );
+};
+
 /**
  * Examples of props needed for `Footer` to work correctly
  */
@@ -10,4 +32,8 @@ export const defaultProps:FooterProps = {
   breakpoint: 769,
   blockExplorerText: 'Cosmos Block Explorer',
   copyrightText: 'Copyright © Forbole 2020',
+  donateText: 'Donate',
+  linkComponents: [
+    <LinkComponent url="#" title="link 1" />,
+  ],
 };
