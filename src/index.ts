@@ -10,6 +10,7 @@ import {
 import ButtonExample from './button_example';
 import DataBlock from './data_block';
 import Footer from './footer';
+import * as resources from './resources';
 
 export {
   ButtonExample,
@@ -22,4 +23,5 @@ export {
   TwitterIcon,
   YoutubeIcon,
   Footer,
+  resources,
 };
