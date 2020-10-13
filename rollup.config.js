@@ -25,7 +25,9 @@ export default [
       resolve(),
       commonjs(),
       filesize(),
-      image(),
+      image({
+        limit: 130000,
+      }),
     ],
     external: [
       ...Object.keys(pkg.dependencies || {

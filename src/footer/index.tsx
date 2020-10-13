@@ -9,11 +9,12 @@ import {
 } from '@material-ui/core';
 import { useGetStyles } from './styles';
 import { FooterProps } from './types';
+import { logo } from '../resources/images';
 
 export const Footer = (props: FooterProps) => {
   const {
     breakpoint = 769,
-    BDLogoSrc = './src/resources/images/big-dipper-logo.png',
+    BDLogoSrc = logo,
     BDLogoAlt = 'Big Dipper logo',
     linkComponents = [],
     socialMediaComponents = [],
