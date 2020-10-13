@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Link,
-} from '@material-ui/core';
+import { Link } from '@material-ui/core';
 import { FooterProps } from '../../src/footer/types';
 
 export const LinkComponent = (props:any) => {
@@ -34,6 +32,10 @@ export const defaultProps:FooterProps = {
   copyrightText: 'Copyright © Forbole 2020',
   donateText: 'Donate',
   linkComponents: [
-    <LinkComponent url="#" title="link 1" />,
+    <LinkComponent url="#" title="About Big Dipper" />,
+    <LinkComponent url="#" title="FAQ" />,
+    <LinkComponent url="#" title="Terms and Conditions" />,
+    <LinkComponent url="#" title="Download Big Dipper Wallet" />,
   ],
+  linkDecorator: '|',
 };

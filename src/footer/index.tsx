@@ -24,6 +24,7 @@ export const Footer = (props: FooterProps) => {
     copyrightText,
     donateText,
     linkComponents,
+    linkDecorator,
   } = props;
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
@@ -74,8 +75,14 @@ export const Footer = (props: FooterProps) => {
         >
           {linkComponents.map((x, i) => {
             return (
-              <span className={classnames(classes.listItem, 'list-item')}>
+              <span
+                key={i}
+                className={classnames(classes.listItem, 'list-item')}
+              >
                 {x}
+                {i !== linkComponents.length - 1 && (
+                  <span className={classnames('list-decorator')}>{linkDecorator}</span>
+                )}
               </span>
               // <ListItem
               //   key={x.key}
@@ -92,9 +99,6 @@ export const Footer = (props: FooterProps) => {
               //       {t(x.key)}
               //     </Link>
               //   </NextLink>
-              //   {i !== footerLinks.length - 1 && (
-              //     <span>|</span>
-              //   )}
               // </ListItem>
               // {i !== footerLinks.length - 1 && (
               //   <span>|</span>

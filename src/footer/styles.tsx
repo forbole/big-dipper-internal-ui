@@ -2,9 +2,7 @@ import { makeStyles } from '@material-ui/styles';
 import { useTheme } from '@material-ui/core/styles';
 import { getMinMediaQuery } from '../utils/media_queries';
 
-export const useGetStyles = ({
-  tableBreakPoint = 769,
-}: any) => {
+export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
   const theme: any = useTheme();
 
   // root colors
@@ -25,8 +23,8 @@ export const useGetStyles = ({
   };
 
   const listItem = {
-    fontSize: theme?.typography?.body3?.fontSize ?? 14,
-  }
+    fontSize: theme?.typography?.body3?.fontSize ?? '0.75rem',
+  };
 
   const useStyles = makeStyles({
     root: {
@@ -35,18 +33,25 @@ export const useGetStyles = ({
       padding: '2rem 1rem',
       display: 'flex',
       flexDirection: 'column',
+      '& .logo-container': {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'flex-end',
+        flexWrap: 'wrap',
+        color: logoContainer.color,
+      },
       [getMinMediaQuery(tableBreakPoint)]: {
         flexDirection: 'row',
         alignItems: 'flex-start',
       },
     },
-    logoContainer: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'flex-end',
-      flexWrap: 'wrap',
-      color: logoContainer.color,
-    },
+    // logoContainer: {
+    //   display: 'flex',
+    //   justifyContent: 'space-between',
+    //   alignItems: 'flex-end',
+    //   flexWrap: 'wrap',
+    //   color: logoContainer.color,
+    // },
     mobileOnly: {
       [getMinMediaQuery(tableBreakPoint)]: {
         display: 'none',
@@ -75,7 +80,7 @@ export const useGetStyles = ({
       width: 'auto',
       padding: '0',
       fontSize: listItem.fontSize,
-      '& span': {
+      '& .list-decorator': {
         margin: '0 1rem',
       },
     },

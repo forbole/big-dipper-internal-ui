@@ -14,4 +14,5 @@ export interface FooterProps {
   copyrightText: string;
   donateText: string;
   linkComponents: ReactElement[];
+  linkDecorator?: ReactElement | string;
 }
