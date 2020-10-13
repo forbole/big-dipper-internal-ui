@@ -16,4 +16,5 @@ export interface FooterProps {
   linkComponents: ReactElement[];
   linkDecorator?: ReactElement | string;
   socialMediaComponents?: ReactElement[];
+  storeBadgesComponents?: ReactElement[];
 }

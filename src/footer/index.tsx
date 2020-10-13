@@ -9,11 +9,6 @@ import {
 } from '@material-ui/core';
 import { useGetStyles } from './styles';
 import { FooterProps } from './types';
-// import {
-//   footerLinks,
-//   socialMediaLinks,
-//   getStoreBadge,
-// } from './utils';
 
 export const Footer = (props: FooterProps) => {
   const {
@@ -22,6 +17,7 @@ export const Footer = (props: FooterProps) => {
     BDLogoAlt = 'Big Dipper logo',
     linkComponents = [],
     socialMediaComponents = [],
+    storeBadgesComponents = [],
     blockExplorerText,
     copyrightText,
     donateText,
@@ -30,7 +26,6 @@ export const Footer = (props: FooterProps) => {
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
   });
-  // const storeBadges = getStoreBadge(classes);
 
   return (
     <div className={classnames(classes.root, 'big-dipper', 'footer')}>
@@ -59,7 +54,7 @@ export const Footer = (props: FooterProps) => {
           </Typography>
         </div>
         <Button
-          className={classnames(classes.mobileOnly, 'donate-text-mobile')}
+          className={classnames(classes.mobileOnly, 'donate-mobile')}
           variant="contained"
           color="primary"
           size="small"
@@ -76,7 +71,7 @@ export const Footer = (props: FooterProps) => {
         >
           {linkComponents.map((x, i) => {
             return (
-              <span
+              <ListItem
                 key={i}
                 className={classnames(classes.listItem, 'list-item')}
               >
@@ -84,32 +79,22 @@ export const Footer = (props: FooterProps) => {
                 {i !== linkComponents.length - 1 && (
                   <span className={classnames('list-decorator')}>{linkDecorator}</span>
                 )}
-              </span>
+              </ListItem>
             );
           })}
         </List>
-        {/* <div
-          className={classes.playStore}
+        <div
+          className={classnames(classes.badgeContainer, 'badge-container')}
         >
-          {storeBadges.map((x) => (
-            <a
-              className={x.className}
-              href={x.url}
-              target="_blank"
-              rel="noreferrer"
-              key={x.alt}
-            >
-              <img
-                src={x.image}
-                alt={x.alt}
-                title={x.alt}
-              />
-            </a>
+          {storeBadgesComponents.map((x, i) => (
+            <span className={classnames('badge')} key={i}>
+              {x}
+            </span>
           ))}
-        </div> */}
+        </div>
       </div>
       <div
-        className={classes.socialMediaContainer}
+        className={classnames(classes.socialMediaContainer, 'social-media-container')}
       >
         {socialMediaComponents.map((x, i) => (
           <span
@@ -119,14 +104,14 @@ export const Footer = (props: FooterProps) => {
             {x}
           </span>
         ))}
-        {/* <Button
-          className={classnames(classes.tabletAndUp)}
+        <Button
+          className={classnames(classes.tabletAndUp, 'donate-tablet')}
           variant="contained"
           color="primary"
           size="small"
         >
-          {t('donate')}
-        </Button> */}
+          {donateText}
+        </Button>
       </div>
     </div>
   );

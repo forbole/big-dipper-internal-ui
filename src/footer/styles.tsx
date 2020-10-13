@@ -77,14 +77,17 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
         margin: '0 1rem',
       },
     },
-    // playStore: {
-    //   display: 'none',
-    //   [getMinMediaQuery(theme.breakpoints.tablet)]: {
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //   },
-    // },
+    badgeContainer: {
+      display: 'none',
+      [getMinMediaQuery(tableBreakPoint)]: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& .badge': {
+          margin: '0.25rem',
+        },
+      },
+    },
     socialMediaContainer: {
       display: 'flex',
       flexWrap: 'wrap',
@@ -109,17 +112,6 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
     logo: {
       width: '150px',
     },
-    // appleBadge: {
-    //   '& img': {
-    //     width: '100px',
-    //   },
-    //   marginRight: '0.5rem',
-    // },
-    // googleBadge: {
-    //   '& img': {
-    //     width: '110px',
-    //   },
-    // },
   });
 
   return {

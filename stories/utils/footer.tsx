@@ -1,5 +1,7 @@
 import React from 'react';
+import classnames from 'classnames';
 import { Link } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import { FooterProps } from '../../src/footer/types';
 import {
   TelegramIcon,
@@ -45,9 +47,45 @@ export const SocialMediaComponent = (props:any) => {
   );
 };
 
-/**
- * Examples of props needed for `Footer` to work correctly
- */
+export const StoreBadgeComponent = (props:any) => {
+  const {
+    url,
+    className,
+    imageSrc,
+    imageAlt,
+  } = props;
+  const useStyles = makeStyles({
+    root: {
+      '&.apple': {
+        '& img': {
+          width: '100px',
+        },
+      },
+      '&.google': {
+        '& img': {
+          width: '110px',
+        },
+      },
+    },
+  });
+  const classes = useStyles();
+  return (
+    <a
+      className={classnames(classes.root, className)}
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        title={imageAlt}
+      />
+    </a>
+  );
+};
+
+// Examples of props needed for `Footer` to work correctly
 export const defaultProps:FooterProps = {
   // have a default icon but honestly i hope not
   BDLogoSrc: './src/resources/images/big-dipper-logo.png',
@@ -70,27 +108,8 @@ export const defaultProps:FooterProps = {
     <SocialMediaComponent url="#" component={TwitterIcon} className="twitter" />,
     <SocialMediaComponent url="#" component={GithubIcon} className="github" />,
   ],
+  storeBadgesComponents: [
+    <StoreBadgeComponent url="#" className="apple" alt="apple" imageSrc="./stories/resources/apple-badge.svg" />,
+    <StoreBadgeComponent url="#" className="google" alt="google" imageSrc="./stories/resources/google-play-badge.svg" />,
+  ],
 };
-
-export const socialMediaLinks = [
-  {
-    component: TelegramIcon,
-    url: '#',
-  },
-  {
-    component: FacebookIcon,
-    url: '#',
-  },
-  {
-    component: MediumIcon,
-    url: '#',
-  },
-  {
-    component: TwitterIcon,
-    url: '#',
-  },
-  {
-    component: GithubIcon,
-    url: '#',
-  },
-];
