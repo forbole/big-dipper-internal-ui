@@ -87,14 +87,17 @@ export const StoreBadgeComponent = (props:any) => {
 
 // Examples of props needed for `Footer` to work correctly
 export const defaultProps:FooterProps = {
-  // have a default icon but honestly i hope not
-  BDLogoSrc: './src/resources/images/big-dipper-logo.png',
-  // default alt is logo
-  BDLogoAlt: 'big dipper logo',
+  bigDipperLogo: {
+    src: './src/resources/images/big-dipper-logo.png',
+    alt: 'big dipper logo',
+  },
+  donate: {
+    text: 'Donate',
+    url: '#',
+  },
   breakpoint: 769,
   blockExplorerText: 'Cosmos Block Explorer',
   copyrightText: 'Copyright © Forbole 2020',
-  donateText: 'Donate',
   linkComponents: [
     <LinkComponent url="#" title="About Big Dipper" />,
     <LinkComponent url="#" title="FAQ" />,
@@ -114,8 +117,7 @@ export const defaultProps:FooterProps = {
   ],
 };
 
-export const baseProps:FooterProps = {
-  blockExplorerText: 'Cosmos Block Explorer',
-  copyrightText: 'Copyright © Forbole 2020',
-  donateText: 'Donate',
-};
+// export const baseProps:FooterProps = {
+//   blockExplorerText: 'Cosmos Block Explorer',
+//   copyrightText: 'Copyright © Forbole 2020',
+// };

@@ -1,18 +1,25 @@
 import { ReactElement } from 'react';
 
+type Donate = {
+  text?: string;
+  url?: string;
+  title?: string;
+}
+
+type BigDipperLogo = {
+  src?: string;
+  alt?: string;
+}
+
 export interface FooterProps {
-  BDLogoSrc?: string;
-  /**
-   * Alt defaults to `big dipper logo`
-   */
-  BDLogoAlt?: string;
   /**
    * Breakpoint between mobile and desktop component
    */
   breakpoint?: number | string;
+  bigDipperLogo: BigDipperLogo,
   blockExplorerText: string;
   copyrightText: string;
-  donateText: string;
+  donate?: Donate;
   linkComponents?: ReactElement[];
   linkDecorator?: ReactElement | string;
   socialMediaComponents?: ReactElement[];

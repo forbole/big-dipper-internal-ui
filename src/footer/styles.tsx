@@ -33,6 +33,9 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
       padding: '2rem 1rem',
       display: 'flex',
       flexDirection: 'column',
+      '& a': {
+        textDecoration: 'none',
+      },
       [getMinMediaQuery(tableBreakPoint)]: {
         flexDirection: 'row',
         alignItems: 'flex-start',

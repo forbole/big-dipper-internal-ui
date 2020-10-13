@@ -2,7 +2,8 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { Footer } from '../src';
 import {
-  defaultProps, baseProps,
+  defaultProps,
+  // baseProps,
 } from './utils/footer';
 import { ThemeKnob } from './theme_knob';
 
@@ -33,9 +34,9 @@ Default.args = {
 /**
  * Base with only necessary props
  */
-export const Base = Template.bind({
-});
+// export const Base = Template.bind({
+// });
 
-Base.args = {
-  ...baseProps,
-};
+// Base.args = {
+//   ...baseProps,
+// };

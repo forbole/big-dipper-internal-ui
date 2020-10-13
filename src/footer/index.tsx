@@ -11,19 +11,37 @@ import { useGetStyles } from './styles';
 import { FooterProps } from './types';
 import { logo } from '../resources/images';
 
+/**
+ * Footer component used across all pages
+ */
 export const Footer = (props: FooterProps) => {
   const {
     breakpoint = 769,
-    BDLogoSrc = logo,
-    BDLogoAlt = 'Big Dipper logo',
     linkComponents = [],
     socialMediaComponents = [],
     storeBadgesComponents = [],
     blockExplorerText,
     copyrightText,
-    donateText,
+    bigDipperLogo = {
+      src: logo,
+      alt: 'Big Dipper Logo',
+    },
+    donate = {
+      text: '',
+      url: '#',
+    },
     linkDecorator,
   } = props;
+
+  const {
+    src: bigDipperSrc,
+    alt: bigDipperAlt,
+  } = bigDipperLogo;
+
+  const {
+    text: donateText,
+    url: donateUrl,
+  } = donate;
 
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
@@ -31,6 +49,7 @@ export const Footer = (props: FooterProps) => {
 
   return (
     <div className={classnames(classes.root, 'big-dipper', 'footer')}>
+      {/* logo container start */}
       <div className={classnames(classes.logoContainer, 'logo-container')}>
         <div>
           <Link
@@ -38,8 +57,8 @@ export const Footer = (props: FooterProps) => {
           >
             <img
               className={classnames(classes.logo, 'logo')}
-              src={BDLogoSrc}
-              alt={BDLogoAlt}
+              src={bigDipperSrc}
+              alt={bigDipperAlt}
             />
           </Link>
           <Typography
@@ -55,16 +74,27 @@ export const Footer = (props: FooterProps) => {
             {copyrightText}
           </Typography>
         </div>
-        <Button
-          className={classnames(classes.mobileOnly, 'donate-mobile')}
-          variant="contained"
-          color="primary"
-          size="small"
-        >
-          {donateText}
-        </Button>
+        {/* mobile donate button start */}
+        {!!donateText && (
+          <a
+            className={classnames(classes.mobileOnly, 'donate-mobile')}
+            href={donateUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+            >
+              {donateText}
+            </Button>
+          </a>
+        )}
+        {/* mobile donate button end */}
       </div>
-
+      {/* logo container end */}
+      {/* links container start */}
       <div
         className={classnames(classes.listContainer, 'list-container')}
       >
@@ -85,6 +115,7 @@ export const Footer = (props: FooterProps) => {
             );
           })}
         </List>
+        {/* play store badges start */}
         <div
           className={classnames(classes.badgeContainer, 'badge-container')}
         >
@@ -94,7 +125,10 @@ export const Footer = (props: FooterProps) => {
             </span>
           ))}
         </div>
+        {/* play store badges end */}
       </div>
+      {/* links container end */}
+      {/* social media container start */}
       <div
         className={classnames(classes.socialMediaContainer, 'social-media-container')}
       >
@@ -112,15 +146,26 @@ export const Footer = (props: FooterProps) => {
         >
           {copyrightText}
         </Typography>
-        <Button
-          className={classnames(classes.tabletAndUp, 'donate-tablet')}
-          variant="contained"
-          color="primary"
-          size="small"
-        >
-          {donateText}
-        </Button>
+        {/* tablet donate button start */}
+        {!!donateText && (
+          <a
+            className={classnames(classes.tabletAndUp, 'donate-tablet')}
+            href={donateUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              size="small"
+            >
+              {donateText}
+            </Button>
+          </a>
+        )}
+        {/* tablet donate button end */}
       </div>
+      {/* social media container end */}
     </div>
   );
 };
