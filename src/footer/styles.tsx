@@ -8,8 +8,8 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
   // root colors
   const root = {
     background: theme?.palette?.custom?.footer
-    ?? '#242322',
-    color: theme?.palette?.custom?.onDarkSurface ?? 'white',
+    ?? 'rgba(0, 0, 0, 1)',
+    color: theme?.palette?.custom?.onDarkSurface ?? 'rgba(255, 255, 255, 0.8)',
   };
 
   // logo colors
@@ -19,7 +19,7 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
 
   // copyright colors
   const copyright = {
-    color: theme?.palette?.custom?.onDarkSurface ?? 'white',
+    color: theme?.palette?.custom?.onDarkSurface ?? 'rgba(255, 255, 255, 0.8)',
   };
 
   const listItem = {
@@ -108,6 +108,7 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
     },
     copyright: {
       color: copyright.color,
+      fontWeight: 300,
     },
     logo: {
       width: '150px',

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Footer } from '../src';
-import { defaultProps } from './utils/footer';
+import {
+  defaultProps, baseProps,
+} from './utils/footer';
 
 export default {
   title: 'Footer',
@@ -13,9 +15,22 @@ const Template = (args) => (
   />
 );
 
+/**
+ * Default props
+ */
 export const Default = Template.bind({
 });
 
 Default.args = {
   ...defaultProps,
+};
+
+/**
+ * Base with only necessary props
+ */
+export const Base = Template.bind({
+});
+
+Base.args = {
+  ...baseProps,
 };

@@ -23,6 +23,7 @@ export const Footer = (props: FooterProps) => {
     donateText,
     linkDecorator,
   } = props;
+
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
   });
@@ -48,7 +49,7 @@ export const Footer = (props: FooterProps) => {
           </Typography>
           <Typography
             variant="body2"
-            className={classnames(classes.tabletAndUp, classes.copyright, 'copyright-text')}
+            className={classnames(classes.tabletAndUp, classes.copyright, 'copyright-text-mobile')}
           >
             {copyrightText}
           </Typography>
@@ -104,6 +105,12 @@ export const Footer = (props: FooterProps) => {
             {x}
           </span>
         ))}
+        <Typography
+          variant="body2"
+          className={classnames(classes.mobileOnly, classes.copyright, 'copyright-text-tablet')}
+        >
+          {copyrightText}
+        </Typography>
         <Button
           className={classnames(classes.tabletAndUp, 'donate-tablet')}
           variant="contained"

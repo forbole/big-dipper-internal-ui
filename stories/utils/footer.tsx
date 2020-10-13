@@ -113,3 +113,9 @@ export const defaultProps:FooterProps = {
     <StoreBadgeComponent url="#" className="google" alt="google" imageSrc="./stories/resources/google-play-badge.svg" />,
   ],
 };
+
+export const baseProps:FooterProps = {
+  blockExplorerText: 'Cosmos Block Explorer',
+  copyrightText: 'Copyright © Forbole 2020',
+  donateText: 'Donate',
+};

@@ -13,7 +13,7 @@ export interface FooterProps {
   blockExplorerText: string;
   copyrightText: string;
   donateText: string;
-  linkComponents: ReactElement[];
+  linkComponents?: ReactElement[];
   linkDecorator?: ReactElement | string;
   socialMediaComponents?: ReactElement[];
   storeBadgesComponents?: ReactElement[];
