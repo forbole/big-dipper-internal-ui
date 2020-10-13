@@ -84,25 +84,6 @@ export const Footer = (props: FooterProps) => {
                   <span className={classnames('list-decorator')}>{linkDecorator}</span>
                 )}
               </span>
-              // <ListItem
-              //   key={x.key}
-              //   className={classes.listItem}
-              // >
-              //   <NextLink
-              //     href={`${x.url}`}
-              //   >
-              //     <Link
-              //       href={`${x.url}`}
-              //       color="inherit"
-              //       underline="none"
-              //     >
-              //       {t(x.key)}
-              //     </Link>
-              //   </NextLink>
-              // </ListItem>
-              // {i !== footerLinks.length - 1 && (
-              //   <span>|</span>
-              // )}
             );
           })}
         </List>

@@ -33,25 +33,18 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
       padding: '2rem 1rem',
       display: 'flex',
       flexDirection: 'column',
-      '& .logo-container': {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        flexWrap: 'wrap',
-        color: logoContainer.color,
-      },
       [getMinMediaQuery(tableBreakPoint)]: {
         flexDirection: 'row',
         alignItems: 'flex-start',
       },
     },
-    // logoContainer: {
-    //   display: 'flex',
-    //   justifyContent: 'space-between',
-    //   alignItems: 'flex-end',
-    //   flexWrap: 'wrap',
-    //   color: logoContainer.color,
-    // },
+    logoContainer: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'flex-end',
+      flexWrap: 'wrap',
+      color: logoContainer.color,
+    },
     mobileOnly: {
       [getMinMediaQuery(tableBreakPoint)]: {
         display: 'none',
