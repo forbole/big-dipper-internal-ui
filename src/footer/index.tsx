@@ -17,31 +17,29 @@ import { logo } from '../resources/images';
 export const Footer = (props: FooterProps) => {
   const {
     breakpoint = 769,
-    linkComponents = [],
     socialMediaComponents = [],
     storeBadgesComponents = [],
     blockExplorerText,
     copyrightText,
-    bigDipperLogo = {
-      src: logo,
-      alt: 'Big Dipper Logo',
-    },
-    donate = {
-      text: '',
-      url: '#',
-    },
-    linkDecorator,
+    links = {},
+    bigDipperLogo = {},
+    donate = {},
   } = props;
 
   const {
-    src: bigDipperSrc,
-    alt: bigDipperAlt,
+    src: bigDipperSrc = logo,
+    alt: bigDipperAlt = 'Big Dipper Logo',
   } = bigDipperLogo;
 
   const {
-    text: donateText,
-    url: donateUrl,
+    text: donateText = '',
+    url: donateUrl = '#',
   } = donate;
+
+  const {
+    components: linkComponents = [],
+    decorator: linkDecorator,
+  } = links;
 
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
@@ -63,7 +61,7 @@ export const Footer = (props: FooterProps) => {
           </Link>
           <Typography
             variant="body2"
-            className={classnames('cosmos-block-explorer-text')}
+            className={classnames('block-explorer-text')}
           >
             {blockExplorerText}
           </Typography>

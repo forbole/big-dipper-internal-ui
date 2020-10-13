@@ -98,13 +98,15 @@ export const defaultProps:FooterProps = {
   breakpoint: 769,
   blockExplorerText: 'Cosmos Block Explorer',
   copyrightText: 'Copyright © Forbole 2020',
-  linkComponents: [
-    <LinkComponent url="#" title="About Big Dipper" />,
-    <LinkComponent url="#" title="FAQ" />,
-    <LinkComponent url="#" title="Terms and Conditions" />,
-    <LinkComponent url="#" title="Download Big Dipper Wallet" />,
-  ],
-  linkDecorator: '|',
+  links: {
+    components: [
+      <LinkComponent url="#" title="About Big Dipper" />,
+      <LinkComponent url="#" title="FAQ" />,
+      <LinkComponent url="#" title="Terms and Conditions" />,
+      <LinkComponent url="#" title="Download Big Dipper Wallet" />,
+    ],
+    decorator: '|',
+  },
   socialMediaComponents: [
     <SocialMediaComponent url="#" component={TelegramIcon} className="telegram" />, <SocialMediaComponent url="#" component={FacebookIcon} className="facebook" />,
     <SocialMediaComponent url="#" component={MediumIcon} className="medium" />,
@@ -117,7 +119,7 @@ export const defaultProps:FooterProps = {
   ],
 };
 
-// export const baseProps:FooterProps = {
-//   blockExplorerText: 'Cosmos Block Explorer',
-//   copyrightText: 'Copyright © Forbole 2020',
-// };
+export const baseProps:FooterProps = {
+  blockExplorerText: 'Cosmos Block Explorer',
+  copyrightText: 'Copyright © Forbole 2020',
+};
