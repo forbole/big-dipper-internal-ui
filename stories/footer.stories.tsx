@@ -1,18 +1,23 @@
 import React from 'react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { Footer } from '../src';
 import {
   defaultProps, baseProps,
 } from './utils/footer';
+import { ThemeKnob } from './theme_knob';
 
 export default {
   title: 'Footer',
   component: Footer,
+  decorators: [withKnobs],
 };
 
 const Template = (args) => (
-  <Footer
-    {...args}
-  />
+  <ThemeKnob>
+    <Footer
+      {...args}
+    />
+  </ThemeKnob>
 );
 
 /**
