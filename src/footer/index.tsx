@@ -17,13 +17,14 @@ import { FooterProps } from './types';
 
 export const Footer = (props: FooterProps) => {
   const {
-    breakpoint,
-    BDLogoSrc,
-    BDLogoAlt,
+    breakpoint = 769,
+    BDLogoSrc = './src/resources/images/big-dipper-logo.png',
+    BDLogoAlt = 'Big Dipper logo',
+    linkComponents = [],
+    socialMediaComponents = [],
     blockExplorerText,
     copyrightText,
     donateText,
-    linkComponents,
     linkDecorator,
   } = props;
   const { classes } = useGetStyles({
@@ -107,38 +108,28 @@ export const Footer = (props: FooterProps) => {
           ))}
         </div> */}
       </div>
-      {/* <div
+      <div
         className={classes.socialMediaContainer}
       >
-        {socialMediaLinks.map((x, i) => (
-          <a
-            href={x.url}
-            target="_blank"
-            rel="noreferrer"
-            className={classes.socialMediaContent}
+        {socialMediaComponents.map((x, i) => (
+          <span
             key={i}
+            className={classnames(classes.socialMediaContent, 'social-media-content')}
           >
-            <x.component />
-          </a>
+            {x}
+          </span>
         ))}
-        <Button
+        {/* <Button
           className={classnames(classes.tabletAndUp)}
           variant="contained"
           color="primary"
           size="small"
         >
           {t('donate')}
-        </Button>
-      </div> */}
+        </Button> */}
+      </div>
     </div>
   );
-};
-
-Footer.defaultProps = {
-  BDLogoSrc: './src/resources/images/big-dipper-logo.png',
-  BDLogoAlt: 'big dipper logo',
-  breakpoint: 769,
-  linkComponents: [],
 };
 
 export default Footer;

@@ -85,24 +85,24 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
     //     alignItems: 'center',
     //   },
     // },
-    // socialMediaContainer: {
-    //   display: 'flex',
-    //   flexWrap: 'wrap',
-    //   [getMinMediaQuery(theme.breakpoints.tablet)]: {
-    //     alignSelf: 'flex-end',
-    //     '& svg': {
-    //       width: '22px',
-    //     },
-    //   },
-    // },
-    // socialMediaContent: {
-    //   marginRight: '0.7rem',
-    //   display: 'flex',
-    //   alignItems: 'center',
-    //   '&:hover': {
-    //     cursor: 'pointer',
-    //   },
-    // },
+    socialMediaContainer: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      [getMinMediaQuery(tableBreakPoint)]: {
+        alignSelf: 'flex-end',
+        '& svg': {
+          width: '22px',
+        },
+      },
+    },
+    socialMediaContent: {
+      marginRight: '0.7rem',
+      display: 'flex',
+      alignItems: 'center',
+      '&:hover': {
+        cursor: 'pointer',
+      },
+    },
     copyright: {
       color: copyright.color,
     },

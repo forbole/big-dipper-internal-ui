@@ -15,4 +15,5 @@ export interface FooterProps {
   donateText: string;
   linkComponents: ReactElement[];
   linkDecorator?: ReactElement | string;
+  socialMediaComponents?: ReactElement[];
 }
