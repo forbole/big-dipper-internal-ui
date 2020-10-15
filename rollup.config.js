@@ -3,6 +3,7 @@ import del from 'rollup-plugin-delete';
 import filesize from 'rollup-plugin-filesize';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import image from '@rollup/plugin-image';
 import pkg from './package.json';
 
 export default [
@@ -24,6 +25,9 @@ export default [
       resolve(),
       commonjs(),
       filesize(),
+      image({
+        limit: 130000,
+      }),
     ],
     external: [
       ...Object.keys(pkg.dependencies || {

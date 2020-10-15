@@ -27,10 +27,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "baseUrl": ".",
+    "baseUrl": "."
   },
   "include": [
-    "src"
+    "src",
+    "declarations.d.ts"
   ],
   "exclude": [
     "node_modules",

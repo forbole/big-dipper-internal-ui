@@ -88,8 +88,7 @@
       {
         "ObjectExpression": "always",
         "ObjectPattern": {
-          "multiline": true,
-          "minProperties": 2
+          "multiline": true
         },
         "ImportDeclaration": {
           "multiline": true,
