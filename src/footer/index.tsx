@@ -21,9 +21,12 @@ export const Footer = (props: FooterProps) => {
     storeBadgesComponents = [],
     blockExplorerText,
     copyrightText,
-    links = {},
-    bigDipperLogo = {},
-    donate = {},
+    links = {
+    },
+    bigDipperLogo = {
+    },
+    donate = {
+    },
   } = props;
 
   const {
