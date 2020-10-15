@@ -57,7 +57,6 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
       display: 'none',
       [getMinMediaQuery(tableBreakPoint)]: {
         display: 'block',
-        borderRadius: '20px',
       },
     },
     listContainer: {
@@ -92,12 +91,19 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
       },
     },
     socialMediaContainer: {
-      display: 'flex',
-      flexWrap: 'wrap',
+      '& .icons-container': {
+        display: 'flex',
+        flexWrap: 'wrap',
+        marginBottom: '1rem',
+      },
       [getMinMediaQuery(tableBreakPoint)]: {
+        display: 'flex',
         alignSelf: 'flex-end',
         '& svg': {
           width: '22px',
+        },
+        '& .donate-tablet button': {
+          borderRadius: '20px',
         },
       },
     },

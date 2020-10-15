@@ -133,14 +133,16 @@ export const Footer = (props: FooterProps) => {
       <div
         className={classnames(classes.socialMediaContainer, 'social-media-container')}
       >
-        {socialMediaComponents.map((x, i) => (
-          <span
-            key={i}
-            className={classnames(classes.socialMediaContent, 'social-media-content')}
-          >
-            {x}
-          </span>
-        ))}
+        <div className="icons-container">
+          {socialMediaComponents.map((x, i) => (
+            <span
+              key={i}
+              className={classnames(classes.socialMediaContent, 'social-media-content')}
+            >
+              {x}
+            </span>
+          ))}
+        </div>
         <Typography
           variant="body2"
           className={classnames(classes.mobileOnly, classes.copyright, 'copyright-text-tablet')}
