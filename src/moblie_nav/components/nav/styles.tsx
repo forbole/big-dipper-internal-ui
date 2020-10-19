@@ -15,6 +15,10 @@ export const useGetStyles = () => {
       },
       '& .logo': {
         width: '120px',
+        zIndex: 200,
+      },
+      '& .network-select': {
+        marginRight: '3rem',
       },
     },
   });

@@ -4,6 +4,7 @@ import {
   Nav,
   Hamburger,
   NavOpen,
+  NetworksOpen,
 } from './components';
 import { MobileProps } from './types';
 import { useMobileHook } from './hooks';
@@ -14,12 +15,20 @@ const MobileNav = (props: MobileProps) => {
   const hookData = useMobileHook();
   const formattedProps = formatProps(props);
   const { classes } = useGetStyles();
-
+  const {
+    isNetworkOpen,
+    isNavOpen,
+    isOpen,
+  } = hookData;
+  // console.log('network ->', isNetworkOpen);
+  // console.log('nav ->', isNavOpen);
+  // console.log('open ->', isOpen);
   return (
     <div className={classnames(classes.root, 'big-dipper', 'mobile-nav-container')}>
       <Hamburger {...hookData} />
       <NavOpen {...hookData} />
-      <Nav {...formattedProps} />
+      <NetworksOpen {...hookData} />
+      <Nav {...formattedProps} {...hookData} />
     </div>
   );
 };

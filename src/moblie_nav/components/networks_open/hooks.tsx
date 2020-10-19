@@ -2,18 +2,18 @@ import {
   useEffect, useState,
 } from 'react';
 
-export const useNavOpenHook = ({ isNavOpen = false }) => {
-  const [value, setValue] = useState(isNavOpen);
+export const useNetworksOpenHook = ({ isNetworkOpen = false }) => {
+  const [value, setValue] = useState(isNetworkOpen);
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    if (value !== isNavOpen) {
-      setValue(isNavOpen);
+    if (value !== isNetworkOpen) {
+      setValue(isNetworkOpen);
       setShouldAnimate(true);
     } else {
       setShouldAnimate(false);
     }
-  }, [isNavOpen]);
+  }, [isNetworkOpen]);
 
   return {
     shouldAnimate,

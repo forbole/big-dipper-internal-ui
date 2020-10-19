@@ -3,43 +3,44 @@ import { makeStyles } from '@material-ui/styles';
 export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
-      zIndex: -10,
+      zIndex: 99,
       height: '100vh',
-      background: 'orange',
+      background: 'yellow',
       position: 'fixed',
       width: '100%',
+      visibility: 'hidden',
       opacity: 0,
       '&.open': {
-        animation: '$openView .2s ease-in-out',
+        animation: '$openNetworkView .2s ease-in-out',
         '-webkit-animation-fill-mode': 'forwards',
       },
       '&.close': {
-        animation: '$closeView .2s ease-in-out',
+        animation: '$closeNetworkView .2s ease-in-out',
         '-webkit-animation-fill-mode': 'forwards',
       },
     },
-    '@keyframes openView': {
+    '@keyframes openNetworkView': {
       '0%': {
         opacity: 0,
-        zIndex: 99,
+        visibility: 'visible',
       },
       '100%': {
         opacity: 1,
-        zIndex: 99,
+        visibility: 'visible',
       },
     },
-    '@keyframes closeView': {
+    '@keyframes closeNetworkView': {
       '0%': {
         opacity: 1,
-        zIndex: 99,
+        visibility: 'visible',
       },
       '100%': {
         opacity: 0,
-        zIndex: -10,
+        visibility: 'hidden',
       },
     },
     content: {
-      '&.mobile-nav-open-content': {
+      '&.mobile-network-open-content': {
         marginTop: '3.5rem',
         padding: '0 1rem 1rem',
         height: '100%',

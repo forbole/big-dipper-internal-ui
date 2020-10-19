@@ -6,6 +6,7 @@ import { useGetStyles } from './styles';
 const Nav = (props: NavProps) => {
   const { classes } = useGetStyles();
   const {
+    openNetwork,
     logo: {
       src,
       alt,
@@ -22,8 +23,8 @@ const Nav = (props: NavProps) => {
           src={src}
           alt={alt}
         />
-        <div>
-          <p>selector</p>
+        <div onClick={openNetwork} role="button" className={classnames('network-select')}>
+          selector
         </div>
       </div>
       <div>
