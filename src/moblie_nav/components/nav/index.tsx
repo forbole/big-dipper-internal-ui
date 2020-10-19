@@ -1,10 +1,16 @@
 import React from 'react';
+import classnames from 'classnames';
 import { NavProps } from './types';
+import { useGetStyles } from './styles';
 
 const Nav = (props: NavProps) => {
   console.log(props, 'props');
+  const { classes } = useGetStyles();
+
   return (
-    <div>
+    <div
+      className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
+    >
       <div>
         <p>logo</p>
         <div>
