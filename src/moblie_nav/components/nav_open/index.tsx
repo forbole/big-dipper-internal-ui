@@ -2,21 +2,14 @@ import React from 'react';
 import classnames from 'classnames';
 import { NavOpenProps } from './types';
 import { useGetStyles } from './styles';
-import { useNavOpenHook } from './hooks';
 
 const NavOpen = (props: NavOpenProps) => {
   const { classes } = useGetStyles();
   const { isNavOpen = false } = props;
-  const { shouldAnimate } = useNavOpenHook({
-    isNavOpen,
-  });
   return (
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-open', {
-        // open: isNavOpen,
-        // close: !isNavOpen,
-        // open: isNavOpen && shouldAnimate,
-        // close: !isNavOpen && shouldAnimate,
+        open: isNavOpen,
       })}
     >
       <div

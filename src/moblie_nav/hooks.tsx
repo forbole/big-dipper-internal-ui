@@ -16,10 +16,8 @@ export const useMobileHook = (): MobileHookProps => {
       }
       setOpen(false);
     } else {
-      console.log('am i not hittig else');
       // if initial state is closed then we open navbar
       setNavOpen(true);
-      // setNetworkOpen(true);
       setOpen(true);
     }
   };

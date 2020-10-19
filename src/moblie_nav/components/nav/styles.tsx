@@ -18,9 +18,8 @@ export const useGetStyles = () => {
         zIndex: 200,
       },
       '& .network-select': {
-        position: 'absolute',
-        right: '150px',
-        // marginRight: '3rem',
+        zIndex: 150,
+        marginRight: '3rem',
       },
     },
   });

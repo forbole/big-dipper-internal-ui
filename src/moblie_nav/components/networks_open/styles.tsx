@@ -10,33 +10,10 @@ export const useGetStyles = () => {
       width: '100%',
       visibility: 'hidden',
       opacity: 0,
+      transition: '0.2s ease-in-out',
       '&.open': {
-        animation: '$openNetworkView .2s ease-in-out',
-        '-webkit-animation-fill-mode': 'forwards',
-      },
-      '&.close': {
-        animation: '$closeNetworkView .2s ease-in-out',
-        '-webkit-animation-fill-mode': 'forwards',
-      },
-    },
-    '@keyframes openNetworkView': {
-      '0%': {
-        opacity: 0,
-        visibility: 'visible',
-      },
-      '100%': {
         opacity: 1,
         visibility: 'visible',
-      },
-    },
-    '@keyframes closeNetworkView': {
-      '0%': {
-        opacity: 1,
-        visibility: 'visible',
-      },
-      '100%': {
-        opacity: 0,
-        visibility: 'hidden',
       },
     },
     content: {

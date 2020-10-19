@@ -3,43 +3,17 @@ import { makeStyles } from '@material-ui/styles';
 export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
-      zIndex: 100,
+      zIndex: 151,
       height: '100vh',
       background: 'blue',
       position: 'fixed',
       width: '100%',
       opacity: 0,
       visibility: 'hidden',
+      transition: '0.2s ease-in-out',
       '&.open': {
-        animation: '$openView .2s ease-in-out',
-        '-webkit-animation-fill-mode': 'forwards',
-      },
-      '&.close': {
-        animation: '$closeView .2s ease-in-out',
-        '-webkit-animation-fill-mode': 'forwards',
-      },
-    },
-    '@keyframes openView': {
-      '0%': {
-        visibility: 'visible',
-      },
-      '10%': {
-        opacity: 0,
-        visibility: 'visible',
-      },
-      '100%': {
         opacity: 1,
         visibility: 'visible',
-      },
-    },
-    '@keyframes closeView': {
-      '0%': {
-        opacity: 1,
-        visibility: 'visible',
-      },
-      '100%': {
-        opacity: 0,
-        visibility: 'hidden',
       },
     },
     content: {
