@@ -13,7 +13,7 @@ export const useNavOpenHook = ({ isNavOpen = false }) => {
     } else {
       setShouldAnimate(false);
     }
-  }, [isNavOpen]);
+  }, [isNavOpen, setValue, setShouldAnimate]);
 
   return {
     shouldAnimate,

@@ -22,11 +22,11 @@ const MobileNav = (props: MobileProps) => {
   } = hookData;
   // console.log('network ->', isNetworkOpen);
   // console.log('nav ->', isNavOpen);
-  // console.log('open ->', isOpen);
+  console.log('open ->', isOpen);
   return (
     <div className={classnames(classes.root, 'big-dipper', 'mobile-nav-container')}>
       <Hamburger {...hookData} />
-      <NavOpen {...hookData} />
+      {/* <NavOpen {...hookData} /> */}
       <NetworksOpen {...hookData} />
       <Nav {...formattedProps} {...hookData} />
     </div>

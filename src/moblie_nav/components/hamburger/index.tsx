@@ -9,7 +9,7 @@ const Hamburger = (props: HamburgerProps) => {
     isOpen,
     toggleIsOpen,
   } = props;
-
+  console.log(isOpen, 'hamburger is open');
   return (
     <div
       role="button"

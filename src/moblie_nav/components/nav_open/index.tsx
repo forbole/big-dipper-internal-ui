@@ -13,8 +13,10 @@ const NavOpen = (props: NavOpenProps) => {
   return (
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-open', {
-        open: isNavOpen && shouldAnimate,
-        close: !isNavOpen && shouldAnimate,
+        // open: isNavOpen,
+        // close: !isNavOpen,
+        // open: isNavOpen && shouldAnimate,
+        // close: !isNavOpen && shouldAnimate,
       })}
     >
       <div

@@ -8,6 +8,7 @@ export interface MobileProps {
 
 type toggleIsOpen = () => void;
 type openNetwork = () => void;
+type openTest = () => void;
 export interface MobileHookProps {
   isOpen: boolean;
   toggleIsOpen: toggleIsOpen;

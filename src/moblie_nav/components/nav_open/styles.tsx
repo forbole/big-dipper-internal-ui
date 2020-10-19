@@ -3,12 +3,13 @@ import { makeStyles } from '@material-ui/styles';
 export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
-      zIndex: -10,
+      zIndex: 100,
       height: '100vh',
-      background: 'orange',
+      background: 'blue',
       position: 'fixed',
       width: '100%',
       opacity: 0,
+      visibility: 'hidden',
       '&.open': {
         animation: '$openView .2s ease-in-out',
         '-webkit-animation-fill-mode': 'forwards',
@@ -20,22 +21,25 @@ export const useGetStyles = () => {
     },
     '@keyframes openView': {
       '0%': {
+        visibility: 'visible',
+      },
+      '10%': {
         opacity: 0,
-        zIndex: 99,
+        visibility: 'visible',
       },
       '100%': {
         opacity: 1,
-        zIndex: 99,
+        visibility: 'visible',
       },
     },
     '@keyframes closeView': {
       '0%': {
         opacity: 1,
-        zIndex: 99,
+        visibility: 'visible',
       },
       '100%': {
         opacity: 0,
-        zIndex: -10,
+        visibility: 'hidden',
       },
     },
     content: {

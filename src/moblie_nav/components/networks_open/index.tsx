@@ -7,16 +7,13 @@ import { useGetStyles } from './styles';
 const NetworksOpen = (props:NetworksOpenProps) => {
   const { isNetworkOpen = false } = props;
   const { classes } = useGetStyles();
-  const { shouldAnimate } = useNetworksOpenHook({
+  const { animationClass } = useNetworksOpenHook({
     isNetworkOpen,
   });
-
+  console.log(animationClass, 'animation class');
   return (
     <div
-      className={classnames(classes.root, 'big-dipper', 'mobile-network-open', {
-        open: isNetworkOpen && shouldAnimate,
-        close: !isNetworkOpen && shouldAnimate,
-      })}
+      className={classnames(classes.root, animationClass, 'big-dipper', 'mobile-network-open')}
     >
       <div
         className={classnames(classes.content, 'mobile-network-open-content')}

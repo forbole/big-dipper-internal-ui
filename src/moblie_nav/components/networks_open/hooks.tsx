@@ -4,18 +4,16 @@ import {
 
 export const useNetworksOpenHook = ({ isNetworkOpen = false }) => {
   const [value, setValue] = useState(isNetworkOpen);
-  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [animationClass, setAnimationClass] = useState('');
 
   useEffect(() => {
     if (value !== isNetworkOpen) {
+      setAnimationClass(isNetworkOpen ? 'open' : 'close');
       setValue(isNetworkOpen);
-      setShouldAnimate(true);
-    } else {
-      setShouldAnimate(false);
     }
-  }, [isNetworkOpen]);
+  }, [isNetworkOpen, setValue, setAnimationClass]);
 
   return {
-    shouldAnimate,
+    animationClass,
   };
 };
