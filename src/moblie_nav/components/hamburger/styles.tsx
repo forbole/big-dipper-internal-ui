@@ -27,6 +27,9 @@ export const useGetStyles = () => {
         position: 'fixed',
         right: '15px',
         top: '12px',
+        '&:hover': {
+          cursor: 'pointer',
+        },
         '&:before, &:after, & .hamburger-content': {
           content: '""',
           backgroundColor: 'blue',
@@ -34,11 +37,19 @@ export const useGetStyles = () => {
           display: 'block',
           height: '2px',
           margin: '4px 0',
-          transition: 'all 0.4x ease-in-out',
+          transition: 'all 0.4s ease-in-out',
         },
-        // wingman
-        height: '20px',
-        // background: 'pink',
+        '&.active': {
+          '&:before': {
+            transform: 'translateY(7px) rotate(137deg)',
+          },
+          '&:after': {
+            transform: 'translateY(-5px) rotate(-140deg)',
+          },
+          '& .hamburger-content': {
+            transform: 'scale(0)',
+          },
+        },
       },
     },
   });
