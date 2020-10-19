@@ -7,9 +7,9 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
 
   // root colors
   const root = {
-    background: theme?.palette?.custom?.footer
+    background: theme?.palette?.background?.footer
     ?? 'rgba(0, 0, 0, 1)',
-    color: theme?.palette?.custom?.onDarkSurface ?? 'rgba(255, 255, 255, 0.8)',
+    color: theme?.palette?.fonts?.fontTwo ?? 'rgba(255, 255, 255, 0.8)',
   };
 
   // logo colors
@@ -19,7 +19,7 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
 
   // copyright colors
   const copyright = {
-    color: theme?.palette?.custom?.onDarkSurface ?? 'rgba(255, 255, 255, 0.8)',
+    color: theme?.palette?.fonts?.fontsTwo ?? 'rgba(255, 255, 255, 0.8)',
   };
 
   const listItem = {

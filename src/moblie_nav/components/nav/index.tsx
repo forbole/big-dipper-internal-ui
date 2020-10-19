@@ -2,6 +2,7 @@ import React from 'react';
 import { NavProps } from './types';
 
 const Nav = (props: NavProps) => {
+  console.log(props, 'props');
   return (
     <div>
       <div>

@@ -4,11 +4,11 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 import { select } from '@storybook/addon-knobs';
-import {dark, light} from './themes/theme';
+import {darkTheme, lightTheme} from './themes/theme';
 
 const themes = {
-  light,
-  dark,
+  light: lightTheme,
+  dark: darkTheme,
 };
 const themeNames = Object.keys(themes);
 
