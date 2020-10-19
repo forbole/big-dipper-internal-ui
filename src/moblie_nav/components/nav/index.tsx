@@ -24,7 +24,6 @@ const Nav = (props: NavProps) => {
         />
         <div>
           <p>selector</p>
-          <p>hamburger holder</p>
         </div>
       </div>
       <div>

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
-      zIndex: 99,
+      zIndex: -10,
       height: '100vh',
       background: 'orange',
       position: 'fixed',
@@ -21,21 +21,21 @@ export const useGetStyles = () => {
     '@keyframes openView': {
       '0%': {
         opacity: 0,
-        display: 'block',
+        zIndex: 99,
       },
       '100%': {
         opacity: 1,
-        display: 'block',
+        zIndex: 99,
       },
     },
     '@keyframes closeView': {
       '0%': {
         opacity: 1,
-        display: 'block',
+        zIndex: 99,
       },
       '100%': {
         opacity: 0,
-        display: 'none',
+        zIndex: -10,
       },
     },
   });

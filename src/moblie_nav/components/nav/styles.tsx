@@ -12,7 +12,6 @@ export const useGetStyles = () => {
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
-        flexDirection: 'column',
       },
       '& .logo': {
         width: '120px',
