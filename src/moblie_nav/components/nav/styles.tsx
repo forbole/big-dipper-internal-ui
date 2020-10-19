@@ -7,7 +7,16 @@ export const useGetStyles = () => {
 
   const useStyles = makeStyles({
     root: {
-      background: 'pink',
+      padding: '1rem',
+      '& .top-bar-container': {
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: 'space-between',
+        flexDirection: 'column',
+      },
+      '& .logo': {
+        width: '120px',
+      },
     },
   });
 

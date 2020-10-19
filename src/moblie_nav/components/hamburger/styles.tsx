@@ -1,9 +1,12 @@
 import { makeStyles } from '@material-ui/styles';
-// import { useTheme } from '@material-ui/core/styles';
-// import { getMinMediaQuery } from '../utils/media_queries';
+import { useTheme } from '@material-ui/core/styles';
 
 export const useGetStyles = () => {
-  // const theme: any = useTheme();
+  const theme: any = useTheme();
+
+  // icon for the hamburger
+  const iconColor = theme?.palette?.custom?.fonts?.fontOne
+  ?? 'rgba(0, 0, 0, 1)';
 
   const useStyles = makeStyles({
     root: {
@@ -11,14 +14,14 @@ export const useGetStyles = () => {
         zIndex: 200,
         width: '20px',
         position: 'fixed',
-        right: '15px',
-        top: '12px',
+        right: '1rem',
+        top: '1rem',
         '&:hover': {
           cursor: 'pointer',
         },
         '&:before, &:after, & .hamburger-content': {
           content: '""',
-          backgroundColor: 'blue',
+          backgroundColor: iconColor,
           borderRadius: '10px',
           display: 'block',
           height: '2px',

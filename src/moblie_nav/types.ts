@@ -1,5 +1,9 @@
+type logo = {
+  src?: string;
+  alt?: string;
+}
 export interface MobileProps {
-  logoSrc?: string;
+  logo: logo;
 }
 
 type toggleIsOpen = () => void;
