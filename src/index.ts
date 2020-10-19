@@ -7,14 +7,13 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from './icons';
-import ButtonExample from './button_example';
-import DataBlock from './data_block';
-import Footer from './footer';
 import * as resources from './resources';
+import Footer from './footer';
+import MobileNav from './moblie_nav';
+import DesktopNav from './desktop_navbar';
 
 export {
-  ButtonExample,
-  DataBlock,
+  resources,
   TelegramIcon,
   MediumIcon,
   FacebookIcon,
@@ -23,5 +22,6 @@ export {
   TwitterIcon,
   YoutubeIcon,
   Footer,
-  resources,
+  MobileNav,
+  DesktopNav,
 };
