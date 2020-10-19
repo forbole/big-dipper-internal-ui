@@ -10,7 +10,7 @@ export const common = {
   },
   typography: {
     paragraph: {
-      fontSize: '0.75rem',
+      fontSize: '0.875rem', // 14px
     },
   },
   palette: {

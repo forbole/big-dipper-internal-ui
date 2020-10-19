@@ -23,7 +23,7 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
   };
 
   const listItem = {
-    fontSize: theme?.typography?.paragraph?.fontSize ?? '0.75rem',
+    fontSize: theme?.typography?.paragraph?.fontSize ?? '0.875rem',
   };
 
   const useStyles = makeStyles({
