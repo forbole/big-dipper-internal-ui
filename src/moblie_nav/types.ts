@@ -1,5 +1,5 @@
 export interface MobileProps {
-
+  logoSrc?: string;
 }
 
 type toggleIsOpen = () => void;

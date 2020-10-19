@@ -4,15 +4,15 @@ import {
 } from './components';
 import { MobileProps } from './types';
 import { useMobileHook } from './hooks';
+import { formatProps } from './utils';
 
 const MobileNav = (props: MobileProps) => {
   const hookData = useMobileHook();
+  const formattedProps = formatProps(props);
   return (
     <div>
-      hello?
       <Hamburger {...hookData} />
-      hello.
-      <Nav />
+      <Nav {...formattedProps} />
     </div>
   );
 };

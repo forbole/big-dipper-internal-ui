@@ -5,20 +5,6 @@ import { useTheme } from '@material-ui/core/styles';
 export const useGetStyles = () => {
   const theme: any = useTheme();
 
-  // logo colors
-  const logoContainer = {
-    color: theme?.palette?.custom?.white ?? 'white',
-  };
-
-  // copyright colors
-  const copyright = {
-    color: theme?.palette?.custom?.onDarkSurface ?? 'rgba(255, 255, 255, 0.8)',
-  };
-
-  const listItem = {
-    fontSize: theme?.typography?.body3?.fontSize ?? '0.75rem',
-  };
-
   const useStyles = makeStyles({
     root: {
       '&.hamburger': {

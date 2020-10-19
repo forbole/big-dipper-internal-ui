@@ -1,6 +1,7 @@
 import React from 'react';
+import { NavProps } from './types';
 
-const Nav = () => {
+const Nav = (props: NavProps) => {
   return (
     <div>
       <div>
