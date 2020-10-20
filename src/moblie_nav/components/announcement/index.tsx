@@ -9,17 +9,24 @@ const Announcement = (props:any) => {
   const {
     ref,
     width,
+    handleAnimation,
+    animationMargin,
   } = useAnnouncementHook();
   const { classes } = useGetStyles({
     textWidth: width,
+    animationMargin,
   });
 
   return (
     <div
       className={classnames(classes.root, 'big-dipper', 'announcement')}
     >
-      <NotificationsActiveOutlined fontSize="small" />
-      <p ref={ref} className={classnames('announcement-text')}>
+      <NotificationsActiveOutlined fontSize="small" className={classnames(classes.icon, 'icon')} />
+      <p
+        ref={ref}
+        onAnimationIteration={handleAnimation}
+        className={classnames('announcement-text')}
+      >
         {announcement}
       </p>
     </div>

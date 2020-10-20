@@ -15,7 +15,7 @@ export const useGetStyles = () => {
 
   const useStyles = makeStyles({
     root: {
-      padding: '1rem',
+      padding: '0.5rem 1rem',
       '& .input': {
         width: '100%',
         background: input.background,
