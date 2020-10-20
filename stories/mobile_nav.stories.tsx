@@ -29,7 +29,7 @@ Default.args = {
     alt: 'big dipper logo',
   },
   searchBar: true,
-  announcement: true,
+  announcement: 'Did you know that rubber bands last longer when refrigerated.',
   searchBarPlaceholder: 'Search by block height / address / tx hash',
   searchBarCallback: (value:string) => console.log('The value: ', value),
 };

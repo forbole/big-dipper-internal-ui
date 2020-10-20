@@ -6,6 +6,7 @@ import {
   NetworksOpen,
   SearchBar,
   Placeholder,
+  Announcement,
 } from './components';
 import { MobileProps } from './types';
 import {
@@ -22,7 +23,7 @@ const MobileNav = (props: MobileProps) => {
   } = useGetHeightHook();
   const formattedProps = formatProps(props);
   const { classes } = useGetStyles();
-  const { searchBar } = formattedProps;
+  const { searchBar, announcement } = formattedProps;
   return (
     <>
       <div
@@ -34,6 +35,9 @@ const MobileNav = (props: MobileProps) => {
         <Nav {...formattedProps} {...hookData} />
         {!!searchBar && (
           <SearchBar {...formattedProps} />
+        )}
+        {!!announcement && (
+          <Announcement announcement={announcement} />
         )}
       </div>
       <Placeholder height={height} />

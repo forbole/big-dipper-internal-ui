@@ -4,6 +4,7 @@ import NavOpen from './nav_open';
 import NetworksOpen from './networks_open';
 import SearchBar from './search_bar';
 import Placeholder from './placeholder';
+import Announcement from './announcement';
 
 export {
   Nav,
@@ -12,4 +13,5 @@ export {
   NetworksOpen,
   SearchBar,
   Placeholder,
+  Announcement,
 };
