@@ -4,11 +4,12 @@ type logo = {
 }
 export interface MobileProps {
   logo: logo;
+  searchBar?: boolean;
+  announcement?: boolean;
 }
 
 type toggleIsOpen = () => void;
 type openNetwork = () => void;
-type openTest = () => void;
 export interface MobileHookProps {
   isOpen: boolean;
   toggleIsOpen: toggleIsOpen;

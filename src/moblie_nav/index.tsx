@@ -2,7 +2,6 @@ import React from 'react';
 import classnames from 'classnames';
 import {
   Nav,
-  Hamburger,
   NavOpen,
   NetworksOpen,
 } from './components';
@@ -19,7 +18,6 @@ const MobileNav = (props: MobileProps) => {
   return (
     <>
       <div className={classnames(classes.root, 'big-dipper', 'mobile-nav')}>
-        <Hamburger {...hookData} />
         <NavOpen {...hookData} />
         <NetworksOpen {...hookData} />
         <Nav {...formattedProps} {...hookData} />

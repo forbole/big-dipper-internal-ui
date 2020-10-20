@@ -1,5 +1,5 @@
 import Nav from './nav';
-import Hamburger from './hamburger';
+import Hamburger from './nav/components/hamburger';
 import NavOpen from './nav_open';
 import NetworksOpen from './networks_open';
 

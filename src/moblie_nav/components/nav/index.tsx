@@ -2,11 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import { NavProps } from './types';
 import { useGetStyles } from './styles';
+import { Hamburger } from './components';
 
 const Nav = (props: NavProps) => {
   const { classes } = useGetStyles();
   const {
     openNetwork,
+    searchBar,
     logo: {
       src,
       alt,
@@ -24,14 +26,23 @@ const Nav = (props: NavProps) => {
           src={src}
           alt={alt}
         />
-        <div onClick={openNetwork} role="button" className={classnames('network-select')}>
-          selector
+        {/* action container start */}
+        <div className={classnames('action-container')}>
+          <div onClick={openNetwork} role="button" className={classnames('network-select')}>
+            selector
+          </div>
+          <Hamburger {...props} />
         </div>
+        {/* action container end */}
       </div>
       {/* topbar end */}
-      <div>
-        searchbar
-      </div>
+      {/* searchbar start */}
+      {!!searchBar && (
+        <div>
+          searchbar
+        </div>
+      )}
+      {/* searchbar end */}
       <div>announcement</div>
     </div>
   );

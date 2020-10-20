@@ -16,10 +16,17 @@ export const useGetStyles = () => {
       '& .logo': {
         width: '120px',
         zIndex: 200,
+        '&:hover': {
+          cursor: 'pointer',
+        },
       },
       '& .network-select': {
         zIndex: 150,
-        marginRight: '3rem',
+        marginRight: '1rem',
+      },
+      '& .action-container': {
+        display: 'flex',
+        alignItems: 'center',
       },
     },
   });
