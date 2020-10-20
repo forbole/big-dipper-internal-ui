@@ -13,9 +13,10 @@ export const useGetStyles = () => {
       '&.hamburger': {
         zIndex: 200,
         width: '20px',
-        position: 'fixed',
-        right: '1rem',
-        top: '1rem',
+        // wingman
+        // position: 'fixed',
+        // right: '1rem',
+        // top: '1rem',
         '&:hover': {
           cursor: 'pointer',
         },

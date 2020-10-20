@@ -9,6 +9,11 @@ export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
       background: rootBackground,
+      '&.mobile-nav': {
+        width: '100%',
+        position: 'fixed',
+        top: '0',
+      },
     },
   });
 

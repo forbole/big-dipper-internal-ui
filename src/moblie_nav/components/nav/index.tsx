@@ -17,6 +17,7 @@ const Nav = (props: NavProps) => {
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-bar')}
     >
+      {/* topbar start */}
       <div className={classnames('top-bar-container')}>
         <img
           className={classnames('logo')}
@@ -27,6 +28,7 @@ const Nav = (props: NavProps) => {
           selector
         </div>
       </div>
+      {/* topbar end */}
       <div>
         searchbar
       </div>
