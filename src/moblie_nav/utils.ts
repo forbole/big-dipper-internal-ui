@@ -4,7 +4,7 @@ import { logo as defaultLogo } from '../resources/images';
 /**
  * Handles props that require default value
  */
-export const formatProps = (props:MobileProps) => {
+export const formatProps = (props:MobileProps):any => {
   const {
     logo = {
     },

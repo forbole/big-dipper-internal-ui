@@ -3,6 +3,7 @@ import Hamburger from './nav/components/hamburger';
 import NavOpen from './nav_open';
 import NetworksOpen from './networks_open';
 import SearchBar from './search_bar';
+import Placeholder from './placeholder';
 
 export {
   Nav,
@@ -10,4 +11,5 @@ export {
   NavOpen,
   NetworksOpen,
   SearchBar,
+  Placeholder,
 };

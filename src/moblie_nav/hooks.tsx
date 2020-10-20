@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import {
+  useEffect, useState, useRef,
+} from 'react';
 import { MobileHookProps } from './types';
 
 export const useMobileHook = (): MobileHookProps => {
@@ -37,5 +39,18 @@ export const useMobileHook = (): MobileHookProps => {
     isNetworkOpen,
     isNavOpen,
     openNetwork,
+  };
+};
+
+export const useGetHeightHook = () => {
+  const [height, setHeight] = useState(0);
+  const ref: any = useRef(null);
+  useEffect(() => {
+    setHeight(ref?.current?.clientHeight);
+  }, [ref]);
+
+  return {
+    height,
+    ref,
   };
 };

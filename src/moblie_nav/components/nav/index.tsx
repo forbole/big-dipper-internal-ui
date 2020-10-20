@@ -8,7 +8,6 @@ const Nav = (props: NavProps) => {
   const { classes } = useGetStyles();
   const {
     openNetwork,
-    searchBar,
     logo: {
       src,
       alt,

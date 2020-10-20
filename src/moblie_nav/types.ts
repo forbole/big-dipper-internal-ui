@@ -4,7 +4,7 @@ type logo = {
 }
 // wingman
 // i could be wrong
-type searchBarCallback = (value:string | number) => void;
+export type searchBarCallback = (value:string | number) => void;
 export interface MobileProps {
   logo?: logo;
   searchBar?: boolean;
