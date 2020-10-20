@@ -24,7 +24,14 @@ export const Default = Template.bind({
 });
 
 Default.args = {
-
+  logo: {
+    src: './src/resources/images/big-dipper-logo.png',
+    alt: 'big dipper logo',
+  },
+  searchBar: true,
+  announcement: true,
+  searchBarPlaceholder: 'Search by block height / address / tx hash',
+  searchBarCallback: (value:string) => console.log('The value: ', value),
 };
 
 /**

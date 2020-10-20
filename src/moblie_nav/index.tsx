@@ -15,14 +15,16 @@ const MobileNav = (props: MobileProps) => {
   const hookData = useMobileHook();
   const formattedProps = formatProps(props);
   const { classes } = useGetStyles();
-
+  const { searchBar } = formattedProps;
   return (
     <>
       <div className={classnames(classes.root, 'big-dipper', 'mobile-nav')}>
         <NavOpen {...hookData} />
         <NetworksOpen {...hookData} />
         <Nav {...formattedProps} {...hookData} />
-        <SearchBar />
+        {!!searchBar && (
+          <SearchBar {...formattedProps} />
+        )}
       </div>
       {/* wingman remove */}
       <div>

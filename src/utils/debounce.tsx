@@ -1,21 +1,23 @@
-import {
-  useState, useEffect,
-} from 'react';
+import { useEffect } from 'react';
+
+export interface userDebounceHookProps {
+  value: string;
+  delay: number;
+  callback?: (value:string | number) => void;
+}
 
 export const useDebounceHook = ({
   value,
   delay,
-  // callback
-}: any) => {
-  // State and setters for debounced value
-  const [debouncedValue, setDebouncedValue] = useState(value);
-
+  callback,
+}: userDebounceHookProps) => {
   useEffect(
     () => {
       // Set debouncedValue to value (passed in) after the specified delay
       const handler = setTimeout(() => {
-        setDebouncedValue(value);
-        console.log(debouncedValue, 'debounced value');
+        if (callback) {
+          callback(value);
+        }
       }, delay);
 
       // Return a cleanup function that will be called every time ...
@@ -35,6 +37,4 @@ export const useDebounceHook = ({
     // ... need to be able to change that dynamically.
     [value],
   );
-
-  return debouncedValue;
 };

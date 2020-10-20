@@ -2,10 +2,15 @@ type logo = {
   src?: string;
   alt?: string;
 }
+// wingman
+// i could be wrong
+type searchBarCallback = (value:string | number) => void;
 export interface MobileProps {
-  logo: logo;
+  logo?: logo;
   searchBar?: boolean;
   announcement?: boolean;
+  searchBarPlaceholder?: string;
+  searchBarCallback?: searchBarCallback;
 }
 
 type toggleIsOpen = () => void;
