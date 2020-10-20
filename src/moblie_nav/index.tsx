@@ -4,6 +4,7 @@ import {
   Nav,
   NavOpen,
   NetworksOpen,
+  SearchBar,
 } from './components';
 import { MobileProps } from './types';
 import { useMobileHook } from './hooks';
@@ -21,6 +22,7 @@ const MobileNav = (props: MobileProps) => {
         <NavOpen {...hookData} />
         <NetworksOpen {...hookData} />
         <Nav {...formattedProps} {...hookData} />
+        <SearchBar />
       </div>
       {/* wingman remove */}
       <div>

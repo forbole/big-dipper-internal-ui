@@ -7,11 +7,11 @@ export const useGetStyles = () => {
 
   const useStyles = makeStyles({
     root: {
-      padding: '1rem',
-      '& .top-bar-container': {
+      '&.mobile-nav-bar': {
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
+        padding: '1rem',
       },
       '& .logo': {
         width: '120px',

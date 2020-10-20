@@ -20,30 +20,23 @@ const Nav = (props: NavProps) => {
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-bar')}
     >
       {/* topbar start */}
-      <div className={classnames('top-bar-container')}>
-        <img
-          className={classnames('logo')}
-          src={src}
-          alt={alt}
-        />
-        {/* action container start */}
-        <div className={classnames('action-container')}>
-          <div onClick={openNetwork} role="button" className={classnames('network-select')}>
-            selector
-          </div>
-          <Hamburger {...props} />
+      {/* <div className={classnames('top-bar-container')}> */}
+      <img
+        className={classnames('logo')}
+        src={src}
+        alt={alt}
+      />
+      {/* action container start */}
+      <div className={classnames('action-container')}>
+        <div onClick={openNetwork} role="button" className={classnames('network-select')}>
+          selector
         </div>
-        {/* action container end */}
+        <Hamburger {...props} />
       </div>
+      {/* action container end */}
+      {/* </div> */}
       {/* topbar end */}
-      {/* searchbar start */}
-      {!!searchBar && (
-        <div>
-          searchbar
-        </div>
-      )}
-      {/* searchbar end */}
-      <div>announcement</div>
+      {/* <div>announcement</div> */}
     </div>
   );
 };
