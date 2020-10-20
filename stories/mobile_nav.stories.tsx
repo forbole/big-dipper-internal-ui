@@ -32,6 +32,10 @@ Default.args = {
   announcement: 'Did you know that rubber bands last longer when refrigerated.',
   searchBarPlaceholder: 'Search by block height / address / tx hash',
   searchBarCallback: (value:string) => console.log('The value: ', value),
+  network: {
+    network: 'cosmoshub3dfgdgfhghfgh',
+    online: true,
+  },
 };
 
 /**

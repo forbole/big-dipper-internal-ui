@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { ExpandMore } from '@material-ui/icons';
 import { NavProps } from './types';
 import { useGetStyles } from './styles';
 import { Hamburger } from './components';
@@ -8,6 +9,7 @@ const Nav = (props: NavProps) => {
   const { classes } = useGetStyles();
   const {
     openNetwork,
+    network,
     logo: {
       src,
       alt,
@@ -24,9 +26,23 @@ const Nav = (props: NavProps) => {
         alt={alt}
       />
       <div className={classnames('action-container')}>
-        <div onClick={openNetwork} role="button" className={classnames('network-select')}>
-          selector
-        </div>
+        {!!network && (
+          <div
+            className={classnames('network-container')}
+            onClick={openNetwork}
+            role="button"
+          >
+            <div
+              className={classnames('network-select', {
+                online: network?.online,
+                offline: !network?.online,
+              })}
+            >
+              {network?.network}
+            </div>
+            <ExpandMore fontSize="small" />
+          </div>
+        )}
         <Hamburger {...props} />
       </div>
     </div>

@@ -1,10 +1,13 @@
 import { makeStyles } from '@material-ui/styles';
-// import { useTheme } from '@material-ui/core/styles';
-// import { getMinMediaQuery } from '../utils/media_queries';
+import { useTheme } from '@material-ui/core/styles';
 
 export const useGetStyles = () => {
-  // const theme: any = useTheme();
+  const theme: any = useTheme();
 
+  const networkSelect = {
+    online: theme?.palette?.secondary?.main ?? '#35D07F',
+    offline: theme?.palette?.primary?.main ?? '#FA3A39',
+  };
   const useStyles = makeStyles({
     root: {
       '&.mobile-nav-bar': {
@@ -20,9 +23,39 @@ export const useGetStyles = () => {
           cursor: 'pointer',
         },
       },
-      '& .network-select': {
+      '& .network-container': {
         zIndex: 150,
-        marginRight: '1rem',
+        flex: 1,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginRight: '0.3rem',
+        '&:hover': {
+          cursor: 'pointer',
+        },
+      },
+      '& .network-select': {
+        fontSize: '0.75rem',
+        wordBreak: 'break-all',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        width: '100%',
+        textOverflow: 'ellipsis',
+        textAlign: 'right',
+        '&:before': {
+          content: '" "',
+          display: 'inline-block',
+          marginRight: '0.2rem',
+          width: '6px',
+          height: '6px',
+          borderRadius: '50%',
+        },
+        '&.online:before': {
+          background: networkSelect.online,
+        },
+        '&.offline:before': {
+          background: networkSelect.offline,
+        },
       },
       '& .action-container': {
         display: 'flex',

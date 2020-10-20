@@ -6,9 +6,11 @@ export const useGetStyles = ({ textWidth, animationMargin }: any) => {
   const icon = {
     background: theme?.palette?.background?.default
     ?? 'rgba(0, 0, 0, 1)',
+    color: theme?.palette?.custom?.fonts?.fontTwo ?? 'rgba(0, 0, 0, 1)',
+  };
+  const text = {
     color: theme?.palette?.custom?.fonts?.fontOne ?? 'rgba(0, 0, 0, 1)',
   };
-
   const useStyles = makeStyles({
     root: {
       padding: '0.5rem 1rem 0.5rem 0',
@@ -16,14 +18,14 @@ export const useGetStyles = ({ textWidth, animationMargin }: any) => {
       justifyContent: 'flex-start',
       alignContent: 'center',
       position: 'relative',
-      overflow: 'hidden',
       '& .announcement-text': {
         flex: '1',
         margin: '0',
         marginLeft: '0.3rem',
         fontSize: '0.75rem',
-        animation: `$slide ${textWidth * 0.05}s infinite ease-in`,
+        animation: `$slide ${textWidth * 0.05}s infinite ease-in-out`,
         whiteSpace: 'nowrap',
+        color: text.color,
       },
     },
     '@keyframes slide': {
@@ -31,7 +33,7 @@ export const useGetStyles = ({ textWidth, animationMargin }: any) => {
         marginLeft: `${animationMargin}%`,
       },
       '100%': {
-        marginLeft: `calc(-${textWidth}px + -15%)`,
+        marginLeft: `calc(-${textWidth}px + -10%)`,
       },
     },
     icon: {
