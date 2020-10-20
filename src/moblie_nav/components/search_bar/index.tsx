@@ -1,8 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import {
-  TextField, InputBase,
+  InputBase, InputAdornment,
 } from '@material-ui/core';
+import { Search } from '@material-ui/icons';
 import { useDebounceHook } from '../../../utils/debounce';
 import { useGetStyles } from './styles';
 import { SearchBarProps } from './types';
@@ -27,6 +28,11 @@ const SearchBar = (props: SearchBarProps) => {
         inputProps={{
           'aria-label': 'search by block height, address, tx hash',
         }}
+        startAdornment={(
+          <InputAdornment position="start">
+            <Search fontSize="small" className={classnames(classes.icon, 'icon')} />
+          </InputAdornment>
+        )}
       />
     </form>
   );

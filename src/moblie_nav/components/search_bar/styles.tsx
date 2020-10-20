@@ -9,6 +9,10 @@ export const useGetStyles = () => {
     ?? 'rgba(0, 0, 0, 1)',
   };
 
+  const icon = {
+    color: theme?.palette?.custom?.fonts?.fontFour ?? 'rgba(0, 0, 0, 1)',
+  };
+
   const useStyles = makeStyles({
     root: {
       padding: '1rem',
@@ -22,6 +26,11 @@ export const useGetStyles = () => {
           whiteSpace: 'nowrap',
           overflow: 'hidden',
         },
+      },
+    },
+    icon: {
+      '&.icon': {
+        color: icon.color,
       },
     },
   });

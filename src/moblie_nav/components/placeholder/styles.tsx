@@ -5,7 +5,6 @@ export const useGetStyles = (height:number) => {
     root: {
       width: '100%',
       height: `${height}px`,
-      background: 'pink',
     },
   });
 
