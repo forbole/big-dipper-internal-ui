@@ -28,10 +28,19 @@ export type language = {
   onClick: ({ key, value }:singleLanguage) => void;
 }
 
+export type themeMode = {
+  mode: {
+    value: string;
+    key: string;
+  };
+  onClick: () => void;
+}
+
 export type menu = {
   isMenuOpen: boolean;
   items: ReactElement[];
   language: language;
+  themeMode?: themeMode;
 }
 
 type hamburgerIcon = {

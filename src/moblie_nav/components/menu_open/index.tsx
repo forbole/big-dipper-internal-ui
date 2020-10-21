@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import {
-  Language, ExpandMoreOutlined,
+  Language, ExpandMoreOutlined, Brightness4Outlined,
 } from '@material-ui/icons';
 import { NavOpenProps } from './types';
 import { useGetStyles } from './styles';
@@ -20,11 +20,11 @@ const MenuOpen = (props: NavOpenProps) => {
         languages,
         onClick,
       },
+      themeMode,
     },
   } = props;
 
   return (
-    // drawer start
     <>
       <LanguageDrawer {...hookProps} selected={selected} languages={languages} onClick={onClick} />
       <div
@@ -52,7 +52,21 @@ const MenuOpen = (props: NavOpenProps) => {
             <p className={classnames('selected-language')}>{selected?.value}</p>
             <ExpandMoreOutlined fontSize="small" className={classnames('more-icon')} />
           </div>
-          <div>mode</div>
+          {!!themeMode && (
+            <div
+              className={classnames('theme-container')}
+              role="button"
+              onClick={themeMode?.onClick}
+            >
+              <Brightness4Outlined
+                fontSize="small"
+                className={classnames('theme-icon')}
+              />
+              <p>
+                {themeMode?.mode?.value}
+              </p>
+            </div>
+          )}
         </div>
         {/* actions end */}
       </div>

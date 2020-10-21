@@ -25,6 +25,8 @@ const Template = (args) => {
     isNetworkOpen,
     isNavOpen,
     openNetwork,
+    mode,
+    toggleMode,
   } = useMobileHook();
 
   const stateRelatedProps = {
@@ -34,6 +36,10 @@ const Template = (args) => {
     },
     menu: {
       isMenuOpen: isNavOpen,
+      themeMode: {
+        mode,
+        onClick: toggleMode,
+      },
     },
     hamburgerIcon: {
       isOpen,

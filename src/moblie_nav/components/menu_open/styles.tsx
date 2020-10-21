@@ -33,12 +33,25 @@ export const useGetStyles = () => {
         padding: '1rem',
       },
       '& .language-selector': {
-        marginRight: '1rem',
+        width: '50%',
         display: 'flex',
         alignItems: 'center',
         '& p': {
           fontSize: '0.75rem',
           margin: '0 0.3rem',
+        },
+      },
+      '& .theme-container': {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        flex: 1,
+        '& p': {
+          margin: 0,
+          fontSize: '0.75rem',
+        },
+        '& .theme-icon': {
+          marginRight: '0.3rem',
         },
       },
     },

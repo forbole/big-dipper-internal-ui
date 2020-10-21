@@ -5,6 +5,19 @@ export const useMobileHook = () => {
   const [isOpen, setOpen] = useState(false);
   const [isNetworkOpen, setNetworkOpen] = useState(false);
   const [isNavOpen, setNavOpen] = useState(true);
+  const [mode, setMode] = useState({
+    value: 'light',
+    key: 'light',
+  });
+
+  const toggleMode = () => {
+    console.log('im here');
+    const value = mode?.value === 'light' ? 'dark' : 'light';
+    setMode({
+      value,
+      key: value,
+    });
+  };
 
   const toggleIsOpen = () => {
     if ((isOpen && isNetworkOpen) || (isOpen && isNavOpen)) {
@@ -37,6 +50,8 @@ export const useMobileHook = () => {
     isNetworkOpen,
     isNavOpen,
     openNetwork,
+    toggleMode,
+    mode,
   };
 };
 
