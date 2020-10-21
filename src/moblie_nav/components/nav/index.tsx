@@ -8,7 +8,6 @@ import { Hamburger } from './components';
 const Nav = (props: NavProps) => {
   const { classes } = useGetStyles();
   const {
-    openNetwork,
     network,
     logo: {
       src,
@@ -29,7 +28,7 @@ const Nav = (props: NavProps) => {
         {!!network && (
           <div
             className={classnames('network-container')}
-            onClick={openNetwork}
+            onClick={network?.openNetwork}
             role="button"
           >
             <div

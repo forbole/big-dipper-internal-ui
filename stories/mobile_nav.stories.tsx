@@ -1,7 +1,9 @@
 import React from 'react';
+import * as R from 'ramda';
 import { withKnobs } from '@storybook/addon-knobs';
 import { MobileNav } from '../src';
 import { ThemeKnob } from './theme_knob';
+import { useMobileHook } from './utils/mobile_nav';
 
 export default {
   title: 'Navbar/Mobile',
@@ -9,13 +11,39 @@ export default {
   decorators: [withKnobs],
 };
 
-const Template = (args) => (
-  <ThemeKnob>
-    <MobileNav
-      {...args}
-    />
-  </ThemeKnob>
-);
+const Template = (args) => {
+  const {
+    isOpen,
+    toggleIsOpen,
+    isNetworkOpen,
+    isNavOpen,
+    openNetwork,
+  } = useMobileHook();
+
+  const stateRelatedProps = {
+    network: {
+      isNetworkOpen,
+      openNetwork,
+    },
+    menu: {
+      isMenuOpen: isNavOpen,
+    },
+    hamburgerIcon: {
+      isOpen,
+      onClick: toggleIsOpen,
+    },
+  };
+
+  const mergeProps = R.mergeDeepLeft(args, stateRelatedProps);
+
+  return (
+    <ThemeKnob>
+      <MobileNav
+        {...mergeProps}
+      />
+    </ThemeKnob>
+  );
+};
 
 /**
  * Mobile props
@@ -28,10 +56,11 @@ Default.args = {
     src: './src/resources/images/big-dipper-logo.png',
     alt: 'big dipper logo',
   },
-  searchBar: true,
   announcement: 'Did you know that rubber bands last longer when refrigerated.',
-  searchBarPlaceholder: 'Search by block height / address / tx hash',
-  searchBarCallback: (value:string) => console.log('The value: ', value),
+  searchBar: {
+    searchBarPlaceholder: 'Search by block height / address / tx hash',
+    searchBarCallback: (value:string) => console.log('The value: ', value),
+  },
   network: {
     network: 'cosmoshub3dfgdgfhghfgh',
     online: true,

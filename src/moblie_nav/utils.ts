@@ -7,25 +7,27 @@ import { logo as defaultLogo } from '../resources/images';
 export const formatProps = (props:MobileProps): any => {
   const {
     logo = {
+      src: defaultLogo,
+      alt: 'logo',
     },
-    searchBar = true,
+    searchBar = {
+    },
     announcement = '',
     network = {
     },
+    menu = {
+      isMenuOpen: false,
+    },
+    hamburgerIcon,
   } = props;
-  const {
-    src = defaultLogo,
-    alt = 'logo',
-  } = logo;
 
   return {
     ...props,
     network,
-    logo: {
-      src,
-      alt,
-    },
+    logo,
     searchBar,
     announcement,
+    menu,
+    hamburgerIcon,
   };
 };

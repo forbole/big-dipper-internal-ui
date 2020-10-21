@@ -1,10 +1,10 @@
 import {
-  MobileProps, MobileHookProps,
+  MobileProps,
+  network,
+  logo,
 } from '../../types';
 
-export interface NavProps extends MobileProps, MobileHookProps {
-  logo: {
-    src: string;
-    alt: string;
-  }
+export interface NavProps extends MobileProps {
+  network: network;
+  logo: logo;
 }

@@ -1,3 +1,3 @@
-import { MobileHookProps } from '../../types';
+import { MobileProps } from '../../types';
 
-export interface NavOpenProps extends MobileHookProps {}
+export interface NavOpenProps extends MobileProps {}

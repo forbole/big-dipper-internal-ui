@@ -9,14 +9,12 @@ import {
   Announcement,
 } from './components';
 import { MobileProps } from './types';
-import {
-  useMobileHook, useGetHeightHook,
-} from './hooks';
+import { useGetHeightHook } from './hooks';
 import { useGetStyles } from './styles';
 import { formatProps } from './utils';
 
 const MobileNav = (props: MobileProps) => {
-  const hookData = useMobileHook();
+  console.log(props, 'my props');
   const {
     ref: heightRef,
     height,
@@ -30,12 +28,12 @@ const MobileNav = (props: MobileProps) => {
         ref={heightRef}
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
       >
-        <NavOpen {...hookData} />
-        <NetworksOpen {...hookData} />
-        <Nav {...formattedProps} {...hookData} />
-        {!!searchBar && (
+        {/* <NavOpen {...formattedProps} /> */}
+        {/* <NetworksOpen {...hookData} /> */}
+        <Nav {...formattedProps} />
+        {/* {!!searchBar && (
           <SearchBar {...formattedProps} />
-        )}
+        )} */}
         {!!announcement && (
           <Announcement announcement={announcement} />
         )}
