@@ -20,6 +20,7 @@ export const ThemeKnob =  ({ children }) => {
     'light',
     'Themes',
   );
+  console.log(themes[theme],'wtf');
 
   return (
     <ThemeProvider theme={themes[theme]}>

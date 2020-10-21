@@ -70,10 +70,6 @@ Default.args = {
     network: 'cosmoshub3dfgdgfhghfgh',
     online: true,
   },
-  menu: {
-  },
-  hamburgerIcon: {
-  },
 };
 
 /**

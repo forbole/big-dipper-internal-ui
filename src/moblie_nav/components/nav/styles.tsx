@@ -5,6 +5,7 @@ export const useGetStyles = () => {
   const theme: any = useTheme();
 
   const networkSelect = {
+    color: theme?.palette?.custom?.fonts?.fontOne ?? 'green',
     online: theme?.palette?.secondary?.main ?? '#35D07F',
     offline: theme?.palette?.primary?.main ?? '#FA3A39',
   };
@@ -39,6 +40,7 @@ export const useGetStyles = () => {
       '& .network-select-text': {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
+        // color: networkSelect.color,
         '&:before': {
           content: '" "',
           display: 'inline-block',
