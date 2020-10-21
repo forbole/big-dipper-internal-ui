@@ -40,7 +40,7 @@ export const useGetStyles = () => {
       '& .network-select-text': {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
-        // color: networkSelect.color,
+        color: networkSelect.color,
         '&:before': {
           content: '" "',
           display: 'inline-block',

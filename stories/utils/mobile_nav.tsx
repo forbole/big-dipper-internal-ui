@@ -1,11 +1,10 @@
-import React, {
-  useEffect, useState, useRef,
-} from 'react';
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/styles';
 
 export const useMobileHook = () => {
   const [isOpen, setOpen] = useState(false);
   const [isNetworkOpen, setNetworkOpen] = useState(false);
-  const [isNavOpen, setNavOpen] = useState(false);
+  const [isNavOpen, setNavOpen] = useState(true);
 
   const toggleIsOpen = () => {
     if ((isOpen && isNetworkOpen) || (isOpen && isNavOpen)) {
@@ -39,4 +38,19 @@ export const useMobileHook = () => {
     isNavOpen,
     openNetwork,
   };
+};
+
+export const MenuItem = (props:any) => {
+  const useStyles = makeStyles({
+    root: {
+      fontSize: '3rem',
+      margin: '1rem 0',
+    },
+  });
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      item
+    </div>
+  );
 };

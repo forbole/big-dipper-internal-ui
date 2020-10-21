@@ -15,9 +15,7 @@ export const formatProps = (props:MobileProps): any => {
     announcement = '',
     network = {
     },
-    menu = {
-      isMenuOpen: false,
-    },
+    menu,
     hamburgerIcon,
   } = props;
 

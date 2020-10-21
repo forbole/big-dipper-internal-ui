@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import {
   Nav,
-  NavOpen,
+  MenuOpen,
   NetworksOpen,
   SearchBar,
   Placeholder,
@@ -27,7 +27,7 @@ const MobileNav = (props: MobileProps) => {
         ref={heightRef}
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
       >
-        <NavOpen {...formattedProps} />
+        <MenuOpen {...formattedProps} />
         <NetworksOpen {...formattedProps} />
         <Nav {...formattedProps} />
         {!!searchBar && (

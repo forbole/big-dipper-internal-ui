@@ -1,6 +1,8 @@
+import { ReactElement } from 'react';
+
 export type logo = {
-  src: string;
-  alt: string;
+  src?: string;
+  alt?: string;
 }
 
 export type network = {
@@ -15,8 +17,21 @@ export type searchBar = {
   searchBarCallback: (value:string | number) => void;
 }
 
+export type singleLanguage = {
+  key: string;
+  value: string;
+}
+
+export type language = {
+  selected: singleLanguage;
+  languages: singleLanguage[];
+  onClick: ({ key, value }:singleLanguage) => void;
+}
+
 export type menu = {
   isMenuOpen: boolean;
+  items: ReactElement[];
+  language: language;
 }
 
 type hamburgerIcon = {

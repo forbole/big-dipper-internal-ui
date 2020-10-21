@@ -3,7 +3,9 @@ import * as R from 'ramda';
 import { withKnobs } from '@storybook/addon-knobs';
 import { MobileNav } from '../src';
 import { ThemeKnob } from './theme_knob';
-import { useMobileHook } from './utils/mobile_nav';
+import {
+  useMobileHook, MenuItem,
+} from './utils/mobile_nav';
 
 export default {
   title: 'Navbar/Mobile',
@@ -69,6 +71,38 @@ Default.args = {
   network: {
     network: 'cosmoshub3dfgdgfhghfgh',
     online: true,
+  },
+  menu: {
+    language: {
+      selected: {
+        key: 'en',
+        value: 'English',
+      },
+      languages: [
+        {
+          key: 'en',
+          value: 'English',
+        },
+        {
+          key: 'cn',
+          value: '中文',
+        },
+      ],
+      onClick: ({ key, value }) => {
+        console.log(`Click Value ${value} with key ${key}`);
+      },
+    },
+    items: [
+      <MenuItem />,
+      <MenuItem />,
+      <MenuItem />,
+      <MenuItem />,
+      <MenuItem />,
+      <MenuItem />,
+      <MenuItem />,
+      <MenuItem />,
+      <MenuItem />,
+    ],
   },
 };
 
