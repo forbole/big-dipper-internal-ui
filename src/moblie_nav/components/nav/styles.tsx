@@ -30,18 +30,15 @@ export const useGetStyles = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         marginRight: '0.3rem',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
         '&:hover': {
           cursor: 'pointer',
         },
       },
-      '& .network-select': {
-        fontSize: '0.75rem',
-        wordBreak: 'break-all',
-        whiteSpace: 'nowrap',
+      '& .network-select-text': {
         overflow: 'hidden',
-        width: '100%',
         textOverflow: 'ellipsis',
-        textAlign: 'right',
         '&:before': {
           content: '" "',
           display: 'inline-block',
@@ -60,6 +57,7 @@ export const useGetStyles = () => {
       '& .action-container': {
         display: 'flex',
         alignItems: 'center',
+        minWidth: 0,
       },
     },
   });

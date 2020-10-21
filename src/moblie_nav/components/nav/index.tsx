@@ -33,7 +33,7 @@ const Nav = (props: NavProps) => {
             role="button"
           >
             <div
-              className={classnames('network-select', {
+              className={classnames('network-select-text', {
                 online: network?.online,
                 offline: !network?.online,
               })}
