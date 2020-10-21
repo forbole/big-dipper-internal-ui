@@ -1,3 +1,7 @@
-import { MobileHookProps } from '../../types';
+import {
+  MobileProps, network,
+} from '../../types';
 
-export interface NetworksOpenProps extends MobileHookProps {}
+export interface NetworksOpenProps extends MobileProps {
+  network: network;
+}

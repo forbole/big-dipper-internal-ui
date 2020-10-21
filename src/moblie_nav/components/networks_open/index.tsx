@@ -4,7 +4,8 @@ import { NetworksOpenProps } from './types';
 import { useGetStyles } from './styles';
 
 const NetworksOpen = (props:NetworksOpenProps) => {
-  const { isNetworkOpen = false } = props;
+  const { network: { isNetworkOpen } } = props;
+
   const { classes } = useGetStyles();
 
   return (

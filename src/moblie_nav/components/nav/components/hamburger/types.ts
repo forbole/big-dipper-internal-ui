@@ -1,3 +1,3 @@
-import { MobileHookProps } from '../../../../types';
+import { MobileProps } from '../../../../types';
 
-export interface HamburgerProps extends MobileHookProps {}
+export interface HamburgerProps extends MobileProps {}

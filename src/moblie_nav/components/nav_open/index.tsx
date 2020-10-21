@@ -5,11 +5,11 @@ import { useGetStyles } from './styles';
 
 const NavOpen = (props: NavOpenProps) => {
   const { classes } = useGetStyles();
-  const { menu: { isMenuOpen: isNavOpen } } = props;
+  const { menu: { isMenuOpen } } = props;
   return (
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-open', {
-        open: isNavOpen,
+        open: isMenuOpen,
       })}
     >
       <div

@@ -11,7 +11,7 @@ import { useSearchBarHook } from './hooks';
 
 const SearchBar = (props: SearchBarProps) => {
   const { classes } = useGetStyles();
-  const { searchBarPlaceholder, searchBarCallback: callback } = props;
+  const { searchBar: { searchBarPlaceholder, searchBarCallback: callback } } = props;
   const { handleOnChange, value } = useSearchBarHook();
   useDebounceHook({
     value,

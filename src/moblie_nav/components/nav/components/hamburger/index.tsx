@@ -6,14 +6,16 @@ import { HamburgerProps } from './types';
 const Hamburger = (props: HamburgerProps) => {
   const { classes } = useGetStyles();
   const {
-    isOpen,
-    toggleIsOpen,
+    hamburgerIcon: {
+      isOpen,
+      onClick,
+    },
   } = props;
 
   return (
     <div
       role="button"
-      onClick={toggleIsOpen}
+      onClick={onClick}
       className={classnames(classes.root, 'big-dipper', 'hamburger', {
         active: isOpen,
       })}

@@ -14,7 +14,6 @@ import { useGetStyles } from './styles';
 import { formatProps } from './utils';
 
 const MobileNav = (props: MobileProps) => {
-  console.log(props, 'my props');
   const {
     ref: heightRef,
     height,
@@ -28,12 +27,12 @@ const MobileNav = (props: MobileProps) => {
         ref={heightRef}
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
       >
-        {/* <NavOpen {...formattedProps} /> */}
-        {/* <NetworksOpen {...hookData} /> */}
+        <NavOpen {...formattedProps} />
+        <NetworksOpen {...formattedProps} />
         <Nav {...formattedProps} />
-        {/* {!!searchBar && (
+        {!!searchBar && (
           <SearchBar {...formattedProps} />
-        )} */}
+        )}
         {!!announcement && (
           <Announcement announcement={announcement} />
         )}

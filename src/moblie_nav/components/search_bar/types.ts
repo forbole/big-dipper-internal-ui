@@ -1,7 +1,8 @@
 import {
-  MobileProps, searchBarCallback,
+  MobileProps,
+  searchBar,
 } from '../../types';
 
 export interface SearchBarProps extends MobileProps {
-  searchBarCallback: searchBarCallback;
+  searchBar: searchBar;
 }

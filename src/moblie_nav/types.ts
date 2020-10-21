@@ -4,19 +4,18 @@ export type logo = {
 }
 
 export type network = {
-  network: string;
-  online: boolean;
-  // wingman
-  isNetworkOpen: boolean;
-  openNetwork: () => void;
+  network?: string;
+  online?: boolean;
+  isNetworkOpen?: boolean;
+  openNetwork?: () => void;
 }
 
-type searchBar = {
+export type searchBar = {
   searchBarPlaceholder?: string;
   searchBarCallback: (value:string | number) => void;
 }
 
-type menu = {
+export type menu = {
   isMenuOpen: boolean;
 }
 

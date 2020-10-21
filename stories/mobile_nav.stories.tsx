@@ -9,6 +9,11 @@ export default {
   title: 'Navbar/Mobile',
   component: MobileNav,
   decorators: [withKnobs],
+  argTypes: {
+    logo: {
+      defaultValue: 'hello',
+    },
+  },
 };
 
 const Template = (args) => {
@@ -64,6 +69,10 @@ Default.args = {
   network: {
     network: 'cosmoshub3dfgdgfhghfgh',
     online: true,
+  },
+  menu: {
+  },
+  hamburgerIcon: {
   },
 };
 
