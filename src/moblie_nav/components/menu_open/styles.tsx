@@ -61,6 +61,7 @@ export const useGetStyles = () => {
         padding: '0 1rem 1rem',
         overflow: 'auto',
         boxSizing: 'border-box',
+        flex: 1,
       },
     },
   });

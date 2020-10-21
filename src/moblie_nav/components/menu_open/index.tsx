@@ -43,6 +43,7 @@ const MenuOpen = (props: NavOpenProps) => {
         </div>
         {/* actions start */}
         <div className={classnames('bottom-actions')}>
+          {/* language start */}
           <div
             className={classnames('language-selector')}
             role="button"
@@ -52,6 +53,8 @@ const MenuOpen = (props: NavOpenProps) => {
             <p className={classnames('selected-language')}>{selected?.value}</p>
             <ExpandMoreOutlined fontSize="small" className={classnames('more-icon')} />
           </div>
+          {/* language end */}
+          {/* theme start */}
           {!!themeMode && (
             <div
               className={classnames('theme-container')}
@@ -67,6 +70,7 @@ const MenuOpen = (props: NavOpenProps) => {
               </p>
             </div>
           )}
+          {/* theme end */}
         </div>
         {/* actions end */}
       </div>

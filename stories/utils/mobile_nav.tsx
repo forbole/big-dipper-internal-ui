@@ -4,17 +4,16 @@ import { makeStyles } from '@material-ui/styles';
 export const useMobileHook = () => {
   const [isOpen, setOpen] = useState(false);
   const [isNetworkOpen, setNetworkOpen] = useState(false);
-  const [isNavOpen, setNavOpen] = useState(true);
+  const [isNavOpen, setNavOpen] = useState(false);
   const [mode, setMode] = useState({
-    value: 'light',
+    value: 'light mode',
     key: 'light',
   });
 
   const toggleMode = () => {
-    console.log('im here');
-    const value = mode?.value === 'light' ? 'dark' : 'light';
+    const value = mode?.key === 'light' ? 'dark' : 'light';
     setMode({
-      value,
+      value: `${value} mode`,
       key: value,
     });
   };
@@ -56,16 +55,17 @@ export const useMobileHook = () => {
 };
 
 export const MenuItem = (props:any) => {
+  const { value } = props;
   const useStyles = makeStyles({
     root: {
-      fontSize: '3rem',
+      fontSize: '1rem',
       margin: '1rem 0',
     },
   });
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      item
+      {value}
     </div>
   );
 };
