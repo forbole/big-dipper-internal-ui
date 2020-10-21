@@ -29,7 +29,7 @@ export const useGetStyles = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginRight: '0.3rem',
+        margin: '0 0.3rem 0 0.7rem',
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         '&:hover': {
