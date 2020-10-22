@@ -57,5 +57,5 @@ export interface MobileProps {
   announcement?: string;
   network?: network;
   menu: menu;
-  hamburgerIcon: hamburgerIcon;
+  hamburgerIcon?: hamburgerIcon;
 }

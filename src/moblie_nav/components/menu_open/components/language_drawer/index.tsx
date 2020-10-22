@@ -1,8 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import {
-  Drawer, Divider,
-} from '@material-ui/core';
+import { Drawer } from '@material-ui/core';
 import { LanguageDrawerProps } from './types';
 import { useGetStyles } from './styles';
 import { useLanguageDrawerHook } from './hooks';
