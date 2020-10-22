@@ -4,7 +4,6 @@ import {
   InputBase, InputAdornment,
 } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
-import { useDebounceHook } from '../../../utils/debounce';
 import { useGetStyles } from './styles';
 import { SearchBarProps } from './types';
 import { useSearchBarHook } from './hooks';
@@ -12,18 +11,22 @@ import { useSearchBarHook } from './hooks';
 const SearchBar = (props: SearchBarProps) => {
   const { classes } = useGetStyles();
   const { searchBar: { searchBarPlaceholder, searchBarCallback: callback } } = props;
-  const { handleOnChange, value } = useSearchBarHook();
-  useDebounceHook({
-    value,
-    delay: 500,
-    callback,
-  });
+  const {
+    handleOnChange, value,
+    handleOnSubmit,
+    handleKeyDown,
+  } = useSearchBarHook(callback);
+
   return (
-    <form className={classnames(classes.root, 'big-dipper', 'search-input')}>
+    <form
+      className={classnames(classes.root, 'big-dipper', 'search-input')}
+      onSubmit={handleOnSubmit}
+    >
       <InputBase
         className={classnames('input')}
         placeholder={searchBarPlaceholder}
         onChange={handleOnChange}
+        onKeyDown={handleKeyDown}
         value={value}
         inputProps={{
           'aria-label': 'search by block height, address, tx hash',

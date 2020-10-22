@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 
 export const useMobileHook = () => {
   const [isOpen, setOpen] = useState(false);
-  const [isNetworkOpen, setNetworkOpen] = useState(true);
+  const [isNetworkOpen, setNetworkOpen] = useState(false);
   const [isNavOpen, setNavOpen] = useState(false);
   const [mode, setMode] = useState({
     value: 'light mode',
@@ -155,7 +155,7 @@ export const NetworkItem = () => {
           </p>
           {dummyData.links.map((x) => {
             return (
-              <div className="item">
+              <div className="item" key={x.chain_id}>
                 <p>
                   {x.chain_id}
                 </p>
