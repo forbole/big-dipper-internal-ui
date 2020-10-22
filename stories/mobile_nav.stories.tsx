@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { MobileNav } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
-  useMobileHook, MenuItem,
+  useMobileHook, MenuItem, NetworkItem,
 } from './utils/mobile_nav';
 
 export default {
@@ -75,8 +75,14 @@ Default.args = {
     searchBarCallback: (value:string) => console.log('The value: ', value),
   },
   network: {
-    network: 'cosmoshub3dfgdgfhghfgh',
-    online: true,
+    selectedNetwork: {
+      value: 'cosmoshub3dfgdgfhghfgh',
+      online: true,
+    },
+    items: [
+      <NetworkItem />,
+      <NetworkItem />,
+    ],
   },
   menu: {
     language: {
@@ -99,21 +105,6 @@ Default.args = {
       },
     },
     items: [
-      <MenuItem value="overview" />,
-      <MenuItem value="validator" />,
-      <MenuItem value="blocks" />,
-      <MenuItem value="activites" />,
-      <MenuItem value="proposals" />,
-      <MenuItem value="news" />,
-      <MenuItem value="analysis" />,
-
-      <MenuItem value="overview" />,
-      <MenuItem value="validator" />,
-      <MenuItem value="blocks" />,
-      <MenuItem value="activites" />,
-      <MenuItem value="proposals" />,
-      <MenuItem value="news" />,
-      <MenuItem value="analysis" />,
       <MenuItem value="overview" />,
       <MenuItem value="validator" />,
       <MenuItem value="blocks" />,

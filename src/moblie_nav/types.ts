@@ -6,8 +6,11 @@ export type logo = {
 }
 
 export type network = {
-  network?: string;
-  online?: boolean;
+  selectedNetwork: {
+    value: string;
+    online?: boolean;
+  }
+  items: ReactElement[];
   isNetworkOpen?: boolean;
   openNetwork?: () => void;
 }

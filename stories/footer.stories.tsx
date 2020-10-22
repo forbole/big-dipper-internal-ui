@@ -57,7 +57,8 @@ Default.args = {
     decorator: '|',
   },
   socialMediaComponents: [
-    <SocialMediaComponent url="#" component={TelegramIcon} className="telegram" />, <SocialMediaComponent url="#" component={FacebookIcon} className="facebook" />,
+    <SocialMediaComponent url="#" component={TelegramIcon} className="telegram" />,
+    <SocialMediaComponent url="#" component={FacebookIcon} className="facebook" />,
     <SocialMediaComponent url="#" component={MediumIcon} className="medium" />,
     <SocialMediaComponent url="#" component={TwitterIcon} className="twitter" />,
     <SocialMediaComponent url="#" component={GithubIcon} className="github" />,

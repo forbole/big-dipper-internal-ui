@@ -4,7 +4,12 @@ import { NetworksOpenProps } from './types';
 import { useGetStyles } from './styles';
 
 const NetworksOpen = (props:NetworksOpenProps) => {
-  const { network: { isNetworkOpen } } = props;
+  const {
+    network: {
+      isNetworkOpen,
+      items,
+    },
+  } = props;
 
   const { classes } = useGetStyles();
 
@@ -17,7 +22,11 @@ const NetworksOpen = (props:NetworksOpenProps) => {
       <div
         className={classnames(classes.content, 'mobile-network-open-content')}
       >
-        HELLOOOWWOWOWO
+        {items?.map((x, i) => (
+          <React.Fragment key={i}>
+            {x}
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );

@@ -15,6 +15,8 @@ const Nav = (props: NavProps) => {
     },
   } = props;
 
+  const { selectedNetwork } = network;
+
   return (
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-bar')}
@@ -33,11 +35,11 @@ const Nav = (props: NavProps) => {
           >
             <div
               className={classnames('network-select-text', {
-                online: network?.online,
-                offline: !network?.online,
+                online: selectedNetwork?.online,
+                offline: !selectedNetwork?.online,
               })}
             >
-              {network?.network}
+              {selectedNetwork?.value}
             </div>
             <ExpandMore fontSize="small" />
           </div>
