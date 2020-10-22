@@ -14,7 +14,9 @@ export const useSearchBarHook = (callback:any) => {
   };
 
   const handleKeyDown = (e:any) => {
-    if (e?.keyCode === 13 && e?.shiftKey === false) {
+    const shift = e?.shiftKey;
+    const isEnter = e?.keyCode === 13 || e?.key === 'Enter';
+    if (isEnter && !shift) {
       e.preventDefault();
       handleOnSubmit();
     }

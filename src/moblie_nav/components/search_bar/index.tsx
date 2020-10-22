@@ -12,7 +12,8 @@ const SearchBar = (props: SearchBarProps) => {
   const { classes } = useGetStyles();
   const { searchBar: { searchBarPlaceholder, searchBarCallback: callback } } = props;
   const {
-    handleOnChange, value,
+    handleOnChange,
+    value,
     handleOnSubmit,
     handleKeyDown,
   } = useSearchBarHook(callback);
