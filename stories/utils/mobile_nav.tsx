@@ -102,7 +102,7 @@ const dummyData = {
     },
   ],
 };
-export const NetworkItem = (props:any) => {
+export const NetworkItem = () => {
   const useStyles = makeStyles({
     root: {
       fontSize: '1rem',

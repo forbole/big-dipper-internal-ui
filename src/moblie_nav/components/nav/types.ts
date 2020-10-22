@@ -1,10 +1,10 @@
 import {
   MobileProps,
-  network,
   logo,
+  hamburgerIcon,
 } from '../../types';
 
 export interface NavProps extends MobileProps {
-  network: network;
   logo: logo;
+  hamburgerIcon: hamburgerIcon;
 }

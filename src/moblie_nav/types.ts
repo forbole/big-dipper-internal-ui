@@ -46,7 +46,7 @@ export type menu = {
   themeMode?: themeMode;
 }
 
-type hamburgerIcon = {
+export type hamburgerIcon = {
   isOpen: boolean;
   onClick: () => void,
 }
@@ -56,6 +56,6 @@ export interface MobileProps {
   searchBar?: searchBar;
   announcement?: string;
   network?: network;
-  menu: menu;
+  menu?: menu;
   hamburgerIcon?: hamburgerIcon;
 }

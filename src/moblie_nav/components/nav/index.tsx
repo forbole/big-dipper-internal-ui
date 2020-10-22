@@ -15,7 +15,10 @@ const Nav = (props: NavProps) => {
     },
   } = props;
 
-  const { selectedNetwork } = network;
+  const selectedNetwork = network?.selectedNetwork ?? {
+    online: null,
+    value: null,
+  };
 
   return (
     <div

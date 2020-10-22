@@ -1,3 +1,7 @@
-import { MobileProps } from '../../../../types';
+import {
+  MobileProps, hamburgerIcon,
+} from '../../../../types';
 
-export interface HamburgerProps extends MobileProps {}
+export interface HamburgerProps extends MobileProps {
+  hamburgerIcon: hamburgerIcon;
+}
