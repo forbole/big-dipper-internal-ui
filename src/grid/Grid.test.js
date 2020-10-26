@@ -2,7 +2,7 @@ import * as React from 'react';
 import { expect } from 'chai';
 import { getClasses, createMount, describeConformance, createClientRender } from 'test/utils';
 import { createMuiTheme } from '@material-ui/core/styles';
-import Grid, { styles } from './Grid';
+import Grid, { styles } from '.';
 
 describe('<Grid />', () => {
   const mount = createMount();
