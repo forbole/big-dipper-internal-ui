@@ -55,7 +55,7 @@ function generateGrid(globalStyles: any, theme: any, breakpoint: any) {
   });
 
   // No need for a media query for the first size.
-  if (breakpoint === 'xs') {
+  if (breakpoint === 'xs' || breakpoint === 'mobile') {
     Object.assign(globalStyles, styles);
   } else {
     globalStyles[theme.breakpoints.up(breakpoint)] = styles;
