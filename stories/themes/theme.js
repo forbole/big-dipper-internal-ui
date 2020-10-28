@@ -5,18 +5,18 @@ import { createMuiTheme } from '@material-ui/core/styles';
 export const common = {
   breakpoints: {
 
-  keys: ['xs', 'sm', 'md', 'lg', 'xl', 'mobile', 'tablet', 'desktop'],
-  values: {
-    xs: 0,
-    sm: 600,
-    md: 960,
-    lg: 1280,
-    xl: 1920,
-    mobile: 0,
-    tablet: 769,
-    desktop: 1080,
-    maxWidth: 1100,
-  }
+    keys: ['xs', 'sm', 'md', 'lg', 'xl', 'mobile', 'tablet', 'desktop'],
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+      mobile: 0,
+      tablet: 769,
+      desktop: 1080,
+      maxWidth: 1100,
+    },
   },
   typography: {
     paragraph: {
