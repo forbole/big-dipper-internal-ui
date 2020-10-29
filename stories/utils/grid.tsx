@@ -23,8 +23,8 @@ const getFaqDetails = () => {
     {
       question: ('question6'),
       ans: ('ans6'),
-    }
-    ];
+    },
+  ];
 
   return (faq);
 };

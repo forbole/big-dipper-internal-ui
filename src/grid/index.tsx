@@ -1,26 +1,17 @@
-// A grid component using the following libs as inspiration.
-//
-// For the implementation:
-// - https://getbootstrap.com/docs/4.3/layout/grid/
-// - https://github.com/kristoferjoseph/flexboxgrid/blob/master/src/css/flexboxgrid.css
-// - https://github.com/roylee0704/react-flexbox-grid
-// - https://material.angularjs.org/latest/layout/introduction
-//
-// Follow this flexbox Guide to better understand the underlying model:
-// - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+/* eslint-disable react/require-default-props, no-param-reassign, react/forbid-prop-types */
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { withStyles } from '@material-ui/core/styles';;
+import { withStyles } from '@material-ui/core/styles';
 
 const SPACINGS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const GRID_SIZES = ['auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 function generateGrid(globalStyles: any, theme: any, breakpoint: any) {
-  const styles = {};
-
-  GRID_SIZES.forEach((size:any) => {
+  const styles = {
+  };
+  GRID_SIZES.forEach((size: any) => {
     const key = `grid-${breakpoint}-${size}`;
 
     if (size === true) {
@@ -43,7 +34,7 @@ function generateGrid(globalStyles: any, theme: any, breakpoint: any) {
     }
 
     // Keep 7 significant numbers.
-    const width = `${Math.round((size/ 12) * 10e7) / 10e5}%`;
+    const width = `${Math.round((size / 12) * 10e7) / 10e5}%`;
 
     // Close to the bootstrap implementation:
     // https://github.com/twbs/bootstrap/blob/8fccaa2439e97ec72a4b7dc42ccc1f649790adb0/scss/mixins/_grid.scss#L41
@@ -68,7 +59,9 @@ function getOffset(val: any, div = 1) {
 }
 
 function generateGutter(theme: any, breakpoint: any) {
-  const styles = {};
+  const styles = {
+
+  };
 
   SPACINGS.forEach((spacing) => {
     const themeSpacing = theme.spacing(spacing);
@@ -97,7 +90,9 @@ function generateGutter(theme: any, breakpoint: any) {
 // justifyContent: 'flex-start',
 export const styles = (theme: any) => ({
   /* Styles applied to the root element. */
-  root: {},
+  root: {
+
+  },
   /* Styles applied to the root element if `container={true}`. */
   container: {
     boxSizing: 'border-box',
@@ -195,10 +190,11 @@ export const styles = (theme: any) => ({
     // Use side effect over immutability for better performance.
     generateGrid(accumulator, theme, key);
     return accumulator;
-  }, {}),
+  }, {
+  }),
 });
 
-const Grid:any = React.forwardRef(function Grid(props, ref) {
+const Grid: any = React.forwardRef((props, ref) => {
   const {
     alignContent = 'stretch',
     alignItems = 'stretch',
@@ -285,7 +281,7 @@ Grid.propTypes = {
    * The component used for the root node.
    * Either a string to use a HTML element or a component.
    */
-  component: PropTypes /* @typescript-to-proptypes-ignore */.elementType,
+  component: PropTypes/* @typescript-to-proptypes-ignore */.elementType,
   /**
    * If `true`, the component will have the flex *container* behavior.
    * You should be wrapping *items* with a *container*.
@@ -367,10 +363,12 @@ Grid.propTypes = {
    * If `true`, it sets `min-width: 0` on the item.
    * Refer to the limitations section of the documentation to better understand the use case.
    */
-  
+
   zeroMinWidth: PropTypes.bool,
 };
 
-const StyledGrid = withStyles(styles, { name: 'MuiGrid' })(Grid);
+const StyledGrid = withStyles(styles, {
+  name: 'MuiGrid',
+})(Grid);
 
 export default StyledGrid;

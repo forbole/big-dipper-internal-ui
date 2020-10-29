@@ -24,6 +24,6 @@ export {
   TwitterIcon,
   YoutubeIcon,
   Footer,
-  StyledGrid,
+  StyledGrid as Grid,
   resources,
 };
