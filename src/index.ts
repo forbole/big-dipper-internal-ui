@@ -10,7 +10,7 @@ import {
 import ButtonExample from './button_example';
 import DataBlock from './data_block';
 import Footer from './footer';
-import StyledGrid from './grid';
+import Grid from './grid';
 import * as resources from './resources';
 
 export {
@@ -24,6 +24,6 @@ export {
   TwitterIcon,
   YoutubeIcon,
   Footer,
-  StyledGrid as Grid,
+  Grid,
   resources,
 };

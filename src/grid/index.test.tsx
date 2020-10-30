@@ -25,7 +25,6 @@ export const common:any = {
 export const theme = createMuiTheme(common);
 describe('Grid', () => {
   it('Works with base props', () => {
-    // const { classes } = useGetStyles();
     expect(Grid).toBeTruthy();
     const wrap = mount(
 
