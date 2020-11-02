@@ -172,13 +172,6 @@ describe('MobileNav/MobileNav', () => {
             <MenuItem value="news" />,
             <MenuItem value="analysis" />,
           ],
-          themeMode: {
-            mode: {
-              key: 'light',
-              value: 'light mode',
-            },
-            onClick: function noRefCheck() {},
-          },
         }}
         network={{
           isNetworkOpen: false,
