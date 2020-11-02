@@ -42,7 +42,7 @@ export type themeMode = {
 export type menu = {
   isMenuOpen: boolean;
   items: ReactElement[];
-  language: language;
+  language?: language;
   themeMode?: themeMode;
 }
 

@@ -20,21 +20,14 @@ const MenuOpen = (props: NavOpenProps) => {
     },
   } = props;
 
-  const {
-    selected,
-    languages,
-    onClick,
-  } = language ?? {
-  };
-
   return (
     <>
       {!!language && (
         <LanguageDrawer
           {...hookProps}
-          selected={selected}
-          languages={languages}
-          onClick={onClick}
+          selected={language!.selected}
+          languages={language!.languages}
+          onClick={language!.onClick}
         />
       )}
       <div
@@ -62,7 +55,7 @@ const MenuOpen = (props: NavOpenProps) => {
                 onClick={hookProps?.toggleDrawer}
               >
                 <Language fontSize="small" className={classnames('globe-icon')} />
-                <p className={classnames('selected-language')}>{selected?.value}</p>
+                <p className={classnames('selected-language')}>{language!.selected?.value}</p>
                 <ExpandMoreOutlined fontSize="small" className={classnames('more-icon')} />
               </div>
             )

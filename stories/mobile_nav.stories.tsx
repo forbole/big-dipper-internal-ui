@@ -53,6 +53,40 @@ const Template = (args) => {
   );
 };
 
+const TemplateBase = (args) => {
+  const {
+    isOpen,
+    toggleIsOpen,
+    isNetworkOpen,
+    isNavOpen,
+    openNetwork,
+  } = useMobileHook();
+
+  const stateRelatedProps = {
+    network: {
+      isNetworkOpen,
+      openNetwork,
+    },
+    menu: {
+      isMenuOpen: isNavOpen,
+    },
+    hamburgerIcon: {
+      isOpen,
+      onClick: toggleIsOpen,
+    },
+  };
+
+  const mergeProps = R.mergeDeepLeft(args, stateRelatedProps);
+
+  return (
+    <ThemeKnob>
+      <MobileNav
+        {...mergeProps}
+      />
+    </ThemeKnob>
+  );
+};
+
 /**
  * Mobile props
  */
@@ -114,7 +148,7 @@ Default.args = {
 // =====================================
 // Base
 // =====================================
-export const Base = Template.bind({
+export const Base = TemplateBase.bind({
 });
 
 Base.args = {
