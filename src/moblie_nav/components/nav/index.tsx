@@ -15,11 +15,6 @@ const Nav = (props: NavProps) => {
     },
   } = props;
 
-  const selectedNetwork = network?.selectedNetwork ?? {
-    online: null,
-    value: null,
-  };
-
   return (
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-bar')}
@@ -30,7 +25,7 @@ const Nav = (props: NavProps) => {
         alt={alt}
       />
       <div className={classnames('action-container')}>
-        {!!network && (
+        {!!network!.selectedNetwork?.value && (
           <div
             className={classnames('network-container')}
             onClick={network?.openNetwork}
@@ -38,11 +33,11 @@ const Nav = (props: NavProps) => {
           >
             <div
               className={classnames('network-select-text', {
-                online: selectedNetwork?.online,
-                offline: !selectedNetwork?.online,
+                online: network!.selectedNetwork?.online,
+                offline: !network!.selectedNetwork?.online,
               })}
             >
-              {selectedNetwork?.value}
+              {network!.selectedNetwork?.value}
             </div>
             <ExpandMore fontSize="small" />
           </div>

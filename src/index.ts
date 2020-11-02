@@ -1,3 +1,4 @@
+import * as resources from './resources';
 import {
   TelegramIcon,
   MediumIcon,
@@ -9,9 +10,11 @@ import {
 } from './icons';
 import Footer from './footer';
 import Grid from './grid';
-import * as resources from './resources';
+import MobileNav from './moblie_nav';
+import DesktopNav from './desktop_navbar';
 
 export {
+  resources,
   TelegramIcon,
   MediumIcon,
   FacebookIcon,
@@ -21,5 +24,6 @@ export {
   YoutubeIcon,
   Footer,
   Grid,
-  resources,
+  MobileNav,
+  DesktopNav,
 };

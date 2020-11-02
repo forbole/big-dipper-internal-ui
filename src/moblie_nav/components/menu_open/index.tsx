@@ -15,18 +15,28 @@ const MenuOpen = (props: NavOpenProps) => {
     menu: {
       isMenuOpen,
       items,
-      language: {
-        selected,
-        languages,
-        onClick,
-      },
       themeMode,
+      language,
     },
   } = props;
 
+  const {
+    selected,
+    languages,
+    onClick,
+  } = language ?? {
+  };
+
   return (
     <>
-      <LanguageDrawer {...hookProps} selected={selected} languages={languages} onClick={onClick} />
+      {!!language && (
+        <LanguageDrawer
+          {...hookProps}
+          selected={selected}
+          languages={languages}
+          onClick={onClick}
+        />
+      )}
       <div
         className={classnames(classes.root, 'big-dipper', 'mobile-nav-open', {
           open: isMenuOpen,
@@ -44,15 +54,19 @@ const MenuOpen = (props: NavOpenProps) => {
         {/* actions start */}
         <div className={classnames('bottom-actions')}>
           {/* language start */}
-          <div
-            className={classnames('language-selector')}
-            role="button"
-            onClick={hookProps?.toggleDrawer}
-          >
-            <Language fontSize="small" className={classnames('globe-icon')} />
-            <p className={classnames('selected-language')}>{selected?.value}</p>
-            <ExpandMoreOutlined fontSize="small" className={classnames('more-icon')} />
-          </div>
+          {
+            !!language && (
+              <div
+                className={classnames('language-selector')}
+                role="button"
+                onClick={hookProps?.toggleDrawer}
+              >
+                <Language fontSize="small" className={classnames('globe-icon')} />
+                <p className={classnames('selected-language')}>{selected?.value}</p>
+                <ExpandMoreOutlined fontSize="small" className={classnames('more-icon')} />
+              </div>
+            )
+          }
           {/* language end */}
           {/* theme start */}
           {!!themeMode && (

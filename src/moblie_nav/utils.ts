@@ -10,11 +10,9 @@ export const formatProps = (props:MobileProps): any => {
       src: defaultLogo,
       alt: 'logo',
     },
-    searchBar = {
-    },
+    searchBar,
     announcement = '',
-    network = {
-    },
+    network,
     menu,
     hamburgerIcon,
   } = props;

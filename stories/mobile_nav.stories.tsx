@@ -11,11 +11,6 @@ export default {
   title: 'Navbar/Mobile',
   component: MobileNav,
   decorators: [withKnobs],
-  argTypes: {
-    logo: {
-      defaultValue: 'hello',
-    },
-  },
 };
 
 const Template = (args) => {
@@ -116,12 +111,26 @@ Default.args = {
   },
 };
 
-/**
- * Base with only necessary props
- */
-// export const Base = Template.bind({
-// });
+// =====================================
+// Base
+// =====================================
+export const Base = Template.bind({
+});
 
-// Base.args = {
-//   ...baseProps,
-// };
+Base.args = {
+  logo: {
+    src: './src/resources/images/big-dipper-logo.png',
+    alt: 'big dipper logo',
+  },
+  menu: {
+    items: [
+      <MenuItem value="overview" />,
+      <MenuItem value="validator" />,
+      <MenuItem value="blocks" />,
+      <MenuItem value="activites" />,
+      <MenuItem value="proposals" />,
+      <MenuItem value="news" />,
+      <MenuItem value="analysis" />,
+    ],
+  },
+};
