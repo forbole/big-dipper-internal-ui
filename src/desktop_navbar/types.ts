@@ -7,6 +7,10 @@ export type DesktopSideBarProps = {
   logoSrc?: string;
 }
 
+export type TopBarProps = {
+}
+
 export interface DesktopNavProps {
   sideBar: DesktopSideBarProps;
+  // topBar: TopBarProps;
 }

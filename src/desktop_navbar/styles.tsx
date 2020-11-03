@@ -25,6 +25,8 @@ export const useGetStyles = () => {
     },
     appBar: {
       '&.appbar-container': {
+        background: theme?.palette?.background?.default,
+        color: theme?.palette?.custom?.fonts?.fontTwo ?? 'inherit',
         width: `calc(100% - ${CLOSED_DRAWER_WIDTH}px)`,
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {

@@ -3,17 +3,28 @@ import clsx from 'clsx';
 import {
   Drawer,
   List,
+  AppBar,
 } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import { useGetStyles } from './styles';
 import {
   logo, logoWhite,
 } from '../resources/images';
+import { useGetHeightHook } from '../utils/get_height_hook';
 import { DesktopNavProps } from './types';
+import {
+  TopActionBar, HeaderBar,
+} from './components';
+import { Placeholder } from '..';
 
 const DesktopNav = (props:DesktopNavProps) => {
   const { classes } = useGetStyles();
   const theme = useTheme();
+  const {
+    ref: heightRef,
+    height,
+  } = useGetHeightHook();
+
   const {
     sideBar: {
       open,
@@ -27,23 +38,17 @@ const DesktopNav = (props:DesktopNavProps) => {
     <div
       className={clsx(classes.root, 'big-dipper', 'desktop-nav')}
     >
-      <div
-        className={clsx(classes.appBar, 'appbar-container', {
-          open,
-        })}
-      >
-        hello world
-      </div>
-      {/* <AppBar
+      <AppBar
+        ref={heightRef}
         position="fixed"
         className={clsx(classes.appBar, 'appbar-container', {
           open,
         })}
       >
-        <div>
-          hello world
-        </div>
-      </AppBar> */}
+        <TopActionBar />
+        <HeaderBar />
+      </AppBar>
+      <Placeholder height={height} />
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {

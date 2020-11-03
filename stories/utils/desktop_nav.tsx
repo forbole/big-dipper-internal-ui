@@ -30,7 +30,6 @@ export const TextHolders = (props:DesktopNavProps) => {
   const useStyles = makeStyles((theme: any) => createStyles({
     root: {
       marginLeft: CLOSED_DRAWER_WIDTH,
-      marginTop: '1.5rem',
       padding: '0.5rem',
       '&.open': {
         marginLeft: OPEN_DRAWER_WIDTH,

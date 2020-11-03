@@ -5,13 +5,13 @@ import {
   MenuOpen,
   NetworksOpen,
   SearchBar,
-  Placeholder,
   Announcement,
 } from './components';
 import { MobileProps } from './types';
-import { useGetHeightHook } from './hooks';
+import { useGetHeightHook } from '../utils/get_height_hook';
 import { useGetStyles } from './styles';
 import { formatProps } from './utils';
+import { Placeholder } from '..';
 
 const MobileNav = (props: MobileProps) => {
   const {
