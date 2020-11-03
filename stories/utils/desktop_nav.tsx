@@ -8,6 +8,7 @@ import { DesktopNavProps } from '../../src/desktop_navbar/types';
 
 export const useDesktopNavHook = () => {
   const [open, setOpen] = useState(false);
+  const [isNetworkOpen, setNetworkOpen] = useState(false);
   const [mode, setMode] = useState({
     value: 'light mode',
     key: 'light',
@@ -25,12 +26,18 @@ export const useDesktopNavHook = () => {
     });
   };
 
+  const toggleNetwork = () => {
+    setNetworkOpen(!isNetworkOpen);
+  };
+
   return {
     open,
     setOpen,
     toggleDraw,
     toggleMode,
     mode,
+    toggleNetwork,
+    isNetworkOpen,
   };
 };
 
@@ -39,6 +46,12 @@ export const TextHolders = (props:DesktopNavProps) => {
     sideBar: {
       open,
       onClick,
+    },
+    topBar: {
+      network: {
+        openNetwork: toggleNetwork,
+        isNetworkOpen,
+      },
     },
   } = props;
   const OPEN_DRAWER_WIDTH = 230;
@@ -59,9 +72,18 @@ export const TextHolders = (props:DesktopNavProps) => {
 
   const classes = useStyles();
 
+  const handleClick = () => {
+    if (open) {
+      onClick();
+    }
+    if (isNetworkOpen) {
+      toggleNetwork();
+    }
+  };
+
   return (
     <div
-      onClick={onClick}
+      onClick={handleClick}
       role="button"
       className={clsx(classes.root, {
         open,

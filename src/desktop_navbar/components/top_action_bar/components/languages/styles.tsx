@@ -12,6 +12,7 @@ export const useGetStyles = () => {
         },
         '& svg': {
           fontSize: '1.3rem',
+          marginRight: '0.1rem',
         },
       },
     },

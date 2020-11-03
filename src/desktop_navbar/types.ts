@@ -31,10 +31,21 @@ export type themeMode = {
   onClick: () => void;
 }
 
+export type network = {
+  selectedNetwork: {
+    value: string;
+    online?: boolean;
+  }
+  items: ReactElement[];
+  isNetworkOpen?: boolean;
+  openNetwork?: () => void;
+}
+
 export type TopBarProps = {
   language: language;
   themeMode: themeMode;
   searchBar: searchBar;
+  network: network;
 }
 
 export interface DesktopNavProps {

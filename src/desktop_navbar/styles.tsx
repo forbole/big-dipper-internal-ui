@@ -1,4 +1,3 @@
-import { green } from '@material-ui/core/colors';
 import {
   makeStyles, createStyles,
 } from '@material-ui/styles';
@@ -9,7 +8,12 @@ export const useGetStyles = () => {
 
   const useStyles = makeStyles((theme: any) => createStyles({
     root: {
-      display: 'flex',
+      '& .search-input': {
+        marginRight: '1rem',
+        padding: '0',
+        width: '100%',
+        maxWidth: '500px',
+      },
       '& .big-dipper-icon': {
         display: 'flex',
         alignItems: 'center',

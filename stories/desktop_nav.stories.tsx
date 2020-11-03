@@ -31,6 +31,8 @@ const Template = (args) => {
     toggleDraw,
     toggleMode,
     mode,
+    toggleNetwork,
+    isNetworkOpen,
   } = useDesktopNavHook();
   const hookProps = {
     sideBar: {
@@ -47,6 +49,19 @@ const Template = (args) => {
       ],
     },
     topBar: {
+      network: {
+        isNetworkOpen,
+        openNetwork: toggleNetwork,
+        selectedNetwork: {
+          value: 'cosmoshub3dfgdgfhghfgh',
+          online: true,
+        },
+        items: [
+          <div>item one</div>,
+          <div>item two</div>,
+          <div>item three</div>,
+        ],
+      },
       searchBar: {
         searchBarPlaceholder: 'Search by block height / address / tx hash',
         searchBarCallback: (value:string) => console.log('The value: ', value),

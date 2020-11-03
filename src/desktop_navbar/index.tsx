@@ -13,18 +13,13 @@ import {
 import { useGetHeightHook } from '../utils/get_height_hook';
 import { DesktopNavProps } from './types';
 import {
-  TopActionBar, HeaderBar,
+  TopActionBar, HeaderBar, NetworkOpen,
 } from './components';
 import { Placeholder } from '..';
 
 const DesktopNav = (props:DesktopNavProps) => {
   const { classes } = useGetStyles();
   const theme = useTheme();
-  const {
-    ref: heightRef,
-    height,
-  } = useGetHeightHook();
-
   const {
     sideBar: {
       open,
@@ -34,6 +29,11 @@ const DesktopNav = (props:DesktopNavProps) => {
     },
     topBar,
   } = props;
+
+  const {
+    ref: heightRef,
+    height,
+  } = useGetHeightHook();
 
   return (
     <div
@@ -47,9 +47,10 @@ const DesktopNav = (props:DesktopNavProps) => {
         })}
       >
         <TopActionBar {...topBar} />
-        <HeaderBar />
+        {/* <HeaderBar /> */}
       </AppBar>
       <Placeholder height={height} />
+      <NetworkOpen topBar={topBar} />
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {
