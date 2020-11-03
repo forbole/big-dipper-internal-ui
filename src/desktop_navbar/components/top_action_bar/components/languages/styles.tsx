@@ -10,6 +10,9 @@ export const useGetStyles = () => {
         '&:hover': {
           cursor: 'pointer',
         },
+        '& svg': {
+          fontSize: '1.3rem',
+        },
       },
     },
   });

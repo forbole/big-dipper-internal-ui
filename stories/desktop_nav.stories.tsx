@@ -29,7 +29,8 @@ const Template = (args) => {
   const {
     open,
     toggleDraw,
-
+    toggleMode,
+    mode,
   } = useDesktopNavHook();
   const hookProps = {
     sideBar: {
@@ -46,6 +47,10 @@ const Template = (args) => {
       ],
     },
     topBar: {
+      themeMode: {
+        mode,
+        onClick: toggleMode,
+      },
       language: {
         languages: [
           {

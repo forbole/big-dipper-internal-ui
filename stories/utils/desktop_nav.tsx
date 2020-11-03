@@ -8,13 +8,29 @@ import { DesktopNavProps } from '../../src/desktop_navbar/types';
 
 export const useDesktopNavHook = () => {
   const [open, setOpen] = useState(false);
+  const [mode, setMode] = useState({
+    value: 'light mode',
+    key: 'light',
+  });
+
   const toggleDraw = () => {
     setOpen(!open);
   };
+
+  const toggleMode = () => {
+    const value = mode?.key === 'light' ? 'dark' : 'light';
+    setMode({
+      value: `${value} mode`,
+      key: value,
+    });
+  };
+
   return {
     open,
     setOpen,
     toggleDraw,
+    toggleMode,
+    mode,
   };
 };
 

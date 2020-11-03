@@ -18,8 +18,17 @@ export type language = {
   onClick: ({ key, value }:singleLanguage) => void;
 }
 
+export type themeMode = {
+  mode: {
+    value: string;
+    key: string;
+  };
+  onClick: () => void;
+}
+
 export type TopBarProps = {
   language: language;
+  themeMode: themeMode;
 }
 
 export interface DesktopNavProps {
