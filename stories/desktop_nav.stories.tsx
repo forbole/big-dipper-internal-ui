@@ -45,6 +45,27 @@ const Template = (args) => {
         <DesktopNavbarItem text="Analysis" icon={<PieChartOutlined />} />,
       ],
     },
+    topBar: {
+      language: {
+        languages: [
+          {
+            key: 'en',
+            value: 'EN',
+          },
+          {
+            key: 'cn',
+            value: '中文',
+          },
+        ],
+        onClick: ({ key, value }) => {
+          console.log(`Click Value ${value} with key ${key}`);
+        },
+        selected: {
+          key: 'en',
+          value: 'EN',
+        },
+      },
+    },
   };
 
   return (

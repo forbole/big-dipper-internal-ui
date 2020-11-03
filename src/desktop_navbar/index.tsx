@@ -32,6 +32,7 @@ const DesktopNav = (props:DesktopNavProps) => {
       items,
       logoSrc = theme?.palette?.type === 'light' ? logo : logoWhite,
     },
+    topBar,
   } = props;
 
   return (
@@ -45,7 +46,7 @@ const DesktopNav = (props:DesktopNavProps) => {
           open,
         })}
       >
-        <TopActionBar />
+        <TopActionBar {...topBar} />
         <HeaderBar />
       </AppBar>
       <Placeholder height={height} />
