@@ -17,6 +17,7 @@ import {
   bigDipperIcon, logo,
 } from '../resources/images';
 import { DesktopNavProps } from './types';
+import { DesktopNavbarItem } from '..';
 
 const DesktopNav = (props:DesktopNavProps) => {
   const { classes } = useGetStyles();
@@ -31,7 +32,7 @@ const DesktopNav = (props:DesktopNavProps) => {
     <div
       className={clsx(classes.root, 'big-dipper', 'desktop-nav')}
     >
-      <AppBar
+      {/* <AppBar
         position="fixed"
         className={clsx(classes.appBar, 'appbar-container', {
           open,
@@ -40,7 +41,7 @@ const DesktopNav = (props:DesktopNavProps) => {
         <div>
           hello world
         </div>
-      </AppBar>
+      </AppBar> */}
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {
@@ -69,11 +70,8 @@ const DesktopNav = (props:DesktopNavProps) => {
           <img src={logo} alt="big dipper logo" />
         </div>
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <MoveToInbox /> : <Mail />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
+          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text) => (
+            <DesktopNavbarItem text={text} icon={<MoveToInbox />} key={text} />
           ))}
         </List>
       </Drawer>

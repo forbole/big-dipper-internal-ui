@@ -1,3 +1,4 @@
+import { green } from '@material-ui/core/colors';
 import {
   makeStyles, createStyles,
 } from '@material-ui/styles';
@@ -43,20 +44,6 @@ export const useGetStyles = () => {
         }),
       },
     },
-    // appBarShift: {
-    //   marginLeft: OPEN_DRAWER_WIDTH,
-    //   width: `calc(100% - ${OPEN_DRAWER_WIDTH}px)`,
-    //   transition: theme.transitions.create(['width', 'margin'], {
-    //     easing: theme.transitions.easing.easeInOut,
-    //     duration: theme.transitions.duration.enteringScreen,
-    //   }),
-    // },
-    menuButton: {
-      marginRight: 36,
-    },
-    hide: {
-      display: 'none',
-    },
     drawer: {
       width: OPEN_DRAWER_WIDTH,
       flexShrink: 0,
@@ -77,20 +64,7 @@ export const useGetStyles = () => {
         duration: theme.transitions.duration.leavingScreen,
       }),
       overflowX: 'hidden',
-      width: theme.spacing(7) + 1,
-      [theme.breakpoints.up('sm')]: {
-        width: CLOSED_DRAWER_WIDTH,
-      },
-    },
-    toolbar: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-      padding: theme.spacing(0, 1),
-    },
-    content: {
-      flexGrow: 1,
-      padding: theme.spacing(3),
+      width: CLOSED_DRAWER_WIDTH,
     },
   }));
 
