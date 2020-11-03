@@ -2,7 +2,6 @@ import Nav from './nav';
 import Hamburger from './nav/components/hamburger';
 import MenuOpen from './menu_open';
 import NetworksOpen from './networks_open';
-import SearchBar from './search_bar';
 import Announcement from './announcement';
 
 export {
@@ -10,6 +9,5 @@ export {
   Hamburger,
   MenuOpen,
   NetworksOpen,
-  SearchBar,
   Announcement,
 };

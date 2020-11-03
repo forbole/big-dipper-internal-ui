@@ -12,13 +12,11 @@ const ThemeMode = (props:ThemeModeProps) => {
   const IconMode = themeMode.mode.key === 'light' ? Brightness4Outlined : Brightness4;
   const { classes } = useGetStyles();
   return (
-    <div
+    <IconMode
       className={classnames(classes.root, 'theme-icon')}
       onClick={themeMode.onClick}
       role="button"
-    >
-      <IconMode />
-    </div>
+    />
   );
 };
 

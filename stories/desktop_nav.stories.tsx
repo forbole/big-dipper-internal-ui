@@ -47,6 +47,10 @@ const Template = (args) => {
       ],
     },
     topBar: {
+      searchBar: {
+        searchBarPlaceholder: 'Search by block height / address / tx hash',
+        searchBarCallback: (value:string) => console.log('The value: ', value),
+      },
       themeMode: {
         mode,
         onClick: toggleMode,

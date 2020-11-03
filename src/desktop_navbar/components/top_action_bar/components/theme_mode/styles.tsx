@@ -4,11 +4,9 @@ export const useGetStyles = () => {
   const useStyles = makeStyles({
     root: {
       margin: '0 1rem',
+      fontSize: '1.3rem',
       '&:hover': {
         cursor: 'pointer',
-      },
-      '& svg': {
-        fontSize: '1.3rem',
       },
     },
   });

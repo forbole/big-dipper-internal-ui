@@ -12,6 +12,11 @@ export type singleLanguage = {
   value: string;
 }
 
+export type searchBar = {
+  searchBarPlaceholder?: string;
+  searchBarCallback: (value:string | number) => void;
+}
+
 export type language = {
   selected: singleLanguage;
   languages: singleLanguage[];
@@ -29,6 +34,7 @@ export type themeMode = {
 export type TopBarProps = {
   language: language;
   themeMode: themeMode;
+  searchBar: searchBar;
 }
 
 export interface DesktopNavProps {

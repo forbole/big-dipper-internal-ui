@@ -5,8 +5,13 @@ export const useGetStyles = () => {
     root: {
       display: 'flex',
       justifyContent: 'flex-end',
-      alignItems: 'start',
-      padding: '0.5rem 1rem',
+      alignItems: 'center',
+      padding: '1.5rem 1rem 0.5rem 1rem',
+      '& .search-input': {
+        marginRight: '1rem',
+        padding: '0',
+        width: '40%',
+      },
     },
   });
 

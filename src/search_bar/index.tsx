@@ -30,7 +30,7 @@ const SearchBar = (props: SearchBarProps) => {
         onKeyDown={handleKeyDown}
         value={value}
         inputProps={{
-          'aria-label': 'search by block height, address, tx hash',
+          'aria-label': searchBarPlaceholder,
         }}
         startAdornment={(
           <InputAdornment position="start">

@@ -4,14 +4,15 @@ import {
   Nav,
   MenuOpen,
   NetworksOpen,
-  SearchBar,
   Announcement,
 } from './components';
 import { MobileProps } from './types';
 import { useGetHeightHook } from '../utils/get_height_hook';
 import { useGetStyles } from './styles';
 import { formatProps } from './utils';
-import { Placeholder } from '..';
+import {
+  Placeholder, SearchBar,
+} from '..';
 
 const MobileNav = (props: MobileProps) => {
   const {
