@@ -2,30 +2,24 @@ import React from 'react';
 import clsx from 'clsx';
 import {
   Drawer,
-  AppBar,
   List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
 } from '@material-ui/core';
-import {
-  MoveToInbox,
-  Mail,
-} from '@material-ui/icons';
+import { useTheme } from '@material-ui/core/styles';
 import { useGetStyles } from './styles';
 import {
-  bigDipperIcon, logo,
+  logo, logoWhite,
 } from '../resources/images';
 import { DesktopNavProps } from './types';
-import { DesktopNavbarItem } from '..';
 
 const DesktopNav = (props:DesktopNavProps) => {
   const { classes } = useGetStyles();
+  const theme = useTheme();
   const {
     sideBar: {
       open,
       onClick,
       items,
+      logoSrc = theme?.palette?.type === 'light' ? logo : logoWhite,
     },
   } = props;
 
@@ -33,6 +27,13 @@ const DesktopNav = (props:DesktopNavProps) => {
     <div
       className={clsx(classes.root, 'big-dipper', 'desktop-nav')}
     >
+      <div
+        className={clsx(classes.appBar, 'appbar-container', {
+          open,
+        })}
+      >
+        hello world
+      </div>
       {/* <AppBar
         position="fixed"
         className={clsx(classes.appBar, 'appbar-container', {
@@ -68,7 +69,7 @@ const DesktopNav = (props:DesktopNavProps) => {
           onClick={onClick}
           role="button"
         >
-          <img src={logo} alt="big dipper logo" />
+          <img src={logoSrc} alt="big dipper logo" />
         </div>
         <List>
           {items.map((x, i) => (

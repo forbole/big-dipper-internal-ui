@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { useTheme } from '@material-ui/core/styles';
 import {
   Typography,
   Button,
@@ -9,12 +10,15 @@ import {
 } from '@material-ui/core';
 import { useGetStyles } from './styles';
 import { FooterProps } from './types';
-import { logo } from '../resources/images';
+import {
+  logo, logoWhite,
+} from '../resources/images';
 
 /**
  * Footer component used across all pages
  */
 export const Footer = (props: FooterProps) => {
+  const theme = useTheme();
   const {
     breakpoint = 769,
     socialMediaComponents = [],
@@ -30,7 +34,7 @@ export const Footer = (props: FooterProps) => {
   } = props;
 
   const {
-    src: bigDipperSrc = logo,
+    src: bigDipperSrc = theme?.palette?.type === 'light' ? logo : logoWhite,
     alt: bigDipperAlt = 'Big Dipper Logo',
   } = bigDipperLogo;
 

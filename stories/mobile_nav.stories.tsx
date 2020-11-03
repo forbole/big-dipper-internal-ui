@@ -95,7 +95,6 @@ export const Default = Template.bind({
 
 Default.args = {
   logo: {
-    src: './src/resources/images/big-dipper-logo.png',
     alt: 'big dipper logo',
   },
   announcement: 'Did you know that rubber bands last longer when refrigerated.',
@@ -153,7 +152,6 @@ export const Base = TemplateBase.bind({
 
 Base.args = {
   logo: {
-    src: './src/resources/images/big-dipper-logo.png',
     alt: 'big dipper logo',
   },
   menu: {

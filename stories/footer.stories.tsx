@@ -37,7 +37,6 @@ export const Default = Template.bind({
 
 Default.args = {
   bigDipperLogo: {
-    src: './src/resources/images/big-dipper-logo.png',
     alt: 'big dipper logo',
   },
   donate: {

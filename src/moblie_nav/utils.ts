@@ -1,26 +1,30 @@
+import { useTheme } from '@material-ui/core/styles';
 import { MobileProps } from './types';
-import { logo as defaultLogo } from '../resources/images';
+import {
+  logo as defaultLogo, logoWhite,
+} from '../resources/images';
 
 /**
  * Handles props that require default value
  */
 export const formatProps = (props:MobileProps): any => {
+  const theme = useTheme();
   const {
-    logo = {
-      src: defaultLogo,
-      alt: 'logo',
-    },
+    logo,
     searchBar,
     announcement = '',
     network,
     menu,
     hamburgerIcon,
   } = props;
-
+  const logoFormat = {
+    src: logo?.src ?? theme?.palette?.type === 'light' ? defaultLogo : logoWhite,
+    alt: logo?.alt ?? 'logo',
+  };
   return {
     ...props,
     network,
-    logo,
+    logo: logoFormat,
     searchBar,
     announcement,
     menu,
