@@ -25,6 +25,7 @@ const DesktopNav = (props:DesktopNavProps) => {
     sideBar: {
       open,
       onClick,
+      items,
     },
   } = props;
 
@@ -70,8 +71,10 @@ const DesktopNav = (props:DesktopNavProps) => {
           <img src={logo} alt="big dipper logo" />
         </div>
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text) => (
-            <DesktopNavbarItem text={text} icon={<MoveToInbox />} key={text} />
+          {items.map((x, i) => (
+            <React.Fragment key={i}>
+              {x}
+            </React.Fragment>
           ))}
         </List>
       </Drawer>
