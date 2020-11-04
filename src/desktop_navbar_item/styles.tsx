@@ -17,6 +17,7 @@ export const useGetStyles = () => {
             },
             '&.active': {
               background: theme?.palette?.custom?.highlight ?? theme?.palette?.primary?.light,
+              color: theme?.palette?.primary?.main,
               '& .MuiListItemIcon-root': {
                 '& svg': {
                   fill: theme?.palette?.primary?.main,

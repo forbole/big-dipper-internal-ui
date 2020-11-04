@@ -16,7 +16,7 @@ import {
 } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
-  TextHolders, useDesktopNavHook,
+  TextHolders, useDesktopNavHook, NetworkItem,
 } from './utils/desktop_nav';
 
 export default {
@@ -58,9 +58,12 @@ const Template = (args) => {
           iconSrc: 'https://gist.githubusercontent.com/kwunyeung/8be4598c77c61e497dfc7220a678b3ee/raw/8178b6bcce1d1563bac10f8a150c713724a742f1/cosmoshub.svg?sanitize=true',
         },
         items: [
-          <div>item one</div>,
-          <div>item two</div>,
-          <div>item three</div>,
+          <NetworkItem />,
+          <NetworkItem />,
+          <NetworkItem />,
+          <NetworkItem />,
+          <NetworkItem />,
+          <NetworkItem />,
         ],
       },
       searchBar: {

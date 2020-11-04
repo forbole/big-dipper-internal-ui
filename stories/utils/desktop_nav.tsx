@@ -5,7 +5,11 @@ import {
 } from '@material-ui/styles';
 import { Typography } from '@material-ui/core';
 import { DesktopNavProps } from '../../src/desktop_navbar/types';
+import { NetworkItem } from './mobile_nav';
 
+export {
+  NetworkItem,
+};
 export const useDesktopNavHook = () => {
   const [open, setOpen] = useState(false);
   const [isNetworkOpen, setNetworkOpen] = useState(false);

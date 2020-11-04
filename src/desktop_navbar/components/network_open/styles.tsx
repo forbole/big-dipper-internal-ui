@@ -29,6 +29,15 @@ export const useGetStyles = () => {
       },
       '& .content': {
         padding: '1rem',
+        boxSizing: 'border-box',
+        display: 'flex',
+        flexWrap: 'wrap',
+        maxHeight: '300px',
+        overflow: 'auto',
+        '& > *': {
+          width: 'calc(25% - 10px)',
+          margin: '5px',
+        },
       },
       '& .logo': {
         padding: '1rem 0.5rem 0.5rem',
