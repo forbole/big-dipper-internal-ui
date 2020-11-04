@@ -16,9 +16,11 @@ const TopActionBar = (props:TopBarProps) => {
   return (
     <div className={classnames(classes.root, 'big-dipper', 'desktop-nav', 'top-action-bar')}>
       <SearchBar searchBar={searchBar} />
-      <Network network={network} />
-      <ThemeMode themeMode={themeMode} />
-      <Languages language={language} />
+      <div className={classnames('side-actions-container')}>
+        <Network network={network} />
+        <ThemeMode themeMode={themeMode} />
+        <Languages language={language} />
+      </div>
     </div>
   );
 };

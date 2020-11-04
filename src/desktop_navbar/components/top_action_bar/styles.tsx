@@ -8,6 +8,10 @@ export const useGetStyles = () => {
       alignItems: 'center',
       padding: '1.5rem 1rem 0.5rem 1rem',
       zIndex: 1205,
+      '& .side-actions-container': {
+        display: 'flex',
+        alignItems: 'center',
+      },
     },
   });
 

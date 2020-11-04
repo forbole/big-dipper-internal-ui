@@ -20,6 +20,10 @@ export const useGetStyles = () => {
           width: '20px',
           marginRight: '0.5rem',
         },
+
+        '& .MuiSvgIcon-root': {
+          marginLeft: '0.1rem',
+        },
       },
     },
   }));
