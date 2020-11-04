@@ -1,9 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import MobileNav from '.';
-import {
-  SearchBar, Announcement,
-} from './components';
+import { Announcement } from './components';
 import {
   NetworkItem, MenuItem,
 } from '../../stories/utils/mobile_nav';
@@ -77,7 +75,6 @@ describe('MobileNav/MobileNav', () => {
       />,
     );
     expect(wrap).not.toBeNull();
-    expect(wrap.find(SearchBar)).toHaveLength(1);
   });
 
   it('Works without announcement and searchbar', () => {
@@ -145,7 +142,6 @@ describe('MobileNav/MobileNav', () => {
     );
     expect(wrap).not.toBeNull();
     expect(wrap.find(Announcement)).toHaveLength(0);
-    expect(wrap.find(SearchBar)).toHaveLength(0);
   });
 
   it('Works without language', () => {
@@ -189,6 +185,5 @@ describe('MobileNav/MobileNav', () => {
     );
     expect(wrap).not.toBeNull();
     expect(wrap.find(Announcement)).toHaveLength(0);
-    expect(wrap.find(SearchBar)).toHaveLength(0);
   });
 });

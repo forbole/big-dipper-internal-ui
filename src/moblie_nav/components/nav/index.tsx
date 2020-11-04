@@ -25,7 +25,7 @@ const Nav = (props: NavProps) => {
         alt={alt}
       />
       <div className={classnames('action-container')}>
-        {!!network!.selectedNetwork?.value && (
+        {!!network?.selectedNetwork?.value && (
           <div
             className={classnames('network-container')}
             onClick={network?.openNetwork}
@@ -33,11 +33,11 @@ const Nav = (props: NavProps) => {
           >
             <div
               className={classnames('network-select-text', {
-                online: network!.selectedNetwork?.online,
-                offline: !network!.selectedNetwork?.online,
+                online: network?.selectedNetwork?.online,
+                offline: !network?.selectedNetwork?.online,
               })}
             >
-              {network!.selectedNetwork?.value}
+              {network?.selectedNetwork?.value}
             </div>
             <ExpandMore fontSize="small" />
           </div>
