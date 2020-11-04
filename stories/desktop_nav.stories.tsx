@@ -39,7 +39,7 @@ const Template = (args) => {
       open,
       onClick: toggleDraw,
       items: [
-        <DesktopNavbarItem text="Home" icon={<HomeOutlined />} />,
+        <DesktopNavbarItem active text="Home" icon={<HomeOutlined />} />,
         <DesktopNavbarItem text="Validators" icon={<PersonOutline />} />,
         <DesktopNavbarItem text="Blocks" icon={<CheckBoxOutlineBlankOutlined />} />,
         <DesktopNavbarItem text="Activities" icon={<SyncAltOutlined />} />,

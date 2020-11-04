@@ -13,9 +13,15 @@ const DesktopNavbarItem = (props:DesktopNavbarItemProps) => {
   const {
     text,
     icon,
+    active,
   } = props;
   return (
-    <ListItem button className={classnames(classes.root, 'big-dipper', 'desktop-item')}>
+    <ListItem
+      button
+      className={classnames(classes.root, 'big-dipper', 'desktop-item', {
+        active,
+      })}
+    >
       <ListItemIcon>{icon}</ListItemIcon>
       <ListItemText primary={text} />
     </ListItem>

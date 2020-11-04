@@ -26,6 +26,10 @@ export const useGetStyles = () => {
           width: '200px',
         },
       },
+
+      '& .MuiDrawer-paperAnchorDockedLeft': {
+        border: 'none',
+      },
     },
     appBar: {
       '&.appbar-container': {

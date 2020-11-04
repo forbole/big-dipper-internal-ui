@@ -12,7 +12,15 @@ export const useGetStyles = () => {
               minWidth: '40px',
 
               '& svg': {
-                fill: theme?.palette?.custom?.icon ?? theme?.primary?.main,
+                fill: theme?.palette?.custom?.icon ?? theme?.palette?.primary?.main,
+              },
+            },
+            '&.active': {
+              background: theme?.palette?.custom?.highlight ?? theme?.palette?.primary?.light,
+              '& .MuiListItemIcon-root': {
+                '& svg': {
+                  fill: theme?.palette?.primary?.main,
+                },
               },
             },
           },

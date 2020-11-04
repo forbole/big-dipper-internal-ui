@@ -48,6 +48,7 @@ const lightThemeOverride = {
     },
     custom: {
       icon: 'rgba(153, 153, 153, 1)',
+      highlight: 'rgba(253, 59, 76, 0.1)',
       fonts: {
         fontOne: 'rgba(0, 0, 0, 1)', // header
         fontTwo: 'rgba(65, 65, 65, 1)', // body and paragraph
@@ -101,6 +102,7 @@ const darkThemeOverride = {
     },
     custom: {
       icon: 'rgba(153, 153, 153, 1)',
+      highlight: 'rgba(37, 37, 43, 1)',
       fonts: {
         fontOne: 'rgba(230, 230, 230, 1)', // header
         fontTwo: 'rgba(170, 170, 171, 1)', // body and paragraph
