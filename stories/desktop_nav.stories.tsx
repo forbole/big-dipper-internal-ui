@@ -1,8 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import {
-  MoveToInbox,
-  Mail,
   HomeOutlined,
   PersonOutline,
   CheckBoxOutlineBlankOutlined,
@@ -12,7 +10,7 @@ import {
   PieChartOutlined,
 } from '@material-ui/icons';
 import {
-  DesktopNav, DesktopNavbarItem,
+  DesktopNav, DesktopNavbarItem, DesktopHeaderBar,
 } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
@@ -49,6 +47,28 @@ const Template = (args) => {
       ],
     },
     topBar: {
+      header: <DesktopHeaderBar
+        title="Cosmos Hub 3"
+        announcement="Did you know that rubber bands last longer when refrigerated."
+        market={[
+          {
+            key: 'Price',
+            value: '$2.75',
+          },
+          {
+            key: 'Market Cap',
+            value: '$515,555.75',
+          },
+          {
+            key: 'Inflation',
+            value: '7.95%',
+          },
+          {
+            key: 'Community Pool',
+            value: '3,400,000 ATOM',
+          },
+        ]}
+      />,
       network: {
         isNetworkOpen,
         openNetwork: toggleNetwork,

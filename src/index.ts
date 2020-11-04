@@ -15,6 +15,8 @@ import DesktopNav from './desktop_navbar';
 import DesktopNavbarItem from './desktop_navbar_item';
 import Placeholder from './placeholder';
 import SearchBar from './search_bar';
+import DesktopHeaderBar from './desktop_header_bar';
+import NavbarAnnouncement from './navbar_announcement';
 
 export {
   resources,
@@ -32,4 +34,6 @@ export {
   DesktopNavbarItem,
   Placeholder,
   SearchBar,
+  DesktopHeaderBar,
+  NavbarAnnouncement,
 };

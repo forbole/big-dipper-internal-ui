@@ -47,6 +47,7 @@ export type TopBarProps = {
   themeMode: themeMode;
   searchBar: searchBar;
   network: network;
+  header?: ReactElement;
 }
 
 export interface DesktopNavProps {

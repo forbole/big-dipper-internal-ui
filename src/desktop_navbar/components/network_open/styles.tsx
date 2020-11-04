@@ -29,6 +29,7 @@ export const useGetStyles = () => {
       },
       '& .content': {
         padding: '1rem',
+        width: '100%',
         boxSizing: 'border-box',
         display: 'flex',
         flexWrap: 'wrap',

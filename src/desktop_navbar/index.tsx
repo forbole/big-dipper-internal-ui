@@ -13,7 +13,7 @@ import {
 import { useGetHeightHook } from '../utils/get_height_hook';
 import { DesktopNavProps } from './types';
 import {
-  TopActionBar, HeaderBar, NetworkOpen,
+  TopActionBar, NetworkOpen,
 } from './components';
 import { Placeholder } from '..';
 
@@ -47,7 +47,9 @@ const DesktopNav = (props:DesktopNavProps) => {
         })}
       >
         <TopActionBar {...topBar} />
-        {/* <HeaderBar /> */}
+        {!!topBar?.header && (
+          topBar.header
+        )}
       </AppBar>
       <Placeholder height={height} />
       <NetworkOpen topBar={topBar} />
