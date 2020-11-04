@@ -8,6 +8,9 @@ import { useGetStyles } from './styles';
 import { SearchBarProps } from './types';
 import { useSearchBarHook } from './hooks';
 
+/**
+ * Search bar for nav
+ */
 const SearchBar = (props: SearchBarProps) => {
   const { classes } = useGetStyles();
   const { searchBar: { searchBarPlaceholder, searchBarCallback: callback } } = props;

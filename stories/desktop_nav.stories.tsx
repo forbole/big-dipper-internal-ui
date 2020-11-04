@@ -55,6 +55,7 @@ const Template = (args) => {
         selectedNetwork: {
           value: 'cosmoshub3dfgdgfhghfgh',
           online: true,
+          iconSrc: 'https://gist.githubusercontent.com/kwunyeung/8be4598c77c61e497dfc7220a678b3ee/raw/8178b6bcce1d1563bac10f8a150c713724a742f1/cosmoshub.svg?sanitize=true',
         },
         items: [
           <div>item one</div>,

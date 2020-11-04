@@ -23,7 +23,7 @@ const NetworkOpen = (props:NetworkOpenProps) => {
       })}
     >
       <div className={classnames('actions')}>
-        <img src={logoSrc} alt="big-dipper-logo" />
+        <img src={logoSrc} alt="big-dipper-logo" className={classnames('logo')} />
         <TopActionBar {...topBar} />
       </div>
       <div className={classnames('content')}>

@@ -30,13 +30,16 @@ export const useGetStyles = () => {
       '& .content': {
         padding: '1rem',
       },
-      '& img': {
+      '& .logo': {
         padding: '1rem 0.5rem 0.5rem',
         width: '200px',
       },
       '& .top-action-bar': {
         width: '100%',
         '& .input': {
+          background: theme?.palette?.background?.default,
+        },
+        '& .selected-network': {
           background: theme?.palette?.background?.default,
         },
       },

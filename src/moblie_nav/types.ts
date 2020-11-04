@@ -9,6 +9,7 @@ export type network = {
   selectedNetwork: {
     value: string;
     online?: boolean;
+    iconSrc?: string;
   }
   items: ReactElement[];
   isNetworkOpen?: boolean;
