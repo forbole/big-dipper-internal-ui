@@ -18,7 +18,7 @@ const NavbarItem = (props:DesktopNavbarItemProps) => {
   return (
     <ListItem
       button
-      className={classnames(classes.root, 'big-dipper', 'desktop-item', {
+      className={classnames(classes.root, 'big-dipper', 'navbar-item', {
         active,
       })}
     >
