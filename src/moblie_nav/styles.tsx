@@ -10,6 +10,7 @@ export const useGetStyles = () => {
     root: {
       background: rootBackground,
       '&.mobile-nav': {
+        zIndex: 500,
         width: '100%',
         position: 'fixed',
         top: '0',

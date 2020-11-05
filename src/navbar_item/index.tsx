@@ -8,7 +8,7 @@ import {
 import { DesktopNavbarItemProps } from './types';
 import { useGetStyles } from './styles';
 
-const DesktopNavbarItem = (props:DesktopNavbarItemProps) => {
+const NavbarItem = (props:DesktopNavbarItemProps) => {
   const { classes } = useGetStyles();
   const {
     text,
@@ -28,4 +28,4 @@ const DesktopNavbarItem = (props:DesktopNavbarItemProps) => {
   );
 };
 
-export default DesktopNavbarItem;
+export default NavbarItem;

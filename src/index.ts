@@ -12,7 +12,7 @@ import Footer from './footer';
 import Grid from './grid';
 import MobileNav from './moblie_nav';
 import DesktopNav from './desktop_navbar';
-import DesktopNavbarItem from './desktop_navbar_item';
+import NavbarItem from './navbar_item';
 import Placeholder from './placeholder';
 import SearchBar from './search_bar';
 import DesktopHeaderBar from './desktop_header_bar';
@@ -31,7 +31,7 @@ export {
   Grid,
   MobileNav,
   DesktopNav,
-  DesktopNavbarItem,
+  NavbarItem,
   Placeholder,
   SearchBar,
   DesktopHeaderBar,

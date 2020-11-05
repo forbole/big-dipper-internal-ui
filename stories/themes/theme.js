@@ -4,7 +4,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 /** Common themes that don't change across light and dark theme */
 export const common = {
   breakpoints: {
-
     keys: ['xs', 'sm', 'md', 'lg', 'xl', 'mobile', 'tablet', 'desktop'],
     values: {
       xs: 0,
@@ -19,6 +18,13 @@ export const common = {
     },
   },
   typography: {
+    fontFamily: [
+      'Open Sans',
+      'Roboto',
+      '"Helvetica Neue"',
+      'sans-serif',
+      'Arial',
+    ].join(','),
     paragraph: {
       fontSize: '0.875rem', // 14px
     },
@@ -48,7 +54,7 @@ const lightThemeOverride = {
     },
     custom: {
       icon: 'rgba(153, 153, 153, 1)',
-      highlight: 'rgba(253, 59, 76, 0.1)',
+      highlight: 'rgba(253, 59, 76, 0.1)', // primary highlight
       fonts: {
         fontOne: 'rgba(0, 0, 0, 1)', // header
         fontTwo: 'rgba(65, 65, 65, 1)', // body and paragraph
@@ -69,6 +75,11 @@ const lightThemeOverride = {
         withdraw: 'rgba(82, 126, 255, 1)', // withdraw
         deposit: 'rgba(253, 117, 34, 1)', // deposit, proposal
         send: 'rgba(157, 44, 252, 1)', // send, multisend
+      },
+      network: {
+        mainnet: 'rgba(253, 59, 76, 1)', // primary light theme color
+        testnet: 'rgba(253, 120, 70, 1)',
+        retired: 'rgba(251, 211, 66, 1)',
       },
       gutters: {
         large: '24px',
@@ -102,7 +113,7 @@ const darkThemeOverride = {
     },
     custom: {
       icon: 'rgba(153, 153, 153, 1)',
-      highlight: 'rgba(37, 37, 43, 1)',
+      highlight: 'rgba(37, 37, 43, 1)', // primary highlight
       fonts: {
         fontOne: 'rgba(230, 230, 230, 1)', // header
         fontTwo: 'rgba(170, 170, 171, 1)', // body and paragraph
@@ -123,6 +134,11 @@ const darkThemeOverride = {
         withdraw: 'rgba(82, 126, 255, 0.7)', // withdraw
         deposit: 'rgba(253, 117, 34, 0.7)', // deposit, proposal
         send: 'rgba(157, 44, 252, 0.7)', // send, multisend
+      },
+      network: {
+        mainnet: 'rgba(253, 59, 76, 0.7)', // primary dark theme color
+        testnet: 'rgba(253, 120, 70, 0.7)',
+        retired: 'rgba(251, 211, 66, 0.7)',
       },
       gutters: {
         large: '24px',

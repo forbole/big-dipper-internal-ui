@@ -10,7 +10,6 @@ export const useGetStyles = () => {
           '&.desktop-item': {
             '& .MuiListItemIcon-root': {
               minWidth: '40px',
-
               '& svg': {
                 fill: theme?.palette?.custom?.icon ?? theme?.palette?.primary?.main,
               },
