@@ -10,7 +10,7 @@ import {
   PieChartOutlined,
 } from '@material-ui/icons';
 import {
-  DesktopNav, DesktopNavbarItem, DesktopHeaderBar,
+  DesktopNav, NavbarItem, DesktopHeaderBar,
 } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
@@ -37,13 +37,13 @@ const Template = (args) => {
       open,
       onClick: toggleDraw,
       items: [
-        <DesktopNavbarItem active text="Home" icon={<HomeOutlined />} />,
-        <DesktopNavbarItem text="Validators" icon={<PersonOutline />} />,
-        <DesktopNavbarItem text="Blocks" icon={<CheckBoxOutlineBlankOutlined />} />,
-        <DesktopNavbarItem text="Activities" icon={<SyncAltOutlined />} />,
-        <DesktopNavbarItem text="Proposals" icon={<EventNoteOutlined />} />,
-        <DesktopNavbarItem text="News" icon={<AnnouncementOutlined />} />,
-        <DesktopNavbarItem text="Analysis" icon={<PieChartOutlined />} />,
+        <NavbarItem active text="Home" icon={<HomeOutlined />} />,
+        <NavbarItem text="Validators" icon={<PersonOutline />} />,
+        <NavbarItem text="Blocks" icon={<CheckBoxOutlineBlankOutlined />} />,
+        <NavbarItem text="Activities" icon={<SyncAltOutlined />} />,
+        <NavbarItem text="Proposals" icon={<EventNoteOutlined />} />,
+        <NavbarItem text="News" icon={<AnnouncementOutlined />} />,
+        <NavbarItem text="Analysis" icon={<PieChartOutlined />} />,
       ],
     },
     topBar: {
