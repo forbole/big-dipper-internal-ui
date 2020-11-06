@@ -16,6 +16,7 @@ export const formatProps = (props:MobileProps): any => {
     network,
     menu,
     hamburgerIcon,
+    className,
   } = props;
   const logoFormat = {
     src: logo?.src ?? theme?.palette?.type === 'light' ? defaultLogo : logoWhite,
@@ -30,5 +31,6 @@ export const formatProps = (props:MobileProps): any => {
     announcement,
     menu,
     hamburgerIcon,
+    className,
   };
 };

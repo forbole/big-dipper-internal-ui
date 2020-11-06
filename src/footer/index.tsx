@@ -25,6 +25,7 @@ export const Footer = (props: FooterProps) => {
     storeBadgesComponents = [],
     blockExplorerText,
     copyrightText,
+    className,
     links = {
     },
     bigDipperLogo = {
@@ -53,7 +54,7 @@ export const Footer = (props: FooterProps) => {
   });
 
   return (
-    <div className={classnames(classes.root, 'big-dipper', 'footer')}>
+    <div className={classnames(classes.root, className, 'big-dipper', 'footer')}>
       {/* logo container start */}
       <div className={classnames(classes.logoContainer, 'logo-container')}>
         <div>

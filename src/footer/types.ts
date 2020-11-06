@@ -28,4 +28,5 @@ export interface FooterProps {
   links?: Links;
   socialMediaComponents?: ReactElement[];
   storeBadgesComponents?: ReactElement[];
+  className?: string;
 }

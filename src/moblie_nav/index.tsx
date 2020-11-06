@@ -21,9 +21,9 @@ const MobileNav = (props: MobileProps) => {
   } = useGetHeightHook();
   const formattedProps = formatProps(props);
   const { classes } = useGetStyles();
-  const { searchBar, announcement } = formattedProps;
+  const { searchBar, announcement, className } = formattedProps;
   return (
-    <div className={classnames('mobile-nav-wrapper')}>
+    <div className={classnames(className, 'mobile-nav-wrapper')}>
       <div
         ref={heightRef}
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}

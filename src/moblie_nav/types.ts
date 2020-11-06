@@ -60,4 +60,5 @@ export interface MobileProps {
   network?: network;
   menu?: menu;
   hamburgerIcon?: hamburgerIcon;
+  className?: string;
 }
