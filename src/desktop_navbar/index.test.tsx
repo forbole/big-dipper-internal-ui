@@ -17,7 +17,7 @@ describe('DesktopNav', () => {
       topBar: {
         network: {
           isNetworkOpen: true,
-          openNetwork: () => {},
+          toggleNetwork: () => {},
           selectedNetwork: {
             value: 'cosmoshub3dfgdgfhghfgh',
             online: true,

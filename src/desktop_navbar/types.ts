@@ -38,8 +38,8 @@ export type network = {
     iconSrc: string;
   }
   items: ReactElement[];
-  isNetworkOpen?: boolean;
-  openNetwork?: () => void;
+  isNetworkOpen: boolean;
+  toggleNetwork: () => void;
 }
 
 export type TopBarProps = {
@@ -53,4 +53,9 @@ export type TopBarProps = {
 export interface DesktopNavProps {
   sideBar: DesktopSideBarProps;
   topBar: TopBarProps;
+}
+
+export interface UseDesktopNavbarHookProps {
+  sideBar: DesktopSideBarProps;
+  network: network;
 }

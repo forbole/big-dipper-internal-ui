@@ -62,7 +62,7 @@ describe('MobileNav/MobileNav', () => {
             <NetworkItem />,
             <NetworkItem />,
           ],
-          openNetwork: function noRefCheck() {},
+          toggleNetwork: function noRefCheck() {},
           selectedNetwork: {
             online: true,
             value: 'cosmoshub3dfgdgfhghfgh',
@@ -132,7 +132,7 @@ describe('MobileNav/MobileNav', () => {
             <NetworkItem />,
             <NetworkItem />,
           ],
-          openNetwork: function noRefCheck() {},
+          toggleNetwork: function noRefCheck() {},
           selectedNetwork: {
             online: true,
             value: 'cosmoshub3dfgdgfhghfgh',
@@ -175,7 +175,7 @@ describe('MobileNav/MobileNav', () => {
             <NetworkItem />,
             <NetworkItem />,
           ],
-          openNetwork: function noRefCheck() {},
+          toggleNetwork: function noRefCheck() {},
           selectedNetwork: {
             online: true,
             value: 'cosmoshub3dfgdgfhghfgh',

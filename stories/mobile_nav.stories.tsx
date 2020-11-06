@@ -19,7 +19,7 @@ const Template = (args) => {
     toggleIsOpen,
     isNetworkOpen,
     isNavOpen,
-    openNetwork,
+    toggleNetwork,
     mode,
     toggleMode,
   } = useMobileHook();
@@ -27,7 +27,7 @@ const Template = (args) => {
   const stateRelatedProps = {
     network: {
       isNetworkOpen,
-      openNetwork,
+      toggleNetwork,
     },
     menu: {
       isMenuOpen: isNavOpen,
@@ -59,13 +59,13 @@ const TemplateBase = (args) => {
     toggleIsOpen,
     isNetworkOpen,
     isNavOpen,
-    openNetwork,
+    toggleNetwork,
   } = useMobileHook();
 
   const stateRelatedProps = {
     network: {
       isNetworkOpen,
-      openNetwork,
+      toggleNetwork,
     },
     menu: {
       isMenuOpen: isNavOpen,

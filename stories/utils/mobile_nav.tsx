@@ -35,7 +35,7 @@ export const useMobileHook = () => {
     }
   };
 
-  const openNetwork = () => {
+  const toggleNetwork = () => {
     // make sure everything else is closed first
     if (isNavOpen) {
       setNavOpen(false);
@@ -49,7 +49,7 @@ export const useMobileHook = () => {
     toggleIsOpen,
     isNetworkOpen,
     isNavOpen,
-    openNetwork,
+    toggleNetwork,
     toggleMode,
     mode,
   };

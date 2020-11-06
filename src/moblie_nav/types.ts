@@ -14,7 +14,7 @@ export type network = {
   }
   items: ReactElement[];
   isNetworkOpen?: boolean;
-  openNetwork?: () => void;
+  toggleNetwork?: () => void;
 }
 
 export type searchBar = {

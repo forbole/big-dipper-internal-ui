@@ -53,7 +53,7 @@ export const TextHolders = (props:DesktopNavProps) => {
     },
     topBar: {
       network: {
-        openNetwork: toggleNetwork,
+        toggleNetwork,
         isNetworkOpen,
       },
     },
@@ -76,19 +76,8 @@ export const TextHolders = (props:DesktopNavProps) => {
 
   const classes = useStyles();
 
-  const handleClick = () => {
-    if (open) {
-      onClick();
-    }
-    if (isNetworkOpen) {
-      toggleNetwork();
-    }
-  };
-
   return (
     <div
-      onClick={handleClick}
-      role="button"
       className={clsx(classes.root, {
         open,
       })}

@@ -33,7 +33,7 @@ const Nav = (props: NavProps) => {
         {!!network?.selectedNetwork?.value && (
           <div
             className={classnames('network-container')}
-            onClick={network?.openNetwork}
+            onClick={network?.toggleNetwork}
             role="button"
           >
             <div

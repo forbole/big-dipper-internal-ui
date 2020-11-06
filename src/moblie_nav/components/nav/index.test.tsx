@@ -16,7 +16,7 @@ describe('MobileNav/Nav', () => {
             },
             items: [],
             isNetworkOpen: true,
-            openNetwork: () => {},
+            toggleNetwork: () => {},
           }
         }
         logo={{

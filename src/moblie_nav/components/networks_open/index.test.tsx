@@ -19,7 +19,7 @@ describe('MobileNav/NetworksOpen', () => {
               <NetworkItem />,
             ],
             isNetworkOpen: true,
-            openNetwork: () => {},
+            toggleNetwork: () => {},
           }
         }
       />,

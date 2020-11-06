@@ -42,6 +42,7 @@ describe('NetworkOpen', () => {
           network: {
             isNetworkOpen: true,
             items: [],
+            toggleNetwork: () => {},
             selectedNetwork: {
               value: '',
               iconSrc: '',

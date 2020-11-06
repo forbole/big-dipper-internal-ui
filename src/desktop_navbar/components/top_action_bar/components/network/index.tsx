@@ -6,7 +6,7 @@ import { useGetStyles } from './styles';
 
 const Network = (props:NetworkProps) => {
   const { network } = props;
-  const { openNetwork } = network;
+  const { toggleNetwork } = network;
   const { classes } = useGetStyles();
   const {
     selectedNetwork: {
@@ -18,7 +18,7 @@ const Network = (props:NetworkProps) => {
   return (
     <div
       className={classnames(classes.root, 'desktop-nav', 'selected-network')}
-      onClick={openNetwork}
+      onClick={toggleNetwork}
       role="button"
     >
       <img src={iconSrc} alt={value} className={classnames('network-icon')} />

@@ -10,7 +10,7 @@ import {
   PieChartOutlined,
 } from '@material-ui/icons';
 import {
-  DesktopNav, NavbarItem, DesktopHeaderBar, Footer,
+  DesktopNav, NavbarItem, DesktopHeaderBar,
 } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
@@ -32,6 +32,7 @@ const Template = (args) => {
     toggleNetwork,
     isNetworkOpen,
   } = useDesktopNavHook();
+
   const hookProps = {
     sideBar: {
       open,
@@ -71,7 +72,7 @@ const Template = (args) => {
       />,
       network: {
         isNetworkOpen,
-        openNetwork: toggleNetwork,
+        toggleNetwork,
         selectedNetwork: {
           value: 'cosmoshub3dfgdgfhghfgh',
           online: true,
@@ -123,15 +124,6 @@ const Template = (args) => {
         {...hookProps}
       />
       <TextHolders {...hookProps} />
-      {/* wingman clean up */}
-      <Footer
-        blockExplorerText="..."
-        copyrightText="...."
-        donate={{
-          text: 'donate',
-          url: '#',
-        }}
-      />
     </ThemeKnob>
   );
 };
