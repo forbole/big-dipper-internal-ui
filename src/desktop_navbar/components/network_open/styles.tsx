@@ -24,7 +24,7 @@ export const useGetStyles = () => {
       '& .actions': {
         width: '100%',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'space-between',
       },
       '& .content': {
