@@ -121,6 +121,9 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
     },
     logo: {
       width: '150px',
+      '&:hover': {
+        cursor: 'pointer',
+      },
     },
   });
 
