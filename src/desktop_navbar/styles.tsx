@@ -39,7 +39,7 @@ export const useGetStyles = () => {
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {
           easing: theme.transitions.easing.easeInOut,
-          duration: theme.transitions.duration.leavingScreen,
+          duration: theme.transitions.duration.enteringScreen,
         }),
         '&.MuiPaper-elevation4': {
           boxShadow: 'none',
@@ -71,7 +71,7 @@ export const useGetStyles = () => {
     drawerClose: {
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.easeIn,
-        duration: theme.transitions.duration.leavingScreen,
+        duration: theme.transitions.duration.enteringScreen,
       }),
       overflowX: 'hidden',
       width: CLOSED_DRAWER_WIDTH,
