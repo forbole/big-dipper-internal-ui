@@ -11,7 +11,12 @@ import { SearchBar } from '../../..';
 
 const TopActionBar = (props:TopBarProps) => {
   const { classes } = useGetStyles();
-  const { language, themeMode, searchBar, network } = props;
+  const {
+    language,
+    themeMode,
+    searchBar,
+    network,
+  } = props;
 
   return (
     <div className={classnames(classes.root, 'big-dipper', 'desktop-nav', 'top-action-bar')}>

@@ -1,8 +1,14 @@
 import { Language } from '@material-ui/icons';
 import React from 'react';
 import classnames from 'classnames';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import {
+  MenuItem,
+  Popper,
+  Grow,
+  Paper,
+  ClickAwayListener,
+  MenuList,
+} from '@material-ui/core';
 import { LanguagesProps } from './types';
 import { useLanguagesHook } from './hooks';
 import { useGetStyles } from './styles';
@@ -21,6 +27,7 @@ const Languages = (props:LanguagesProps) => {
     handleClose,
     handleChange,
   } = useLanguagesHook(onClick);
+
   const { classes } = useGetStyles();
   return (
     <div className={classnames(classes.root, 'big-dipper', 'top-nav-action', 'language')}>
@@ -32,29 +39,46 @@ const Languages = (props:LanguagesProps) => {
         <Language />
         {selected.value}
       </div>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
+      <Popper
         open={Boolean(anchorEl)}
-        onClose={handleClose}
+        anchorEl={anchorEl}
+        role={undefined}
+        transition
+        disablePortal
       >
-        {languages.map((x) => {
-          return (
-            <MenuItem
-              onClick={() => handleChange({
-                key: x?.key, value: x?.value,
-              })}
-              key={x?.key}
-              className={classnames('item', {
-                selected: selected?.key === x?.key,
-              })}
-            >
-              {x?.value}
-            </MenuItem>
-          );
-        })}
-      </Menu>
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
+            }}
+          >
+            <Paper>
+              <ClickAwayListener onClickAway={handleClose}>
+                <MenuList
+                  id="menu-list-grow"
+                >
+                  {languages.map((x) => {
+                    return (
+                      <MenuItem
+                        onClick={() => handleChange({
+                          key: x?.key, value: x?.value,
+                        })}
+                        key={x?.key}
+                        className={classnames('item', {
+                          selected: selected?.key === x?.key,
+                        })}
+                      >
+                        {x?.value}
+                      </MenuItem>
+                    );
+                  })}
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
     </div>
   );
 };
