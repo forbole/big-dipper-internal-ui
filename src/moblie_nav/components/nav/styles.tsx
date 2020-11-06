@@ -17,11 +17,13 @@ export const useGetStyles = () => {
         justifyContent: 'space-between',
         padding: '1rem',
       },
-      '& .logo': {
-        width: '120px',
+      '& .logo-container': {
         zIndex: 200,
-        '&:hover': {
-          cursor: 'pointer',
+        '& .logo': {
+          width: '120px',
+          '&:hover': {
+            cursor: 'pointer',
+          },
         },
       },
       '& .network-container': {

@@ -15,7 +15,7 @@ const TopActionBar = (props:TopBarProps) => {
 
   return (
     <div className={classnames(classes.root, 'big-dipper', 'desktop-nav', 'top-action-bar')}>
-      <SearchBar searchBar={searchBar} />
+      {searchBar && <SearchBar searchBar={searchBar} />}
       <div className={classnames('side-actions-container')}>
         <Network network={network} />
         <ThemeMode themeMode={themeMode} />

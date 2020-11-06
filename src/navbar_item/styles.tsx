@@ -7,7 +7,7 @@ export const useGetStyles = () => {
     return (
       createStyles({
         root: {
-          '&.desktop-item': {
+          '&.navbar-item': {
             '& .MuiListItemIcon-root': {
               minWidth: '40px',
               '& svg': {

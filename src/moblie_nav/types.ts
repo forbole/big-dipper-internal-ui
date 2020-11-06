@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 export type logo = {
   src?: string;
   alt?: string;
+  onClick?: () => void;
 }
 
 export type network = {

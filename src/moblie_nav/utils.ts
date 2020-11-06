@@ -20,6 +20,7 @@ export const formatProps = (props:MobileProps): any => {
   const logoFormat = {
     src: logo?.src ?? theme?.palette?.type === 'light' ? defaultLogo : logoWhite,
     alt: logo?.alt ?? 'logo',
+    onClick: logo?.onClick,
   };
   return {
     ...props,

@@ -23,7 +23,7 @@ const MobileNav = (props: MobileProps) => {
   const { classes } = useGetStyles();
   const { searchBar, announcement } = formattedProps;
   return (
-    <>
+    <div className={classnames('mobile-nav-wrapper')}>
       <div
         ref={heightRef}
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
@@ -39,7 +39,7 @@ const MobileNav = (props: MobileProps) => {
         )}
       </div>
       <Placeholder height={height} />
-    </>
+    </div>
   );
 };
 

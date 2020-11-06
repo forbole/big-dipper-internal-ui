@@ -96,6 +96,7 @@ export const Default = Template.bind({
 Default.args = {
   logo: {
     alt: 'big dipper logo',
+    onClick: () => console.log('logo has been clicked'),
   },
   announcement: 'Did you know that rubber bands last longer when refrigerated.',
   searchBar: {
