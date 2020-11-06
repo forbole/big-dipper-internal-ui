@@ -10,7 +10,7 @@ import {
   PieChartOutlined,
 } from '@material-ui/icons';
 import {
-  DesktopNav, NavbarItem, DesktopHeaderBar,
+  DesktopNav, NavbarItem, DesktopHeaderBar, Footer,
 } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
@@ -123,6 +123,14 @@ const Template = (args) => {
         {...hookProps}
       />
       <TextHolders {...hookProps} />
+      {/* <Footer
+        blockExplorerText="..."
+        copyrightText="...."
+        donate={{
+          text: 'donate',
+          url: '#',
+        }}
+      /> */}
     </ThemeKnob>
   );
 };
