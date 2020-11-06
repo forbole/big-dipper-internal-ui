@@ -4,7 +4,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  ButtonBase,
 } from '@material-ui/core';
 import { DesktopNavbarItemProps } from './types';
 import { useGetStyles } from './styles';
@@ -18,7 +17,7 @@ const NavbarItem = (props:DesktopNavbarItemProps) => {
   } = props;
   return (
     <ListItem
-      // button
+      button
       className={classnames(classes.root, 'big-dipper', 'navbar-item', {
         active,
       })}

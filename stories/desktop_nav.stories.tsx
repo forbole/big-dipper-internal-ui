@@ -123,14 +123,15 @@ const Template = (args) => {
         {...hookProps}
       />
       <TextHolders {...hookProps} />
-      {/* <Footer
+      {/* wingman clean up */}
+      <Footer
         blockExplorerText="..."
         copyrightText="...."
         donate={{
           text: 'donate',
           url: '#',
         }}
-      /> */}
+      />
     </ThemeKnob>
   );
 };
