@@ -9,6 +9,7 @@ type Donate = {
 type BigDipperLogo = {
   src?: string;
   alt?: string;
+  onClick?: () => void;
 }
 
 type Links = {

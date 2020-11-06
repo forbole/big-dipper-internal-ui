@@ -6,14 +6,13 @@ import {
   Button,
   List,
   ListItem,
-  Link,
 } from '@material-ui/core';
 import { useGetStyles } from './styles';
 import { FooterProps } from './types';
+import { useFooterHook } from './hooks';
 import {
   logo, logoWhite,
 } from '../resources/images';
-
 /**
  * Footer component used across all pages
  */
@@ -37,6 +36,7 @@ export const Footer = (props: FooterProps) => {
   const {
     src: bigDipperSrc = theme?.palette?.type === 'light' ? logo : logoWhite,
     alt: bigDipperAlt = 'Big Dipper Logo',
+    onClick,
   } = bigDipperLogo;
 
   const {
@@ -49,6 +49,8 @@ export const Footer = (props: FooterProps) => {
     decorator: linkDecorator,
   } = links;
 
+  const { handleLogoClick } = useFooterHook(onClick);
+
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
   });
@@ -58,15 +60,13 @@ export const Footer = (props: FooterProps) => {
       {/* logo container start */}
       <div className={classnames(classes.logoContainer, 'logo-container')}>
         <div>
-          <Link
-            href="/"
-          >
+          <span onClick={handleLogoClick} role="button">
             <img
               className={classnames(classes.logo, 'logo')}
               src={bigDipperSrc}
               alt={bigDipperAlt}
             />
-          </Link>
+          </span>
           <Typography
             variant="body2"
             className={classnames('block-explorer-text')}
