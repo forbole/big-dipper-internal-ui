@@ -26,10 +26,6 @@ export const useGetStyles = () => {
           width: '200px',
         },
       },
-
-      '& .MuiDrawer-paperAnchorDockedLeft': {
-        border: 'none',
-      },
     },
     appBar: {
       '&.appbar-container': {
@@ -38,7 +34,7 @@ export const useGetStyles = () => {
         width: `calc(100% - ${CLOSED_DRAWER_WIDTH}px)`,
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {
-          easing: theme.transitions.easing.easeInOut,
+          easing: theme.transitions.easing.easeIn,
           duration: theme.transitions.duration.enteringScreen,
         }),
         '&.MuiPaper-elevation4': {
@@ -49,7 +45,7 @@ export const useGetStyles = () => {
         marginLeft: OPEN_DRAWER_WIDTH,
         width: `calc(100% - ${OPEN_DRAWER_WIDTH}px)`,
         transition: theme.transitions.create(['width', 'margin'], {
-          easing: theme.transitions.easing.easeInOut,
+          easing: theme.transitions.easing.easeIn,
           duration: theme.transitions.duration.enteringScreen,
         }),
       },
