@@ -27,6 +27,7 @@ export const useGetStyles = () => {
         overflow: 'auto',
         background: theme?.palette?.background?.paper,
         padding: '0.5rem 1rem',
+        borderRadius: '2px',
         '& .market-price-item': {
           display: 'flex',
           whiteSpace: 'nowrap',

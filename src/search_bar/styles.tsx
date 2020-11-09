@@ -21,6 +21,7 @@ export const useGetStyles = () => {
         background: input.background,
         padding: '0.2rem 0.5rem',
         fontSize: '0.875rem',
+        borderRadius: '2px',
         '& input': {
           textOverflow: 'ellipsis',
           whiteSpace: 'nowrap',
