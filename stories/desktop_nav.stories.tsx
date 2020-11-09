@@ -50,7 +50,7 @@ const Template = (args) => {
     topBar: {
       header: <DesktopHeaderBar
         title="Cosmos Hub 3"
-        announcement="Did you know that rubber bands last longer when refrigerated."
+        announcement="A fun fact"
         market={[
           {
             key: 'Price',

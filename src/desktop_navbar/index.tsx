@@ -19,6 +19,9 @@ import {
 import { useDesktopNavbarHook } from './hooks';
 import { Placeholder } from '..';
 
+/**
+ * DesktopNav bar component used across the app
+ */
 const DesktopNav = (props:DesktopNavProps) => {
   const { classes } = useGetStyles();
   const theme = useTheme();
