@@ -7,6 +7,7 @@ import './styles.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  layout: 'fullscreen',
 }
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));

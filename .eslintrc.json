@@ -45,6 +45,8 @@
     "react/no-array-index-key": "warn",
     "jsx-a11y/anchor-is-valid": "warn",
     "import/no-duplicates": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
     "react/jsx-first-prop-new-line": [
       "error",
       "multiline"

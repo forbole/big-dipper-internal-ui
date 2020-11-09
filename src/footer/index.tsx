@@ -1,26 +1,30 @@
 import React from 'react';
 import classnames from 'classnames';
+import { useTheme } from '@material-ui/core/styles';
 import {
   Typography,
   Button,
   List,
   ListItem,
-  Link,
 } from '@material-ui/core';
 import { useGetStyles } from './styles';
 import { FooterProps } from './types';
-import { logo } from '../resources/images';
-
+import { useFooterHook } from './hooks';
+import {
+  logo, logoWhite,
+} from '../resources/images';
 /**
  * Footer component used across all pages
  */
 export const Footer = (props: FooterProps) => {
+  const theme = useTheme();
   const {
     breakpoint = 769,
     socialMediaComponents = [],
     storeBadgesComponents = [],
     blockExplorerText,
     copyrightText,
+    className,
     links = {
     },
     bigDipperLogo = {
@@ -30,8 +34,9 @@ export const Footer = (props: FooterProps) => {
   } = props;
 
   const {
-    src: bigDipperSrc = logo,
+    src: bigDipperSrc = theme?.palette?.type === 'light' ? logo : logoWhite,
     alt: bigDipperAlt = 'Big Dipper Logo',
+    onClick,
   } = bigDipperLogo;
 
   const {
@@ -44,24 +49,24 @@ export const Footer = (props: FooterProps) => {
     decorator: linkDecorator,
   } = links;
 
+  const { handleLogoClick } = useFooterHook(onClick);
+
   const { classes } = useGetStyles({
     tabletBreakpoint: breakpoint,
   });
 
   return (
-    <div className={classnames(classes.root, 'big-dipper', 'footer')}>
+    <div className={classnames(classes.root, className, 'big-dipper', 'footer')}>
       {/* logo container start */}
       <div className={classnames(classes.logoContainer, 'logo-container')}>
         <div>
-          <Link
-            href="/"
-          >
+          <span onClick={handleLogoClick} role="button">
             <img
               className={classnames(classes.logo, 'logo')}
               src={bigDipperSrc}
               alt={bigDipperAlt}
             />
-          </Link>
+          </span>
           <Typography
             variant="body2"
             className={classnames('block-explorer-text')}

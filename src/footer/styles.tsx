@@ -7,9 +7,9 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
 
   // root colors
   const root = {
-    background: theme?.palette?.custom?.footer
+    background: theme?.palette?.background?.footer
     ?? 'rgba(0, 0, 0, 1)',
-    color: theme?.palette?.custom?.onDarkSurface ?? 'rgba(255, 255, 255, 0.8)',
+    color: theme?.palette?.fonts?.fontTwo ?? 'rgba(255, 255, 255, 0.8)',
   };
 
   // logo colors
@@ -19,11 +19,11 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
 
   // copyright colors
   const copyright = {
-    color: theme?.palette?.custom?.onDarkSurface ?? 'rgba(255, 255, 255, 0.8)',
+    color: theme?.palette?.fonts?.fontsTwo ?? 'rgba(255, 255, 255, 0.8)',
   };
 
   const listItem = {
-    fontSize: theme?.typography?.body3?.fontSize ?? '0.75rem',
+    fontSize: theme?.typography?.paragraph?.fontSize ?? '0.875rem',
   };
 
   const useStyles = makeStyles({
@@ -121,6 +121,9 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
     },
     logo: {
       width: '150px',
+      '&:hover': {
+        cursor: 'pointer',
+      },
     },
   });
 

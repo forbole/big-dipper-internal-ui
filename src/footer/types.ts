@@ -9,6 +9,7 @@ type Donate = {
 type BigDipperLogo = {
   src?: string;
   alt?: string;
+  onClick?: () => void;
 }
 
 type Links = {
@@ -28,4 +29,5 @@ export interface FooterProps {
   links?: Links;
   socialMediaComponents?: ReactElement[];
   storeBadgesComponents?: ReactElement[];
+  className?: string;
 }

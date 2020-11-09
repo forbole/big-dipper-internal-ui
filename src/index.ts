@@ -1,3 +1,4 @@
+import * as resources from './resources';
 import {
   TelegramIcon,
   MediumIcon,
@@ -7,15 +8,18 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from './icons';
-import ButtonExample from './button_example';
-import DataBlock from './data_block';
 import Footer from './footer';
 import Grid from './grid';
-import * as resources from './resources';
+import MobileNav from './moblie_nav';
+import DesktopNav from './desktop_navbar';
+import NavbarItem from './navbar_item';
+import Placeholder from './placeholder';
+import SearchBar from './search_bar';
+import DesktopHeaderBar from './desktop_header_bar';
+import NavbarAnnouncement from './navbar_announcement';
 
 export {
-  ButtonExample,
-  DataBlock,
+  resources,
   TelegramIcon,
   MediumIcon,
   FacebookIcon,
@@ -25,5 +29,11 @@ export {
   YoutubeIcon,
   Footer,
   Grid,
-  resources,
+  MobileNav,
+  DesktopNav,
+  NavbarItem,
+  Placeholder,
+  SearchBar,
+  DesktopHeaderBar,
+  NavbarAnnouncement,
 };
