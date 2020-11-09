@@ -22,7 +22,7 @@ const DesktopHeaderBar = (props:DesktopHeaderBarProps) => {
       <div className={classnames('market-price')}>
         {market.map((x) => {
           return (
-            <div className={classnames('market-price-item')}>
+            <div className={classnames('market-price-item')} key={x.key}>
               <p className={classnames('price-key')}>
                 {x.key}
                 :
