@@ -76,3 +76,160 @@ export const StoreBadgeComponent = (props:any) => {
     </a>
   );
 };
+
+export const defaultArgs = {
+  breakpoint: {
+    table: {
+      type: {
+        summary: 'string | number',
+      },
+      defaultValue: {
+        summary: 769,
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  bigDipperLogo: {
+    type: {
+      required: false,
+    },
+    description: 'defaults to packaged big dipper logo',
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  blockExplorerText: {
+    type: {
+      required: true,
+    },
+    description: '{chain} Block Explorer etc',
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  copyrightText: {
+    type: {
+      required: true,
+    },
+    description: 'Copyright © Forbole 2020 etc',
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  donate: {
+    type: {
+      required: false,
+    },
+    description: 'all optional',
+    table: {
+      type: {
+        summary: 'object',
+        detail: JSON.stringify({
+          text: 'string',
+          url: 'string',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  links: {
+    type: {
+      required: false,
+    },
+    description: 'all optional',
+    table: {
+      type: {
+        summary: 'object',
+        detail: JSON.stringify({
+          components: 'ReactElement[]',
+          decorator: 'ReactElement | string',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  socialMediaComponents: {
+    type: {
+      required: false,
+    },
+    table: {
+      type: {
+        summary: 'ReactElement[]',
+      },
+      defaultValue: {
+        summary: '[]',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  storeBadgesComponents: {
+    type: {
+      required: false,
+    },
+    table: {
+      type: {
+        summary: 'ReactElement[]',
+      },
+      defaultValue: {
+        summary: '[]',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  className: {
+    type: {
+      required: false,
+    },
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+};

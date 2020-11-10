@@ -4,13 +4,22 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { MobileNav } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
-  useMobileHook, MenuItem, NetworkItem,
+  useMobileHook,
+  MenuItem,
+  NetworkItem,
+  defaultArgs,
 } from './utils/mobile_nav';
 
 export default {
   title: 'Navbar/Mobile',
   component: MobileNav,
   decorators: [withKnobs],
+  argTypes: defaultArgs,
+  parameters: {
+    docs: {
+      inlineStories: false,
+    },
+  },
 };
 
 const Template = (args) => {

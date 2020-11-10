@@ -169,3 +169,74 @@ export const TextHolders = (props:DesktopNavProps) => {
 
   );
 };
+
+export const defaultArgs = {
+  sideBar: {
+    table: {
+      type: {
+        required: true,
+        summary: 'object',
+        detail: JSON.stringify({
+          open: 'boolean',
+          onClick: '() => void',
+          items: 'ReactElement[]',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  topBar: {
+    table: {
+      type: {
+        required: true,
+        summary: 'object',
+        detail: JSON.stringify({
+          language: {
+            selected: {
+              key: 'string',
+              value: 'string',
+            },
+            languages: [{
+              key: 'string',
+              value: 'string',
+            }],
+            onClick: '({key, value}) => void',
+          },
+          themeMode: {
+            mode: {
+              value: 'string',
+              key: 'string',
+            },
+            onClick: '() => void',
+          },
+          searchBar: {
+            searchBarPlaceholder: 'string',
+            searchBarCallback: '(value: string | number) => void',
+          },
+          network: {
+            selectedNetwork: {
+              value: 'string [required]',
+              online: 'boolean',
+              iconSrc: 'string',
+            },
+            items: 'ReactElement[] [required]',
+            isNetworkOpen: 'boolean',
+            toggleNetwork: '() => void',
+          },
+          header: 'ReactElement',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+};

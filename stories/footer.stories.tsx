@@ -5,6 +5,7 @@ import {
   LinkComponent,
   SocialMediaComponent,
   StoreBadgeComponent,
+  defaultArgs,
 } from './utils/footer';
 import {
   TelegramIcon,
@@ -19,6 +20,7 @@ export default {
   title: 'Footer',
   component: Footer,
   decorators: [withKnobs],
+  argTypes: defaultArgs,
 };
 
 const Template = (args) => (
@@ -32,10 +34,10 @@ const Template = (args) => (
 /**
  * Default props
  */
-export const Default = Template.bind({
+export const Whut = Template.bind({
 });
 
-Default.args = {
+Whut.args = {
   bigDipperLogo: {
     alt: 'big dipper logo',
   },
