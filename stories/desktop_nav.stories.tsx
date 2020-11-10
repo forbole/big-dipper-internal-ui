@@ -137,13 +137,3 @@ export const Default = Template.bind({
 Default.args = {
 
 };
-
-/**
- * Base with only necessary props
- */
-// export const Base = Template.bind({
-// });
-
-// Base.args = {
-//   ...baseProps,
-// };
