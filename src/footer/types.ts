@@ -3,7 +3,6 @@ import { ReactElement } from 'react';
 type Donate = {
   text?: string;
   url?: string;
-  title?: string;
 }
 
 type BigDipperLogo = {
