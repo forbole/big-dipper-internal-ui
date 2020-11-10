@@ -170,3 +170,142 @@ export const NetworkItem = () => {
     </div>
   );
 };
+
+export const defaultArgs = {
+  logo: {
+    table: {
+      type: {
+        summary: 'object',
+        detail: JSON.stringify({
+          src: 'string',
+          alt: 'string',
+          onClick: '() => void',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  searchBar: {
+    table: {
+      type: {
+        summary: 'object',
+        detail: JSON.stringify({
+          searchBarPlaceholder: 'string',
+          searchBarCallback: '(value: string | number) => void [required]',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  announcement: {
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  network: {
+    table: {
+      type: {
+        summary: 'object',
+        detail: JSON.stringify({
+          selectedNetwork: {
+            value: 'string [required]',
+            online: 'boolean',
+            iconSrc: 'string',
+          },
+          items: 'ReactElement[] [required]',
+          isNetworkOpen: 'boolean',
+          toggleNetwork: '() => void',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  menu: {
+    table: {
+      type: {
+        summary: 'object',
+        detail: JSON.stringify({
+          isMenuOpen: 'boolean [required]',
+          items: 'ReactElement[] [required]',
+          language: {
+            selected: {
+              key: 'string [required]',
+              value: 'string [required]',
+            },
+            languages: [{
+              key: 'string [required]',
+              value: 'string [required]',
+            }],
+            onClick: '({key, value}) => void [required]',
+          },
+          themeMode: {
+            mode: {
+              value: 'string [required]',
+              key: 'string [required]',
+            },
+            onClick: '() => void [required',
+          },
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  hamburgerIcon: {
+    table: {
+      type: {
+        summary: 'object',
+        detail: JSON.stringify({
+          isOpen: 'boolean [required]',
+          onClick: '() => void [required]',
+        }, null, 2),
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+  className: {
+    table: {
+      type: {
+        summary: 'string',
+      },
+      defaultValue: {
+        summary: 'null',
+      },
+    },
+    control: {
+      type: null,
+    },
+  },
+};

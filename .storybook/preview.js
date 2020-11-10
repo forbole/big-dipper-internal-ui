@@ -5,6 +5,7 @@ import {
   Description,
   Primary,
   ArgsTable,
+  Stories,
   PRIMARY_STORY,
 } from '@storybook/addon-docs/blocks';
 import { addDecorator } from '@storybook/react';
@@ -22,6 +23,8 @@ export const parameters = {
       <Subtitle />
       <Description />
       <ArgsTable story={PRIMARY_STORY} />
+      <Primary />
+      <Stories />
     </>
   ),
 },

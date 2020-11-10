@@ -34,10 +34,10 @@ const Template = (args) => (
 /**
  * Default props
  */
-export const Default = Template.bind({
+export const Whut = Template.bind({
 });
 
-Default.args = {
+Whut.args = {
   bigDipperLogo: {
     alt: 'big dipper logo',
   },
