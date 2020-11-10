@@ -32,6 +32,16 @@ export const common = {
   palette: {
     custom: {
       white: 'rgba(255, 255, 255, 1)',
+      gutters: {
+        large: '24px',
+        medium: '16px',
+        small: '8px',
+      },
+      margins: {
+        large: '24px',
+        medium: '16px',
+        small: '16px',
+      },
     },
   },
 };
@@ -81,16 +91,6 @@ const lightThemeOverride = {
         testnet: 'rgba(253, 120, 70, 1)',
         retired: 'rgba(251, 211, 66, 1)',
       },
-      gutters: {
-        large: '24px',
-        medium: '16px',
-        small: '8px',
-      },
-      margins: {
-        large: '24px',
-        medium: '16px',
-        small: '16px',
-      },
     },
   },
 };
@@ -139,16 +139,6 @@ const darkThemeOverride = {
         mainnet: 'rgba(253, 59, 76, 0.7)', // primary dark theme color
         testnet: 'rgba(253, 120, 70, 0.7)',
         retired: 'rgba(251, 211, 66, 0.7)',
-      },
-      gutters: {
-        large: '24px',
-        medium: '16px',
-        small: '8px',
-      },
-      margins: {
-        large: '24px',
-        medium: '16px',
-        small: '16px',
       },
     },
   },
