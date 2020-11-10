@@ -10,17 +10,28 @@ import {
   PieChartOutlined,
 } from '@material-ui/icons';
 import {
-  DesktopNav, NavbarItem, DesktopHeaderBar,
+  DesktopNav,
+  NavbarItem,
+  DesktopHeaderBar,
 } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
-  TextHolders, useDesktopNavHook, NetworkItem,
+  TextHolders,
+  useDesktopNavHook,
+  NetworkItem,
+  defaultArgs,
 } from './utils/desktop_nav';
 
 export default {
   title: 'Navbar/Desktop',
   component: DesktopNav,
   decorators: [withKnobs],
+  argTypes: defaultArgs,
+  parameters: {
+    docs: {
+      inlineStories: false,
+    },
+  },
 };
 
 const Template = (args) => {
@@ -123,7 +134,6 @@ const Template = (args) => {
         {...args}
         {...hookProps}
       />
-      <TextHolders {...hookProps} />
     </ThemeKnob>
   );
 };
