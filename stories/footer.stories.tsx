@@ -65,8 +65,8 @@ Default.args = {
     <SocialMediaComponent url="#" component={GithubIcon} className="github" />,
   ],
   storeBadgesComponents: [
-    <StoreBadgeComponent url="#" className="apple" alt="apple" imageSrc="/images/apple-badge.svg" />,
-    <StoreBadgeComponent url="#" className="google" alt="google" imageSrc="/images/google-play-badge.svg" />,
+    <StoreBadgeComponent url="#" className="apple" alt="apple" imageSrc="images/apple-badge.svg" />,
+    <StoreBadgeComponent url="#" className="google" alt="google" imageSrc="images/google-play-badge.svg" />,
   ],
 };
 
