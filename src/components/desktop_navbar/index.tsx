@@ -10,14 +10,14 @@ import { useTheme } from '@material-ui/core/styles';
 import { useGetStyles } from './styles';
 import {
   logo, logoWhite,
-} from '../resources/images';
-import { useGetHeightHook } from '../utils/get_height_hook';
+} from '../../resources/images';
+import { useGetHeightHook } from '../../utils/get_height_hook';
 import { DesktopNavProps } from './types';
 import {
   TopActionBar, NetworkOpen,
 } from './components';
 import { useDesktopNavbarHook } from './hooks';
-import { Placeholder } from '..';
+import { Placeholder } from '../..';
 
 /**
  * DesktopNav bar component used across the app

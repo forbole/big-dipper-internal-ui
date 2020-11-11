@@ -4,7 +4,7 @@ import MobileNav from '.';
 import { Announcement } from './components';
 import {
   NetworkItem, MenuItem,
-} from '../../stories/utils/mobile_nav';
+} from '../../../stories/utils/mobile_nav';
 
 describe('MobileNav/MobileNav', () => {
   it('Works without announcement', () => {

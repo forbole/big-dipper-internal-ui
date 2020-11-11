@@ -7,12 +7,12 @@ import {
   Announcement,
 } from './components';
 import { MobileProps } from './types';
-import { useGetHeightHook } from '../utils/get_height_hook';
+import { useGetHeightHook } from '../../utils/get_height_hook';
 import { useGetStyles } from './styles';
 import { formatProps } from './utils';
 import {
   Placeholder, SearchBar,
-} from '..';
+} from '../..';
 
 const MobileNav = (props: MobileProps) => {
   const {

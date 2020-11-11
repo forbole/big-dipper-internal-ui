@@ -7,7 +7,7 @@ import { TopActionBar } from '..';
 import { NetworkOpenProps } from './types';
 import {
   logo, logoWhite,
-} from '../../../resources/images';
+} from '../../../../resources/images';
 
 const NetworkOpen = (props:NetworkOpenProps) => {
   const { topBar } = props;

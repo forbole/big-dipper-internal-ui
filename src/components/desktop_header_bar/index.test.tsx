@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import DesktopHeaderBar from '.';
-import { NavbarAnnouncement } from '..';
+import { NavbarAnnouncement } from '../..';
 
 describe('DesktopHeaderBar', () => {
   it('Works with base props', () => {

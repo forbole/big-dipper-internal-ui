@@ -7,7 +7,7 @@ import {
   Network,
 } from './components';
 import { TopBarProps } from '../../types';
-import { SearchBar } from '../../..';
+import { SearchBar } from '../../../..';
 
 const TopActionBar = (props:TopBarProps) => {
   const { classes } = useGetStyles();

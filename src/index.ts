@@ -7,16 +7,16 @@ import {
   GithubIcon,
   TwitterIcon,
   YoutubeIcon,
-} from './icons';
-import Footer from './footer';
-import Grid from './grid';
-import MobileNav from './moblie_nav';
-import DesktopNav from './desktop_navbar';
-import NavbarItem from './navbar_item';
-import Placeholder from './placeholder';
-import SearchBar from './search_bar';
-import DesktopHeaderBar from './desktop_header_bar';
-import NavbarAnnouncement from './navbar_announcement';
+} from './components/icons';
+import Footer from './components/footer';
+import Grid from './components/grid';
+import MobileNav from './components/moblie_nav';
+import DesktopNav from './components/desktop_navbar';
+import NavbarItem from './components/navbar_item';
+import Placeholder from './components/placeholder';
+import SearchBar from './components/search_bar';
+import DesktopHeaderBar from './components/desktop_header_bar';
+import NavbarAnnouncement from './components/navbar_announcement';
 
 export {
   resources,
