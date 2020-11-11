@@ -1,19 +1,19 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { Footer } from '../src';
+import {
+  Footer,
+  TelegramIcon,
+  FacebookIcon,
+  MediumIcon,
+  TwitterIcon,
+  GithubIcon,
+} from '../src';
 import {
   LinkComponent,
   SocialMediaComponent,
   StoreBadgeComponent,
   defaultArgs,
 } from './utils/footer';
-import {
-  TelegramIcon,
-  FacebookIcon,
-  MediumIcon,
-  TwitterIcon,
-  GithubIcon,
-} from '../src/icons';
 import { ThemeKnob } from './theme_knob';
 
 export default {

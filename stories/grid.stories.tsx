@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import Grid from '../src/grid';
+import { Grid } from '../src';
 import { ThemeKnob } from './theme_knob';
 import getFaqDetails from './utils/grid';
 
