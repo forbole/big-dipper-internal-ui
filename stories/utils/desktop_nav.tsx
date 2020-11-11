@@ -4,7 +4,7 @@ import {
   makeStyles, createStyles,
 } from '@material-ui/styles';
 import { Typography } from '@material-ui/core';
-import { DesktopNavProps } from '../../src/desktop_navbar/types';
+import { DesktopNavProps } from '../../src/components/desktop_navbar/types';
 import { NetworkItem } from './mobile_nav';
 
 export {
