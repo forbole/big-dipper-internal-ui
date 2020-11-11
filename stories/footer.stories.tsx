@@ -65,8 +65,8 @@ Whut.args = {
     <SocialMediaComponent url="#" component={GithubIcon} className="github" />,
   ],
   storeBadgesComponents: [
-    <StoreBadgeComponent url="#" className="apple" alt="apple" imageSrc="./stories/resources/apple-badge.svg" />,
-    <StoreBadgeComponent url="#" className="google" alt="google" imageSrc="./stories/resources/google-play-badge.svg" />,
+    <StoreBadgeComponent url="#" className="apple" alt="apple" imageSrc="/stories/resources/apple-badge.svg" />,
+    <StoreBadgeComponent url="#" className="google" alt="google" imageSrc="/stories/resources/google-play-badge.svg" />,
   ],
 };
 
