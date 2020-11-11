@@ -1,4 +1,4 @@
-name: Storybook-Build-Test
+name: Storybook
 on:
   pull_request:
     branches:
