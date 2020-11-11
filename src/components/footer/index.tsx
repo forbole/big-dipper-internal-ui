@@ -12,7 +12,7 @@ import { FooterProps } from './types';
 import { useFooterHook } from './hooks';
 import {
   logo, logoWhite,
-} from '../resources/images';
+} from '../../resources/images';
 /**
  * Footer component used across all pages
  */

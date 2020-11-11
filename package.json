@@ -21,7 +21,7 @@
     "lint:fix": "eslint . --fix --ext .ts,.tsx,.js,.jsx",
     "test:unit": "cross-env NODE_ENV=test jest",
     "storybook": "start-storybook -s ./ -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s ./stories/resources"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.11.0",

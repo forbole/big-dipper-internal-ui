@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import NetworksOpen from '.';
-import { NetworkItem } from '../../../../stories/utils/mobile_nav';
+import { NetworkItem } from '../../../../../stories/utils/mobile_nav';
 
 describe('MobileNav/NetworksOpen', () => {
   it('Works with base props', () => {

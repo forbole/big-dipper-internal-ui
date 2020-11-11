@@ -2,7 +2,7 @@ import { useTheme } from '@material-ui/core/styles';
 import { MobileProps } from './types';
 import {
   logo as defaultLogo, logoWhite,
-} from '../resources/images';
+} from '../../resources/images';
 
 /**
  * Handles props that require default value

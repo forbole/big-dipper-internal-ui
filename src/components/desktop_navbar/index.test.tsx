@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { Drawer } from '@material-ui/core';
 import DesktopNav from '.';
-import { WithMockMaterialTheme } from '../utils/theme_mock';
+import { WithMockMaterialTheme } from '../../utils/theme_mock';
 
 describe('DesktopNav', () => {
   it('Works with base props', () => {

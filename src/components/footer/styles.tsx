@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles';
 import { useTheme } from '@material-ui/core/styles';
-import { getMinMediaQuery } from '../utils/media_queries';
+import { getMinMediaQuery } from '../../utils/media_queries';
 
 export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
   const theme: any = useTheme();
