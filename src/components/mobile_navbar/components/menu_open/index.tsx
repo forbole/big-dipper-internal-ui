@@ -52,7 +52,7 @@ const MenuOpen = (props: NavOpenProps) => {
               <div
                 className={classnames('language-selector')}
                 role="button"
-                // onClick={hookProps?.toggleDrawer}
+                onClick={hookProps?.toggleDrawer}
               >
                 <Language fontSize="small" className={classnames('globe-icon')} />
                 <p className={classnames('selected-language')}>{language!.selected?.value}</p>
