@@ -1,13 +1,13 @@
 import React from 'react';
 import classnames from 'classnames';
-// import { useGetStyles } from './styles';
+import { useGetStyles } from './styles';
 // import { HamburgerProps } from './types';
 
 const Hamburger = (props: any) => {
-  // const { classes } = useGetStyles();
+  const { classes } = useGetStyles();
   const {
     hamburgerIcon: {
-      // isOpen,
+      isOpen,
       onClick,
     },
   } = props;
@@ -16,9 +16,9 @@ const Hamburger = (props: any) => {
     <div
       role="button"
       onClick={onClick}
-      // className={classnames(classes.root, 'big-dipper', 'hamburger', {
-      //   active: isOpen,
-      // })}
+      className={classnames(classes.root, 'big-dipper', 'hamburger', {
+        active: isOpen,
+      })}
     >
       <div className={classnames('hamburger-content')} />
     </div>
