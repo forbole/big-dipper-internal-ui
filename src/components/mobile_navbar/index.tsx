@@ -5,6 +5,7 @@ import { useGetHeightHook } from '../../utils/get_height_hook';
 import { Placeholder } from '../..';
 import { formatProps } from './utils';
 import { MobileProps } from './types';
+import { MenuOpen } from './components';
 
 const MobileNav = (props: MobileProps) => {
   const {
@@ -21,7 +22,15 @@ const MobileNav = (props: MobileProps) => {
         ref={heightRef}
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
       >
-        whoops
+        <MenuOpen {...formattedProps} />
+        {/* <NetworksOpen {...formattedProps} />
+        <Nav {...formattedProps} />
+        {!!searchBar && (
+          <SearchBar {...formattedProps} />
+        )}
+        {!!announcement && (
+          <Announcement announcement={announcement} />
+        )} */}
       </div>
       <Placeholder height={height} />
     </div>
