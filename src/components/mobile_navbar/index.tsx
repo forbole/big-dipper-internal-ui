@@ -5,7 +5,9 @@ import { useGetHeightHook } from '../../utils/get_height_hook';
 import { Placeholder } from '../..';
 import { formatProps } from './utils';
 import { MobileProps } from './types';
-import { MenuOpen } from './components';
+import {
+  MenuOpen, Nav,
+} from './components';
 
 const MobileNav = (props: MobileProps) => {
   const {
@@ -23,12 +25,12 @@ const MobileNav = (props: MobileProps) => {
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
       >
         <MenuOpen {...formattedProps} />
-        {/* <NetworksOpen {...formattedProps} />
+        {/* <NetworksOpen {...formattedProps} /> */}
         <Nav {...formattedProps} />
-        {!!searchBar && (
+        {/* {!!searchBar && (
           <SearchBar {...formattedProps} />
-        )}
-        {!!announcement && (
+        )} */}
+        {/* {!!announcement && (
           <Announcement announcement={announcement} />
         )} */}
       </div>

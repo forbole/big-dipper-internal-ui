@@ -10,7 +10,7 @@ import {
 } from './components/icons';
 import Footer from './components/footer';
 import Grid from './components/grid';
-import DesktopNav from './components/desktop_navbar';
+// import DesktopNav from './components/desktop_navbar';
 import NavbarItem from './components/navbar_item';
 import Placeholder from './components/placeholder';
 import SearchBar from './components/search_bar';
@@ -29,7 +29,7 @@ export {
   YoutubeIcon,
   Footer,
   Grid,
-  DesktopNav,
+  // DesktopNav,
   NavbarItem,
   Placeholder,
   SearchBar,
