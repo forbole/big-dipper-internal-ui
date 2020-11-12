@@ -1,11 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Drawer } from '@material-ui/core';
-// import { LanguageDrawerProps } from './types';
+import { LanguageDrawerProps } from './types';
 import { useGetStyles } from './styles';
 import { useLanguageDrawerHook } from './hooks';
 
-const LanguageDrawer = (props:any) => {
+const LanguageDrawer = (props:LanguageDrawerProps) => {
   const { classes } = useGetStyles();
   const {
     toggleDrawer,
