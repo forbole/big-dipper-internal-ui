@@ -5,12 +5,12 @@ import {
 } from '@material-ui/icons';
 import { NavOpenProps } from './types';
 import { useGetStyles } from './styles';
-// import { useMenuOpenHook } from './hooks';
-// import { LanguageDrawer } from './components';
+import { useMenuOpenHook } from './hooks';
+import { LanguageDrawer } from './components';
 
 const MenuOpen = (props: NavOpenProps) => {
   const { classes } = useGetStyles();
-  // const hookProps = useMenuOpenHook();
+  const hookProps = useMenuOpenHook();
   const {
     menu: {
       isMenuOpen,
@@ -22,14 +22,14 @@ const MenuOpen = (props: NavOpenProps) => {
 
   return (
     <>
-      {/* {!!language && (
+      {!!language && (
         <LanguageDrawer
           {...hookProps}
           selected={language!.selected}
           languages={language!.languages}
           onClick={language!.onClick}
         />
-      )} */}
+      )}
       <div
         className={classnames(classes.root, 'big-dipper', 'mobile-nav-open', {
           open: isMenuOpen,
