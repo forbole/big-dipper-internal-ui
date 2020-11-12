@@ -1,12 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
 import { ExpandMore } from '@material-ui/icons';
-// import { NavProps } from './types';
+import { NavProps } from './types';
 import { useGetStyles } from './styles';
 import { Hamburger } from './components';
 import { useNavHook } from './hooks';
 
-const Nav = (props: any) => {
+const Nav = (props: NavProps) => {
   const { classes } = useGetStyles();
   const {
     network,
