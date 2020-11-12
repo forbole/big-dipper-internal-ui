@@ -10,7 +10,7 @@ import {
 } from './components/icons';
 import Footer from './components/footer';
 import Grid from './components/grid';
-import MobileNav from './components/moblie_nav';
+import MobileNav from './components/mobile_nav';
 import DesktopNav from './components/desktop_navbar';
 import NavbarItem from './components/navbar_item';
 import Placeholder from './components/placeholder';
