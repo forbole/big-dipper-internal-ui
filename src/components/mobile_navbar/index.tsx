@@ -4,8 +4,9 @@ import { useGetStyles } from './styles';
 import { useGetHeightHook } from '../../utils/get_height_hook';
 import { Placeholder } from '../..';
 import { formatProps } from './utils';
+import { MobileProps } from './types';
 
-const MobileNav = (props: any) => {
+const MobileNav = (props: MobileProps) => {
   const {
     ref: heightRef,
     height,

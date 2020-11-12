@@ -2,11 +2,12 @@ import { useTheme } from '@material-ui/core/styles';
 import {
   logo as defaultLogo, logoWhite,
 } from '../../resources/images';
+import { MobileProps } from './types';
 
 /**
  * Handles props that require default value
  */
-export const formatProps = (props:any): any => {
+export const formatProps = (props:MobileProps): any => {
   const theme = useTheme();
   const {
     logo,
