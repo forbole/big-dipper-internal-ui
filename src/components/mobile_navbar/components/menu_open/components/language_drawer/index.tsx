@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import { Drawer } from '@material-ui/core';
 // import { LanguageDrawerProps } from './types';
-// import { useGetStyles } from './styles';
+import { useGetStyles } from './styles';
 // import { useLanguageDrawerHook } from './hooks';
 
 const LanguageDrawer = (props:any) => {
-  // const { classes } = useGetStyles();
+  const { classes } = useGetStyles();
   const {
     toggleDrawer,
     drawerOpen,
@@ -20,7 +20,7 @@ const LanguageDrawer = (props:any) => {
       anchor="bottom"
       open={drawerOpen}
       onClose={toggleDrawer}
-      // className={classnames(classes.root, 'language-drawer')}
+      className={classnames(classes.root, 'language-drawer')}
     >
       <div className={classnames('content')}>
         {languages?.map((x) => {
