@@ -2,11 +2,15 @@ import React from 'react';
 import classnames from 'classnames';
 import { useGetStyles } from './styles';
 import { useGetHeightHook } from '../../utils/get_height_hook';
-import { Placeholder } from '../..';
+import {
+  Placeholder, SearchBar, NavbarAnnouncement,
+} from '../..';
 import { formatProps } from './utils';
 import { MobileProps } from './types';
 import {
-  MenuOpen, Nav, NetworksOpen,
+  MenuOpen,
+  Nav,
+  NetworksOpen,
 } from './components';
 
 const MobileNav = (props: MobileProps) => {
@@ -16,7 +20,7 @@ const MobileNav = (props: MobileProps) => {
   } = useGetHeightHook();
   const { classes } = useGetStyles();
   const formattedProps = formatProps(props);
-  const { className } = formattedProps;
+  const { className, searchBar, announcement } = formattedProps;
 
   return (
     <div className={classnames(className, 'mobile-nav-wrapper')}>
@@ -27,12 +31,12 @@ const MobileNav = (props: MobileProps) => {
         <MenuOpen {...formattedProps} />
         <NetworksOpen {...formattedProps} />
         <Nav {...formattedProps} />
-        {/* {!!searchBar && (
+        {!!searchBar && (
           <SearchBar {...formattedProps} />
-        )} */}
-        {/* {!!announcement && (
-          <Announcement announcement={announcement} />
-        )} */}
+        )}
+        {!!announcement && (
+          <NavbarAnnouncement announcement={announcement} />
+        )}
       </div>
       <Placeholder height={height} />
     </div>
