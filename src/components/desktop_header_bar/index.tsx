@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { NavbarAnnouncement } from '../..';
+import { NavbarAnnouncement } from '..';
 import { DesktopHeaderBarProps } from './types';
 import { useGetStyles } from './styles';
 
