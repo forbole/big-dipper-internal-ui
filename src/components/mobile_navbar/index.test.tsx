@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import MobileNav from '.';
-import NavbarAnnouncement from '../navbar_announcement';
+import { NavbarAnnouncement } from '..';
 
 describe('MobileNav/MobileNav', () => {
   it('Works without NavbarAnnouncement', () => {
