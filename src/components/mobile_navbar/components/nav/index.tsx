@@ -2,12 +2,12 @@ import React from 'react';
 import classnames from 'classnames';
 import { ExpandMore } from '@material-ui/icons';
 // import { NavProps } from './types';
-// import { useGetStyles } from './styles';
+import { useGetStyles } from './styles';
 // import { Hamburger } from './components';
 // import { useNavHook } from './hooks';
 
 const Nav = (props: any) => {
-  // const { classes } = useGetStyles();
+  const { classes } = useGetStyles();
   const {
     network,
     logo: {
@@ -19,7 +19,9 @@ const Nav = (props: any) => {
   // const { handleLogoClick } = useNavHook(onClick);
 
   return (
-    <div>
+    <div
+      className={classnames(classes.root, 'big-dipper', 'mobile-nav-bar')}
+    >
       <span
         // onClick={handleLogoClick}
         role="button"
