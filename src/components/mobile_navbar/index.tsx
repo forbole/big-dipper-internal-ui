@@ -3,16 +3,19 @@ import classnames from 'classnames';
 import { useGetStyles } from './styles';
 import { useGetHeightHook } from '../../utils/get_height_hook';
 import { Placeholder } from '../..';
+import { formatProps } from './utils';
 
-const MobileNav = () => {
+const MobileNav = (props: any) => {
   const {
     ref: heightRef,
     height,
   } = useGetHeightHook();
   const { classes } = useGetStyles();
+  const formattedProps = formatProps(props);
+  const { className } = formattedProps;
 
   return (
-    <div className={classnames('mobile-nav-wrapper')}>
+    <div className={classnames(className, 'mobile-nav-wrapper')}>
       <div
         ref={heightRef}
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
