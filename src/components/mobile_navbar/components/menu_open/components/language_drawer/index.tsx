@@ -23,7 +23,7 @@ const LanguageDrawer = (props:LanguageDrawerProps) => {
       className={classnames(classes.root, 'language-drawer')}
     >
       <div className={classnames('content')}>
-        {languages.map((x) => {
+        {languages?.map((x) => {
           return (
             <div
               role="button"

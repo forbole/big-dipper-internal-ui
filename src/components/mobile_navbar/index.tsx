@@ -1,27 +1,27 @@
 import React from 'react';
 import classnames from 'classnames';
-import {
-  Nav,
-  MenuOpen,
-  NetworksOpen,
-  Announcement,
-} from './components';
-import { MobileProps } from './types';
-import { useGetHeightHook } from '../../utils/get_height_hook';
 import { useGetStyles } from './styles';
-import { formatProps } from './utils';
+import { useGetHeightHook } from '../../utils/get_height_hook';
 import {
-  Placeholder, SearchBar,
-} from '../..';
+  Placeholder, SearchBar, NavbarAnnouncement,
+} from '..';
+import { formatProps } from './utils';
+import { MobileProps } from './types';
+import {
+  MenuOpen,
+  Nav,
+  NetworksOpen,
+} from './components';
 
 const MobileNav = (props: MobileProps) => {
   const {
     ref: heightRef,
     height,
   } = useGetHeightHook();
-  const formattedProps = formatProps(props);
   const { classes } = useGetStyles();
-  const { searchBar, announcement, className } = formattedProps;
+  const formattedProps = formatProps(props);
+  const { className, searchBar, announcement } = formattedProps;
+
   return (
     <div className={classnames(className, 'mobile-nav-wrapper')}>
       <div
@@ -35,7 +35,7 @@ const MobileNav = (props: MobileProps) => {
           <SearchBar {...formattedProps} />
         )}
         {!!announcement && (
-          <Announcement announcement={announcement} />
+          <NavbarAnnouncement announcement={announcement} />
         )}
       </div>
       <Placeholder height={height} />

@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import NetworksOpen from '.';
-import { NetworkItem } from '../../../../../stories/utils/mobile_nav';
 
 describe('MobileNav/NetworksOpen', () => {
   it('Works with base props', () => {
@@ -14,10 +13,7 @@ describe('MobileNav/NetworksOpen', () => {
               value: 'cosmos',
               online: true,
             },
-            items: [
-              <NetworkItem />,
-              <NetworkItem />,
-            ],
+            items: [],
             isNetworkOpen: true,
             toggleNetwork: () => {},
           }
@@ -26,6 +22,5 @@ describe('MobileNav/NetworksOpen', () => {
     );
     expect(wrap).not.toBeNull();
     expect(wrap.find('.open')).toHaveLength(1);
-    expect(wrap.find(NetworkItem)).toHaveLength(2);
   });
 });

@@ -1,13 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import MobileNav from '.';
-import { Announcement } from './components';
-import {
-  NetworkItem, MenuItem,
-} from '../../../stories/utils/mobile_nav';
+import { NavbarAnnouncement } from '..';
 
 describe('MobileNav/MobileNav', () => {
-  it('Works without announcement', () => {
+  it('Works without NavbarAnnouncement', () => {
     expect(MobileNav).toBeTruthy();
 
     const wrap = mount(
@@ -22,15 +19,7 @@ describe('MobileNav/MobileNav', () => {
         }}
         menu={{
           isMenuOpen: false,
-          items: [
-            <MenuItem value="overview" />,
-            <MenuItem value="validator" />,
-            <MenuItem value="blocks" />,
-            <MenuItem value="activites" />,
-            <MenuItem value="proposals" />,
-            <MenuItem value="news" />,
-            <MenuItem value="analysis" />,
-          ],
+          items: [],
           language: {
             languages: [
               {
@@ -58,10 +47,7 @@ describe('MobileNav/MobileNav', () => {
         }}
         network={{
           isNetworkOpen: false,
-          items: [
-            <NetworkItem />,
-            <NetworkItem />,
-          ],
+          items: [],
           toggleNetwork: function noRefCheck() {},
           selectedNetwork: {
             online: true,
@@ -77,7 +63,7 @@ describe('MobileNav/MobileNav', () => {
     expect(wrap).not.toBeNull();
   });
 
-  it('Works without announcement and searchbar', () => {
+  it('Works without NavbarAnnouncement and searchbar', () => {
     expect(MobileNav).toBeTruthy();
 
     const wrap = mount(
@@ -92,15 +78,7 @@ describe('MobileNav/MobileNav', () => {
         }}
         menu={{
           isMenuOpen: false,
-          items: [
-            <MenuItem value="overview" />,
-            <MenuItem value="validator" />,
-            <MenuItem value="blocks" />,
-            <MenuItem value="activites" />,
-            <MenuItem value="proposals" />,
-            <MenuItem value="news" />,
-            <MenuItem value="analysis" />,
-          ],
+          items: [],
           language: {
             languages: [
               {
@@ -128,10 +106,7 @@ describe('MobileNav/MobileNav', () => {
         }}
         network={{
           isNetworkOpen: false,
-          items: [
-            <NetworkItem />,
-            <NetworkItem />,
-          ],
+          items: [],
           toggleNetwork: function noRefCheck() {},
           selectedNetwork: {
             online: true,
@@ -141,7 +116,7 @@ describe('MobileNav/MobileNav', () => {
       />,
     );
     expect(wrap).not.toBeNull();
-    expect(wrap.find(Announcement)).toHaveLength(0);
+    expect(wrap.find(NavbarAnnouncement)).toHaveLength(0);
   });
 
   it('Works without language', () => {
@@ -159,22 +134,11 @@ describe('MobileNav/MobileNav', () => {
         }}
         menu={{
           isMenuOpen: false,
-          items: [
-            <MenuItem value="overview" />,
-            <MenuItem value="validator" />,
-            <MenuItem value="blocks" />,
-            <MenuItem value="activites" />,
-            <MenuItem value="proposals" />,
-            <MenuItem value="news" />,
-            <MenuItem value="analysis" />,
-          ],
+          items: [],
         }}
         network={{
           isNetworkOpen: false,
-          items: [
-            <NetworkItem />,
-            <NetworkItem />,
-          ],
+          items: [],
           toggleNetwork: function noRefCheck() {},
           selectedNetwork: {
             online: true,
@@ -184,6 +148,6 @@ describe('MobileNav/MobileNav', () => {
       />,
     );
     expect(wrap).not.toBeNull();
-    expect(wrap.find(Announcement)).toHaveLength(0);
+    expect(wrap.find(NavbarAnnouncement)).toHaveLength(0);
   });
 });
