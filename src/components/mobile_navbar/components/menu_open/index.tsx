@@ -3,12 +3,12 @@ import classnames from 'classnames';
 import {
   Language, ExpandMoreOutlined, Brightness4Outlined,
 } from '@material-ui/icons';
-// import { NavOpenProps } from './types';
+import { NavOpenProps } from './types';
 import { useGetStyles } from './styles';
 // import { useMenuOpenHook } from './hooks';
 // import { LanguageDrawer } from './components';
 
-const MenuOpen = (props: any) => {
+const MenuOpen = (props: NavOpenProps) => {
   const { classes } = useGetStyles();
   // const hookProps = useMenuOpenHook();
   const {
