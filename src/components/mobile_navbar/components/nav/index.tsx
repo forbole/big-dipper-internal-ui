@@ -4,7 +4,7 @@ import { ExpandMore } from '@material-ui/icons';
 // import { NavProps } from './types';
 import { useGetStyles } from './styles';
 // import { Hamburger } from './components';
-// import { useNavHook } from './hooks';
+import { useNavHook } from './hooks';
 
 const Nav = (props: any) => {
   const { classes } = useGetStyles();
@@ -13,17 +13,17 @@ const Nav = (props: any) => {
     logo: {
       src,
       alt,
-      // onClick,
+      onClick,
     },
   } = props;
-  // const { handleLogoClick } = useNavHook(onClick);
+  const { handleLogoClick } = useNavHook(onClick);
 
   return (
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-bar')}
     >
       <span
-        // onClick={handleLogoClick}
+        onClick={handleLogoClick}
         role="button"
         className={classnames('logo-container')}
       >
