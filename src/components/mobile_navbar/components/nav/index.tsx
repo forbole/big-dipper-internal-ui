@@ -22,11 +22,7 @@ const Nav = (props: NavProps) => {
     <div
       className={classnames(classes.root, 'big-dipper', 'mobile-nav-bar')}
     >
-      <span
-        onClick={handleLogoClick}
-        role="button"
-        className={classnames('logo-container')}
-      >
+      <span onClick={handleLogoClick} role="button" className={classnames('logo-container')}>
         <img
           className={classnames('logo')}
           src={src}

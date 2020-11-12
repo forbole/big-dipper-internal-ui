@@ -14,7 +14,7 @@ const MenuOpen = (props: NavOpenProps) => {
   const {
     menu: {
       isMenuOpen,
-      items = [],
+      items,
       themeMode,
       language,
     },
@@ -38,7 +38,7 @@ const MenuOpen = (props: NavOpenProps) => {
         <div
           className={classnames(classes.content, 'mobile-nav-open-content')}
         >
-          {items?.map((x, i) => (
+          {items.map((x, i) => (
             <React.Fragment key={i}>
               {x}
             </React.Fragment>
