@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { ExpandMore } from '@material-ui/icons';
 // import { NavProps } from './types';
 import { useGetStyles } from './styles';
-// import { Hamburger } from './components';
+import { Hamburger } from './components';
 import { useNavHook } from './hooks';
 
 const Nav = (props: any) => {
@@ -51,7 +51,7 @@ const Nav = (props: any) => {
             <ExpandMore fontSize="small" />
           </div>
         )}
-        {/* <Hamburger {...props} /> */}
+        <Hamburger {...props} />
       </div>
     </div>
   );
