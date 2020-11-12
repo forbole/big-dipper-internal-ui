@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { Drawer } from '@material-ui/core';
 // import { LanguageDrawerProps } from './types';
 import { useGetStyles } from './styles';
-// import { useLanguageDrawerHook } from './hooks';
+import { useLanguageDrawerHook } from './hooks';
 
 const LanguageDrawer = (props:any) => {
   const { classes } = useGetStyles();
@@ -12,9 +12,9 @@ const LanguageDrawer = (props:any) => {
     drawerOpen,
     selected,
     languages,
-    // onClick,
+    onClick,
   } = props;
-  // const { handleChange } = useLanguageDrawerHook(onClick, toggleDrawer);
+  const { handleChange } = useLanguageDrawerHook(onClick, toggleDrawer);
   return (
     <Drawer
       anchor="bottom"
@@ -27,9 +27,9 @@ const LanguageDrawer = (props:any) => {
           return (
             <div
               role="button"
-              // onClick={() => handleChange({
-              //   key: x?.key, value: x?.value,
-              // })}
+              onClick={() => handleChange({
+                key: x?.key, value: x?.value,
+              })}
               key={x?.key}
               className={classnames('item', {
                 selected: selected?.key === x?.key,
