@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import { useGetStyles } from './styles';
-// import { HamburgerProps } from './types';
+import { HamburgerProps } from './types';
 
-const Hamburger = (props: any) => {
+const Hamburger = (props: HamburgerProps) => {
   const { classes } = useGetStyles();
   const {
     hamburgerIcon: {
