@@ -6,7 +6,7 @@ import { Placeholder } from '../..';
 import { formatProps } from './utils';
 import { MobileProps } from './types';
 import {
-  MenuOpen, Nav,
+  MenuOpen, Nav, NetworksOpen,
 } from './components';
 
 const MobileNav = (props: MobileProps) => {
@@ -25,7 +25,7 @@ const MobileNav = (props: MobileProps) => {
         className={classnames(classes.root, 'big-dipper', 'mobile-nav')}
       >
         <MenuOpen {...formattedProps} />
-        {/* <NetworksOpen {...formattedProps} /> */}
+        <NetworksOpen {...formattedProps} />
         <Nav {...formattedProps} />
         {/* {!!searchBar && (
           <SearchBar {...formattedProps} />
