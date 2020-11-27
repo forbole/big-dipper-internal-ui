@@ -1,23 +1,15 @@
 import React from 'react';
 import classnames from 'classnames';
-import { NavbarAnnouncement } from '..';
-import { DesktopHeaderBarProps } from './types';
+import { HeaderBarMobileProps } from './types';
 import { useGetStyles } from './styles';
 
-const DesktopHeaderBar = (props:DesktopHeaderBarProps) => {
-  const { announcement, title, market } = props;
+const HeaderBarMobile = (props:HeaderBarMobileProps) => {
+  const { title, market } = props;
   const { classes } = useGetStyles();
   return (
-    <div className={classnames(classes.root, 'big-dipper', 'header-bar')}>
+    <div className={classnames(classes.root, 'big-dipper', 'header-bar-mobile')}>
       <div className={classnames('flex-container')}>
         <h3>{title}</h3>
-        {
-          !!announcement && (
-          <div className={classnames('announcement-container')}>
-            <NavbarAnnouncement announcement={announcement} />
-          </div>
-          )
-        }
       </div>
       <div className={classnames('market-price')}>
         {market.map((x) => {
@@ -25,7 +17,6 @@ const DesktopHeaderBar = (props:DesktopHeaderBarProps) => {
             <div className={classnames('market-price-item')} key={x.key}>
               <p className={classnames('price-key')}>
                 {x.key}
-                :
               </p>
               <p className={classnames('price-value')}>{x.value}</p>
             </div>
@@ -36,4 +27,4 @@ const DesktopHeaderBar = (props:DesktopHeaderBarProps) => {
   );
 };
 
-export default DesktopHeaderBar;
+export default HeaderBarMobile;

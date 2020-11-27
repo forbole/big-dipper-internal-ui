@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import DesktopHeaderBar from '.';
+import HeaderBarDesktop from '.';
 import { NavbarAnnouncement } from '../..';
 
-describe('DesktopHeaderBar', () => {
+describe('HeaderBarDesktop', () => {
   it('Works with base props', () => {
-    expect(DesktopHeaderBar).toBeTruthy();
+    expect(HeaderBarDesktop).toBeTruthy();
     const wrap = mount(
-      <DesktopHeaderBar
+      <HeaderBarDesktop
         announcement="A fun fact"
         title="Dashboard"
         market={[]}

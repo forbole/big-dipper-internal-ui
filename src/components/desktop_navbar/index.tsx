@@ -17,7 +17,7 @@ import {
   TopActionBar, NetworkOpen,
 } from './components';
 import { useDesktopNavbarHook } from './hooks';
-import { Placeholder } from '..';
+import { Placeholder } from '../..';
 
 /**
  * DesktopNav bar component used across the app
