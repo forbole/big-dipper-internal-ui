@@ -10,6 +10,7 @@ export const useGetStyles = () => {
       alignItems: 'start',
       justifyContent: 'space-between',
       flexDirection: 'column',
+      background: theme?.palette?.background?.paper,
       '& .flex-container': {
         display: 'flex',
         alignItems: 'center',
