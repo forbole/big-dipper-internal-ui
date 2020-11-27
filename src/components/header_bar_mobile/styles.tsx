@@ -5,37 +5,39 @@ import {
 export const useGetStyles = () => {
   const useStyles = makeStyles((theme: any) => createStyles({
     root: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
       padding: '1rem',
-      '& .announcement-container': {
-        overflow: 'hidden',
-      },
+      display: 'flex',
+      alignItems: 'start',
+      justifyContent: 'space-between',
+      flexDirection: 'column',
       '& .flex-container': {
         display: 'flex',
         alignItems: 'center',
       },
       '& h3': {
         margin: 0,
-        fontSize: '1.875rem',
+        marginBottom: '0.5rem',
+        fontSize: '1.5rem',
         fontWeight: 400,
         whiteSpace: 'nowrap',
       },
       '& .market-price': {
-        display: 'flex',
-        overflow: 'auto',
-        background: theme?.palette?.background?.paper,
-        padding: '0.5rem 1rem',
+        overflow: 'hidden',
+        background: theme?.palette?.background?.default,
+        padding: theme?.palette?.custom?.gutters?.small,
         borderRadius: '2px',
+        display: 'grid',
+        gridGap: theme?.palette?.custom?.gutters?.small,
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        width: '100%',
+        boxSizing: 'border-box',
         '& .market-price-item': {
           display: 'flex',
           whiteSpace: 'nowrap',
           alignItems: 'center',
-          justifyContent: 'center',
-          '&:not(:last-child)': {
-            marginRight: '1rem',
-          },
+          overflow: 'hidden',
+          width: '100%',
+          justifyContent: 'flex-start',
           '& .price-key': {
             fontSize: '0.875rem',
             margin: 0,
@@ -44,8 +46,11 @@ export const useGetStyles = () => {
           },
           '& .price-value': {
             color: theme?.palette?.fonts?.fontOne,
-            fontSize: '1.25rem',
+            fontSize: '0.875rem',
             margin: 0,
+            fontWeight: 600,
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
           },
         },
       },

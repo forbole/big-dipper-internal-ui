@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { NavbarAnnouncement } from '..';
+import { NavbarAnnouncement } from '../..';
 import { DesktopHeaderBarProps } from './types';
 import { useGetStyles } from './styles';
 
@@ -8,7 +8,7 @@ const HeaderBarDesktop = (props:DesktopHeaderBarProps) => {
   const { announcement, title, market } = props;
   const { classes } = useGetStyles();
   return (
-    <div className={classnames(classes.root, 'big-dipper', 'header-bar')}>
+    <div className={classnames(classes.root, 'big-dipper', 'header-bar-desktop')}>
       <div className={classnames('flex-container')}>
         <h3>{title}</h3>
         {

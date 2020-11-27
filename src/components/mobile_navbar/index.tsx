@@ -4,7 +4,7 @@ import { useGetStyles } from './styles';
 import { useGetHeightHook } from '../../utils/get_height_hook';
 import {
   Placeholder, SearchBar, NavbarAnnouncement,
-} from '..';
+} from '../..';
 import { formatProps } from './utils';
 import { MobileProps } from './types';
 import {

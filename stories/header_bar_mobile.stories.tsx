@@ -1,11 +1,11 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { HeaderBarDesktop } from '../src';
+import { HeaderBarMobile } from '../src';
 import { ThemeKnob } from './theme_knob';
 
 export default {
   title: 'HeaderBarMobile',
-  component: HeaderBarDesktop,
+  component: HeaderBarMobile,
   decorators: [withKnobs],
   parameters: {
     docs: {
@@ -17,13 +17,12 @@ export default {
 export const Default = () => {
   return (
     <ThemeKnob>
-      <HeaderBarDesktop
+      <HeaderBarMobile
         title="Cosmos Hub 3"
-        announcement="Did you know that rubber bands last longer when refrigerated."
         market={[
           {
             key: 'Price',
-            value: '$2.75',
+            value: '$22222222222.75',
           },
           {
             key: 'Market Cap',

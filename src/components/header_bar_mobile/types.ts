@@ -3,7 +3,7 @@ export type Data = {
   value: string;
 }
 
-export interface DesktopHeaderBarProps {
+export interface HeaderBarMobileProps {
   title: string;
   market: Data[];
 }
