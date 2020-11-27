@@ -12,7 +12,7 @@ import {
 import {
   DesktopNav,
   NavbarItem,
-  DesktopHeaderBar,
+  HeaderBarDesktop,
 } from '../src';
 import { ThemeKnob } from './theme_knob';
 import {
@@ -59,7 +59,7 @@ const Template = (args) => {
       ],
     },
     topBar: {
-      header: <DesktopHeaderBar
+      header: <HeaderBarDesktop
         title="Cosmos Hub 3"
         announcement="Did you know that rubber bands last longer when refrigerated."
         market={[

@@ -13,9 +13,10 @@ import DesktopNav from './desktop_navbar';
 import NavbarItem from './navbar_item';
 import Placeholder from './placeholder';
 import SearchBar from './search_bar';
-import DesktopHeaderBar from './desktop_header_bar';
+import HeaderBarDesktop from './header_bar_desktop';
 import NavbarAnnouncement from './navbar_announcement';
 import MobileNav from './mobile_navbar';
+import MobileHeaderBar from './header_bar_mobile';
 
 export {
   TelegramIcon,
@@ -31,7 +32,8 @@ export {
   NavbarItem,
   Placeholder,
   SearchBar,
-  DesktopHeaderBar,
+  HeaderBarDesktop,
   NavbarAnnouncement,
   MobileNav,
+  MobileHeaderBar,
 };

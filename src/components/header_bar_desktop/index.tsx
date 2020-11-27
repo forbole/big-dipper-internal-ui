@@ -4,7 +4,7 @@ import { NavbarAnnouncement } from '..';
 import { DesktopHeaderBarProps } from './types';
 import { useGetStyles } from './styles';
 
-const DesktopHeaderBar = (props:DesktopHeaderBarProps) => {
+const HeaderBarDesktop = (props:DesktopHeaderBarProps) => {
   const { announcement, title, market } = props;
   const { classes } = useGetStyles();
   return (
@@ -36,4 +36,4 @@ const DesktopHeaderBar = (props:DesktopHeaderBarProps) => {
   );
 };
 
-export default DesktopHeaderBar;
+export default HeaderBarDesktop;

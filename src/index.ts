@@ -13,7 +13,7 @@ import {
   NavbarItem,
   Placeholder,
   SearchBar,
-  DesktopHeaderBar,
+  HeaderBarDesktop,
   NavbarAnnouncement,
   MobileNav,
 } from './components';
@@ -33,7 +33,7 @@ export {
   NavbarItem,
   Placeholder,
   SearchBar,
-  DesktopHeaderBar,
+  HeaderBarDesktop,
   NavbarAnnouncement,
   MobileNav,
 };
