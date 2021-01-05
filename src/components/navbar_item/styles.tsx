@@ -8,6 +8,7 @@ export const useGetStyles = () => {
       createStyles({
         root: {
           '&.navbar-item': {
+            color: theme?.palette?.custom?.fonts?.fontFour,
             '& .MuiListItemIcon-root': {
               minWidth: '40px',
               '& svg': {
