@@ -1,7 +1,7 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 
 export interface DesktopNavbarItemProps {
   text: string;
-  icon: ReactElement;
+  icon: ReactNode;
   active?: boolean;
 }
