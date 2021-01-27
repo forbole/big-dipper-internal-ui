@@ -150,12 +150,12 @@ export const Footer = (props: FooterProps) => {
         {/* tablet donate button start */}
         {!!donate && donate?.url && (
           <a
-            className={classnames(classes.tabletAndUp, 'donate-tablet')}
             href={donate.url}
             target="_blank"
             rel="noreferrer"
           >
             <Button
+              className={classnames(classes.tabletAndUp, 'donate-tablet')}
               variant="contained"
               color="primary"
               size="small"
@@ -167,7 +167,7 @@ export const Footer = (props: FooterProps) => {
         {!!donate && donate?.onClick && (
           <Button
             className={classnames(classes.tabletAndUp, 'donate-tablet')}
-            onClick={onClick}
+            onClick={donate.onClick}
             variant="contained"
             color="primary"
             size="small"

@@ -91,10 +91,15 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
       [getMinMediaQuery(tableBreakPoint)]: {
         display: 'flex',
         alignSelf: 'flex-end',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& .icons-container': {
+          marginBottom: '0',
+        },
         '& svg': {
           width: '22px',
         },
-        '& .donate-tablet button': {
+        '& .donate-tablet': {
           borderRadius: '20px',
         },
       },
