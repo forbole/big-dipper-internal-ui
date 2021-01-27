@@ -1,9 +1,20 @@
 import { ReactElement } from 'react';
 
 type Donate = {
-  text?: string;
-  url?: string;
+  text: string;
 }
+
+type DonateLink = Donate & {
+  url: string;
+  onClick?: () => void;
+}
+
+type DonateAction = Donate & {
+  url?: string;
+  onClick: () => void;
+}
+
+type DonateProps = DonateLink | DonateAction;
 
 type BigDipperLogo = {
   src?: string;
@@ -24,9 +35,8 @@ export interface FooterProps {
   bigDipperLogo?: BigDipperLogo,
   blockExplorerText: string;
   copyrightText: string;
-  donate?: Donate;
+  donate?: DonateProps;
   links?: Links;
   socialMediaComponents?: ReactElement[];
-  storeBadgesComponents?: ReactElement[];
   className?: string;
 }

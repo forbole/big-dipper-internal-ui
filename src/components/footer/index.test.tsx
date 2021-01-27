@@ -46,9 +46,6 @@ describe('Footer', () => {
         socialMediaComponents={[
           <div>media 1</div>,
         ]}
-        storeBadgesComponents={[
-          <div>apple</div>,
-        ]}
       />,
     );
 

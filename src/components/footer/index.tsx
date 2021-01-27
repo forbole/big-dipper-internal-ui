@@ -21,7 +21,6 @@ export const Footer = (props: FooterProps) => {
   const {
     breakpoint = 769,
     socialMediaComponents = [],
-    storeBadgesComponents = [],
     blockExplorerText,
     copyrightText,
     className,
@@ -29,8 +28,7 @@ export const Footer = (props: FooterProps) => {
     },
     bigDipperLogo = {
     },
-    donate = {
-    },
+    donate,
   } = props;
 
   const {
@@ -38,11 +36,6 @@ export const Footer = (props: FooterProps) => {
     alt: bigDipperAlt = 'Big Dipper Logo',
     onClick,
   } = bigDipperLogo;
-
-  const {
-    text: donateText = '',
-    url: donateUrl = '#',
-  } = donate;
 
   const {
     components: linkComponents = [],
@@ -81,10 +74,10 @@ export const Footer = (props: FooterProps) => {
           </Typography>
         </div>
         {/* mobile donate button start */}
-        {!!donateText && (
+        {!!donate && donate?.url && (
           <a
             className={classnames(classes.mobileOnly, 'donate-mobile')}
-            href={donateUrl}
+            href={donate.url}
             target="_blank"
             rel="noreferrer"
           >
@@ -93,9 +86,20 @@ export const Footer = (props: FooterProps) => {
               color="primary"
               size="small"
             >
-              {donateText}
+              {donate.text}
             </Button>
           </a>
+        )}
+        {!!donate && donate?.onClick && (
+          <Button
+            className={classnames(classes.mobileOnly, 'donate-mobile')}
+            onClick={onClick}
+            variant="contained"
+            color="primary"
+            size="small"
+          >
+            {donate.text}
+          </Button>
         )}
         {/* mobile donate button end */}
       </div>
@@ -121,17 +125,6 @@ export const Footer = (props: FooterProps) => {
             );
           })}
         </List>
-        {/* play store badges start */}
-        <div
-          className={classnames(classes.badgeContainer, 'badge-container')}
-        >
-          {storeBadgesComponents.map((x, i) => (
-            <span className={classnames('badge')} key={i}>
-              {x}
-            </span>
-          ))}
-        </div>
-        {/* play store badges end */}
       </div>
       {/* links container end */}
       {/* social media container start */}
@@ -155,10 +148,10 @@ export const Footer = (props: FooterProps) => {
           {copyrightText}
         </Typography>
         {/* tablet donate button start */}
-        {!!donateText && (
+        {!!donate && donate?.url && (
           <a
             className={classnames(classes.tabletAndUp, 'donate-tablet')}
-            href={donateUrl}
+            href={donate.url}
             target="_blank"
             rel="noreferrer"
           >
@@ -167,9 +160,20 @@ export const Footer = (props: FooterProps) => {
               color="primary"
               size="small"
             >
-              {donateText}
+              {donate.text}
             </Button>
           </a>
+        )}
+        {!!donate && donate?.onClick && (
+          <Button
+            className={classnames(classes.tabletAndUp, 'donate-tablet')}
+            onClick={onClick}
+            variant="contained"
+            color="primary"
+            size="small"
+          >
+            {donate.text}
+          </Button>
         )}
         {/* tablet donate button end */}
       </div>
