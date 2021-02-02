@@ -1,8 +1,10 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  pull_request:
+  push:
+    tags:
+      - v*
 
 jobs:
   publish:
@@ -18,3 +20,4 @@ jobs:
         with:
           access: public
           token: ${{ secrets.NPM_TOKEN }}
+          dryRun: ${{ github.event_name == 'pull_request' }}
