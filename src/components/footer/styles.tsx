@@ -69,6 +69,9 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
     list: {
       display: 'flex',
       flexWrap: 'wrap',
+      [getMinMediaQuery(tableBreakPoint)]: {
+        justifyContent: 'center',
+      },
     },
     listItem: {
       whiteSpace: 'nowrap',
@@ -77,17 +80,6 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
       fontSize: listItem.fontSize,
       '& .list-decorator': {
         margin: '0 1rem',
-      },
-    },
-    badgeContainer: {
-      display: 'none',
-      [getMinMediaQuery(tableBreakPoint)]: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        '& .badge': {
-          margin: '0.25rem',
-        },
       },
     },
     socialMediaContainer: {
@@ -99,10 +91,15 @@ export const useGetStyles = ({ tableBreakPoint = 769 }: any) => {
       [getMinMediaQuery(tableBreakPoint)]: {
         display: 'flex',
         alignSelf: 'flex-end',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& .icons-container': {
+          marginBottom: '0',
+        },
         '& svg': {
           width: '22px',
         },
-        '& .donate-tablet button': {
+        '& .donate-tablet': {
           borderRadius: '20px',
         },
       },
