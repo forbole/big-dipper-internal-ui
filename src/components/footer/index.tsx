@@ -52,14 +52,12 @@ export const Footer = (props: FooterProps) => {
     <div className={classnames(classes.root, className, 'big-dipper', 'footer')}>
       {/* logo container start */}
       <div className={classnames(classes.logoContainer, 'logo-container')}>
-        <div>
-          <span onClick={handleLogoClick} role="button">
-            <img
-              className={classnames(classes.logo, 'logo')}
-              src={bigDipperSrc}
-              alt={bigDipperAlt}
-            />
-          </span>
+        <div onClick={handleLogoClick} role="button">
+          <img
+            className={classnames(classes.logo, 'logo')}
+            src={bigDipperSrc}
+            alt={bigDipperAlt}
+          />
           <Typography
             variant="body2"
             className={classnames('block-explorer-text')}
@@ -76,7 +74,7 @@ export const Footer = (props: FooterProps) => {
         {/* mobile donate button start */}
         {!!donate && donate?.url && (
           <a
-            className={classnames(classes.mobileOnly, 'donate-mobile')}
+            className={classnames(classes.mobileOnly, 'donate-mobile', 'url')}
             href={donate.url}
             target="_blank"
             rel="noreferrer"
@@ -92,8 +90,8 @@ export const Footer = (props: FooterProps) => {
         )}
         {!!donate && donate?.onClick && (
           <Button
-            className={classnames(classes.mobileOnly, 'donate-mobile')}
-            onClick={onClick}
+            className={classnames(classes.mobileOnly, 'donate-mobile', 'click')}
+            onClick={donate.onClick}
             variant="contained"
             color="primary"
             size="small"

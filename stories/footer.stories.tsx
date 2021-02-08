@@ -44,7 +44,6 @@ Default.args = {
   donate: {
     text: 'Donate',
     onClick: () => console.log('donate clicked'),
-    // url: '#',
   },
   breakpoint: 769,
   blockExplorerText: 'Cosmos Block Explorer',
